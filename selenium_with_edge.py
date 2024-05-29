@@ -28,9 +28,6 @@ NUMBER_OF_PIPES = [x for x in range(1,11)]
 MATERIAL = ['Water', 'Gas']
 HOLDER = ["Clamp", "Hanger", "Roller"]
 
-edge_options = Options()
-edge_options.add_experimental_option("debuggerAddress","127.0.0.1:9222")
-
 def login():
     element = driver.find_element(By.ID, 'username')
     element.send_keys(USERNAME)
@@ -43,17 +40,25 @@ def enter_tool(toolName):
     button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains (@href, '%s')]" % TOOL_HREFS[toolName])))
     button.click()
 
+def choose_random_combobox_value(selection, allow_empty_value = False):
+    dropdown = Select(driver.find_element(selection[0],selection[1]))
+    choice = random.choice(dropdown.options).text
+    if not allow_empty_value:
+        while choice == "":
+            choice = random.choice(dropdown.options).text
+    dropdown.select_by_visible_text(choice)
+
 def auto_rooftop_pipe():
     #click on the pipe button
     #select hanger/support type button
     #fill ground clearance field
     #fill spacing field
     #fill snow load field
-    #click next                             <<<<<< We are here (untested)
+    #click next                             
     #fill material field
     #fill size field
     #fill insulation field
-    #fill material in pipe field
+    #fill material in pipe field            <<<<<< Here
     #move quantity slider
     #click complete
     #read off weight per foot, cross member length, and pressure on each H frame
@@ -79,7 +84,8 @@ def auto_rooftop_pipe():
         button.click()
     except:
         print("Couldn't press Pipe button")
-    
+
+def page1():
 #--------------------------------------------------------------------------------
 #Filling in first page of values
 
@@ -99,32 +105,83 @@ def auto_rooftop_pipe():
     except:
         print ("Failed when selecting a holder button")
 
+    time.sleep(2)
     #input value for ground clearance
     try:
         clearance = random.randrange(12,37,1)
-        element = driver.find_element(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']")
-        element.send_keys(clearance)
+        if holder == "Hanger":
+            clearnace_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numDropLength_TextBoxElement']")
+            clearnace_textbox.clear()
+            clearnace_textbox.send_keys(clearance)
+        else:
+            clearnace_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']")
+            clearnace_textbox.clear()
+            clearnace_textbox.send_keys(clearance)
     except:
         print("Failed when filling ground clearance field")
     
     #input value for pipe spacing
     try:
         spacing = random.randrange(6,11,1)
-        element = driver.find_element(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']")
-        element.send_keys(spacing)
+        spacing_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']")
+        spacing_textbox.clear()
+        spacing_textbox.send_keys(spacing)
     except:
         print("Failed when filling pipe spacing field")
 
     #input value for snow load
     try:
         snow_load = random.choice(SNOW_LOAD)
-        element = driver.find_element(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']")
-        element.send_keys(snow_load)
+        snow_load_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']")
+        snow_load_textbox.clear()
+        snow_load_textbox.send_keys(snow_load)
     except:
         print("Failed when filling snow load field")
+
+    try:
+        next_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")))
+        next_button.click()
+    except:
+        print("Failed when Clicking next button")
 #--------------------------------------------------------------------------------
 
+def page2():
+#--------------------------------------------------------------------------------
+#Filling in second page of values
+    try:
+        choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
+    except:
+        print("Failed when filling pipe material field")
+    
+    time.sleep(0.5)
 
+    try:
+        choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
+    except:
+        print("Failed when filling pipe diameter field")
+
+    time.sleep(0.5)
+
+    try:
+        choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
+    except:
+        print("Failed when filling pipe diameter field")
+
+    time.sleep(0.5)
+
+    try:
+        if random.choice(MATERIAL) == "Water":
+            material_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[id*='optLiquid_OptionElement']")))
+        else:
+            material_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[id*='optGas_OptionElement']")))
+        material_button.click()
+    except:
+        print("Failed when pressing material in pipe button")
+
+
+
+#--------------------------------------------------------------------------------
+'''
     try:
 
         button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")))
@@ -144,7 +201,7 @@ def auto_rooftop_pipe():
 
         
     except:
-        print("failed.")
+        print("failed.")'''
 
 def write_html_to_temp_file():
     with open("html_output.txt", 'w') as f:
@@ -160,16 +217,14 @@ def random_params():
     #choose random insulation thickness from the thickness dropdown (must intersect with the list from the excel)
     #choose water/gas
     #choose a random quantity
-    
+    pass
 
 if __name__ == '__main__':
     driver = webdriver.Edge()
     driver.get(LINK)
 
     login()
-    enter_tool("RoofTop")
-
-    params = []
+    #enter_tool("RoofTop")
 
     a = input("a: ")
 
@@ -177,15 +232,12 @@ if __name__ == '__main__':
         match (a):
             case "manual":
                 pass
-            case "auto":
-                
-                
-                
-                material = random.choice(MATERIAL)
-
-
-        if (a == "r"):
-            params = random_params()
+            case "page1":
+                page1()
+            case "page2":
+                page2()
+            case "reset":
+                driver.get(LINK)
         a = input("a: ")
 
 
