@@ -64,14 +64,7 @@ def read_value(selection):
     return element.get_attribute("value")
 
 def auto_rooftop_pipe():
-    
-
-    try:
-        # Select the pipe button
-        button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='macPipe_WebkitOuterClickLayer']")))
-        button.click()
-    except:
-        print("Couldn't press Pipe button")
+    pass
 
 def click_element(selection):
     element = WebDriverWait(driver,10).until(EC.element_to_be_clickable(selection))
@@ -202,49 +195,12 @@ def page3():
         print("failed to click edit pipe type button")
     time.sleep(2)
     read_values_from_page2()
-
-
-
-
-
-
 #--------------------------------------------------------------------------------
-'''
-    try:
-
-        button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")))
-        button.click()
-        time.sleep(1)
-
-        dropdownelement = driver.find_element(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']")
-        dropdown = Select(dropdownelement)
-        print("here")
-        dropdown.click()
-        visible_options = dropdown.options
-        for option in visible_options:
-            print(option.text)
-        dropdown.select_by_visible_text("abc") #throws an error when there isnt the option
-        print("here")
-
-
-        
-    except:
-        print("failed.")'''
 
 def write_html_to_temp_file():
     with open("html_output.txt", 'w') as f:
         f.write(driver.page_source)
 
-def random_params():
-    #choose random value between 12 and 36 (inclusive) for ground clearance
-    #choose random value between 6 and 15 (inclusive) for required spacing between pipes
-    #choose random value from [0,10,20,40,60] for snow load
-    #choose random value from pipe material list
-    #choose random diameter from the size dropdown
-    #choose random insulation thickness from the thickness dropdown (must intersect with the list from the excel)
-    #choose water/gas
-    #choose a random quantity
-    pass
 
 if __name__ == '__main__':
     driver = webdriver.Edge()
