@@ -153,11 +153,11 @@ def page2():
     try:
         slider_element = driver.find_element(By.CSS_SELECTOR, "div[id*='sldNumPipes_SliderTrackElement']" )
         actions = ActionChains(driver)
-        for i in range(random.randint(0,9)):
+        for _ in range(random.randint(0,9)):
             actions.move_by_offset(slider_element.location['x'] + slider_element.size['width'] - 5, slider_element.location['y'] + 1).click()
-            actions.perform()
             actions.move_by_offset(-(slider_element.location['x'] + slider_element.size['width'] - 5), -(slider_element.location['y'] + 1))
             actions.perform()
+            #time.sleep(0.5)
     except:
         print("failed when moving slider")
 
@@ -185,12 +185,15 @@ def page3():
     except:
         print("failed to read PSI")
     try:
-        table = driver.find_element(By.CSS_SELECTOR, "div[data-id*='dw-listview-body_']")
-        print("here")
-        actions = ActionChains(driver)
-        actions.move_by_offset(table.location['x'] + 5, table.location['y'] + 5).click()
-        actions.move_by_offset(-(table.location['x'] + 5),-(table.location['y'] + 5))
-        actions.perform()
+        table = driver.find_elements(By.CSS_SELECTOR, "div[data-id*='dw-listview-bodyScroller_']")
+        for element in table:
+            if "tblPipeType_ListView" in element.get_attribute("data-id"):
+                print(element.location)
+                actions = ActionChains(driver)
+                actions.move_by_offset(element.location['x'] + 5, element.location['y'] + 5).click()
+                #actions.move_by_offset(-(table.location['x'] + 5),-(table.location['y'] + 5))
+                actions.perform()
+
     except:
         print("failed to select table row")
     try:
