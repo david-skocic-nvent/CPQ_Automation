@@ -4,6 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.edge.options import Options
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import random
 import time
 from dotenv import load_dotenv
@@ -41,42 +43,28 @@ def enter_tool(toolName):
     button.click()
 
 def choose_random_combobox_value(selection, allow_empty_value = False):
-    dropdown = Select(driver.find_element(selection[0],selection[1]))
+    dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
+    dropdown = Select(dropdown_element)
     choice = random.choice(dropdown.options).text
     if not allow_empty_value:
         while choice == "":
             choice = random.choice(dropdown.options).text
     dropdown.select_by_visible_text(choice)
 
-def auto_rooftop_pipe():
-    #click on the pipe button
-    #select hanger/support type button
-    #fill ground clearance field
-    #fill spacing field
-    #fill snow load field
-    #click next                             
-    #fill material field
-    #fill size field
-    #fill insulation field
-    #fill material in pipe field            <<<<<< Here
-    #move quantity slider
-    #click complete
-    #read off weight per foot, cross member length, and pressure on each H frame
-    #click on the pipe row in the table 
-    #click edit pipe type
-    #click the little gray square
-    #read off weight per foot, width of cross member, hanger size, minimum max pipe spacing, and max spacing between H frames
-        #while max spacing is not filled, choose between (move slider to a lower number, reduce size of pipes)
-    #click complete
-    #click next
-    #enter length of 100
-    #click add to table
-    #read Total number of H frames
-    #click complete
-    #select the row just created
-    #click delete line
+def choose_random_textbox_value(selection, list):
+    choice = random.choice(list)
+    textbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
+    textbox.click()
+    ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()
+    textbox.send_keys(choice)
+    return choice
 
-    #start again at the top of the list
+def read_value(selection):
+    element = driver.find_element(selection[0], selection[1])
+    return element.get_attribute("value")
+
+def auto_rooftop_pipe():
+    
 
     try:
         # Select the pipe button
@@ -84,6 +72,10 @@ def auto_rooftop_pipe():
         button.click()
     except:
         print("Couldn't press Pipe button")
+
+def click_element(selection):
+    element = WebDriverWait(driver,10).until(EC.element_to_be_clickable(selection))
+    element.click()
 
 def page1():
 #--------------------------------------------------------------------------------
@@ -94,55 +86,42 @@ def page1():
         holder = random.choice(HOLDER)
         match (holder):
             case ("Clamp"):
-                button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='optSupport_ImageContainer']")))
-                button.click()
+                click_element((By.CSS_SELECTOR, "div[id*='optSupport_ImageContainer']"))
             case ("Roller"):
-                button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='optHang_ImageContainer']")))
-                button.click()
+                click_element((By.CSS_SELECTOR, "div[id*='optRoller_ImageContainer']"))
             case ("Hanger"):
-                button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[id*='optRoller_ImageContainer']")))
-                button.click()
+                click_element((By.CSS_SELECTOR, "div[id*='optHang_ImageContainer']"))
     except:
         print ("Failed when selecting a holder button")
 
-    time.sleep(2)
+    time.sleep(1)
     #input value for ground clearance
     try:
-        clearance = random.randrange(12,37,1)
         if holder == "Hanger":
-            clearnace_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numDropLength_TextBoxElement']")
-            clearnace_textbox.clear()
-            clearnace_textbox.send_keys(clearance)
+            choose_random_textbox_value((By.CSS_SELECTOR, "input[id*='numDropLength_TextBoxElement']"), [x for x in range(12,25)])
         else:
-            clearnace_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']")
-            clearnace_textbox.clear()
-            clearnace_textbox.send_keys(clearance)
+            choose_random_textbox_value((By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
     except:
         print("Failed when filling ground clearance field")
+        write_html_to_temp_file()
     
     #input value for pipe spacing
     try:
-        spacing = random.randrange(6,11,1)
-        spacing_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']")
-        spacing_textbox.clear()
-        spacing_textbox.send_keys(spacing)
+        choose_random_textbox_value((By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), [x for x in range(2,25)])
     except:
         print("Failed when filling pipe spacing field")
-
+    
     #input value for snow load
     try:
-        snow_load = random.choice(SNOW_LOAD)
-        snow_load_textbox = driver.find_element(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']")
-        snow_load_textbox.clear()
-        snow_load_textbox.send_keys(snow_load)
+        choose_random_textbox_value((By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
     except:
         print("Failed when filling snow load field")
-
-    try:
+    
+    '''try:
         next_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")))
         next_button.click()
     except:
-        print("Failed when Clicking next button")
+        print("Failed when Clicking next button")'''
 #--------------------------------------------------------------------------------
 
 def page2():
@@ -152,31 +131,77 @@ def page2():
         choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     except:
         print("Failed when filling pipe material field")
-    
-    time.sleep(0.5)
 
     try:
         choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
     except:
         print("Failed when filling pipe diameter field")
 
-    time.sleep(0.5)
-
     try:
         choose_random_combobox_value((By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
     except:
         print("Failed when filling pipe diameter field")
 
-    time.sleep(0.5)
-
     try:
         if random.choice(MATERIAL) == "Water":
-            material_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[id*='optLiquid_OptionElement']")))
+            click_element((By.CSS_SELECTOR, "input[id*='optLiquid_OptionElement']"))
         else:
-            material_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[id*='optGas_OptionElement']")))
-        material_button.click()
+            click_element((By.CSS_SELECTOR, "input[id*='optGas_OptionElement']"))
     except:
         print("Failed when pressing material in pipe button")
+
+    try:
+        slider_element = driver.find_element(By.CSS_SELECTOR, "div[id*='sldNumPipes_SliderTrackElement']" )
+        actions = ActionChains(driver)
+        for i in range(random.randint(0,9)):
+            actions.move_by_offset(slider_element.location['x'] + slider_element.size['width'] - 5, slider_element.location['y'] + 1).click()
+            actions.perform()
+            actions.move_by_offset(-(slider_element.location['x'] + slider_element.size['width'] - 5), -(slider_element.location['y'] + 1))
+            actions.perform()
+    except:
+        print("failed when moving slider")
+
+def read_values_from_page2():
+    try:
+        print(read_value((By.CSS_SELECTOR, "select[id*='cboSumWeight_ComboBoxElement']")))
+    except:
+        print("failed to read Overall Weight")
+    try:
+        print(read_value((By.CSS_SELECTOR, "select[id*='cboWidthCrossMember_ComboBoxElement']")))
+    except:
+        print("failed to read Cross Member length")
+    try:
+        print(read_value((By.CSS_SELECTOR, "select[id*='cboMaxSpacingtoUse_ComboBoxElement']")))
+    except:
+        print("failed to read maximum H frame spacing")
+    try:
+        print(read_value((By.CSS_SELECTOR, "select[id*='cboMaxHangerSize_ComboBoxElement']")))
+    except:
+        print("failed to read max hanger size")
+    
+def page3():
+    try:
+        print(read_value((By.CSS_SELECTOR, "input[id*='numOverallPSI_TextBoxElement']")))
+    except:
+        print("failed to read PSI")
+    try:
+        table = driver.find_element(By.CSS_SELECTOR, "div[data-id*='dw-listview-body_']")
+        print("here")
+        actions = ActionChains(driver)
+        actions.move_by_offset(table.location['x'] + 5, table.location['y'] + 5).click()
+        actions.move_by_offset(-(table.location['x'] + 5),-(table.location['y'] + 5))
+        actions.perform()
+    except:
+        print("failed to select table row")
+    try:
+        click_element((By.CSS_SELECTOR, "div[id*='macEditPipeInfo_WebkitOuterClickLayer']"))
+    except:
+        print("failed to click edit pipe type button")
+    time.sleep(2)
+    read_values_from_page2()
+
+
+
 
 
 
@@ -205,7 +230,6 @@ def page2():
 
 def write_html_to_temp_file():
     with open("html_output.txt", 'w') as f:
-        print(driver.page_source)
         f.write(driver.page_source)
 
 def random_params():
@@ -236,6 +260,10 @@ if __name__ == '__main__':
                 page1()
             case "page2":
                 page2()
+            case "rp2":
+                read_values_from_page2()
+            case "page3":
+                page3()
             case "reset":
                 driver.get(LINK)
         a = input("a: ")

@@ -1,0 +1,28 @@
+click on the pipe button
+select hanger/support type button
+fill ground clearance field
+fill spacing field
+fill snow load field
+click next                             
+fill material field
+fill size field
+fill insulation field
+fill material in pipe field            <<<<<< Here
+move quantity slider
+click complete
+read off weight per foot, cross member length, and pressure on each H frame
+click on the pipe row in the table 
+click edit pipe type
+click the little gray square
+read off weight per foot, width of cross member, hanger size, minimum max pipe spacing, and max spacing between H frames
+    while max spacing is not filled, choose between (move slider to a lower number, reduce size of pipes)
+click complete
+click next
+enter length of 100
+click add to table
+read Total number of H frames
+click complete
+select the row just created
+click delete line
+
+start again at the top of the list
