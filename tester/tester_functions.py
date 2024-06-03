@@ -9,8 +9,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 def login(driver: webdriver.Edge, username, password):
-    choose_random_textbox_value(driver,(By.ID, 'username'),[username])
-    choose_random_textbox_value(driver,(By.NAME, 'Password'),[password])
+    choose_textbox_value(driver,(By.ID, 'username'),[username])
+    choose_textbox_value(driver,(By.NAME, 'Password'),[password])
     click_element(driver, (By.ID, "login-button"))
 
 # chooses a combobox value. Can be from all possible options or from a list of user-defined options
