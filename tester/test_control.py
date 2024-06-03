@@ -3,6 +3,7 @@ from fileout import csvout
 from tester_functions import login
 import rooftop.pipe as pipe
 import rooftop.conduit as conduit
+import rooftop.duct as duct
 from dotenv import load_dotenv
 import os
 
@@ -73,4 +74,6 @@ if __name__ == '__main__':
                     for _ in range(10):
                         results = conduit.auto(driver)
                         csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
+                case "duct":
+                    results = duct.auto(driver)
             a = input("tool?: ")
