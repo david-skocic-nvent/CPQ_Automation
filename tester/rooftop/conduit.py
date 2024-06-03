@@ -28,19 +28,19 @@ def auto(driver):
 def page1(driver: webdriver.Edge):
     #input value for ground clearance
     try:
-        results["clearance"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
+        results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
     except:
         print("Failed when filling ground clearance field")
     
     #input value for pipe spacing
     try:
-        results["spacing"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), [x for x in range(2,11)])
+        results["spacing"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), [x for x in range(2,11)])
     except:
         print("Failed when filling pipe spacing field")
     
     #input value for snow load
     try:
-        results["snow load"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
+        results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
     except:
         print("Failed when filling snow load field")
     
@@ -53,17 +53,17 @@ def page1(driver: webdriver.Edge):
 #Filling in second page of values
 def page2(driver: webdriver.Edge):
     try:
-        results["pipe type"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
+        results["pipe type"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     except:
         print("Failed when filling pipe material field")
     time.sleep(1)
     try:
-        results["diameter"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
+        results["diameter"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
     except:
         print("Failed when filling pipe diameter field")
     time.sleep(.5)
     try:
-        results["fill"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPercentFill_TextBoxElement']"),FILL)
+        results["fill"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPercentFill_TextBoxElement']"),FILL)
     except:
         print("Failed when filling wire fill field")
 
@@ -131,7 +131,7 @@ def page3(driver: webdriver.Edge):
 
 def page4(driver):
     try:
-        results["section length"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
+        results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
     except:
         print("failed when entering section length")
     try:

@@ -23,11 +23,8 @@ def auto(driver):
     time.sleep(1)
     return results
 
-
+# Fills in the first page of values
 def page1(driver):
-#--------------------------------------------------------------------------------
-#Filling in first page of values
-
     #choosing holder button
     try:
         holder = random.choice(HOLDER)
@@ -46,21 +43,21 @@ def page1(driver):
     #input value for ground clearance
     try:
         if holder == "Hanger":
-            results["clearance"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDropLength_TextBoxElement']"), [x for x in range(12,25)])
+            results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDropLength_TextBoxElement']"), [x for x in range(12,25)])
         else:
-            results["clearance"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
+            results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
     except:
         print("Failed when filling ground clearance field")
     
     #input value for pipe spacing
     try:
-        results["spacing"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), [x for x in range(2,11)])
+        results["spacing"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), [x for x in range(2,11)])
     except:
         print("Failed when filling pipe spacing field")
     
     #input value for snow load
     try:
-        results["snow load"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
+        results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
     except:
         print("Failed when filling snow load field")
     
@@ -68,22 +65,21 @@ def page1(driver):
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']"))
     except:
         print("failed to click next button")
-#--------------------------------------------------------------------------------
 
 # fills in second page of values
-def page2(driver):
+def page2(driver: webdriver.Edge):
     try:
-        results["pipe type"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
+        results["pipe type"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     except:
         print("Failed when filling pipe material field")
     time.sleep(1)
     try:
-        results["diameter"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
+        results["diameter"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"))
     except:
         print("Failed when filling pipe diameter field")
     time.sleep(.5)
     try:
-        results["insulation"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
+        results["insulation"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
     except:
         print("Failed when filling pipe diameter field")
 
@@ -139,7 +135,7 @@ def read_values_from_page2(driver):
     except:
         print("failed to click complete button")
     
-def page3(driver):
+def page3(driver: webdriver.Edge):
     try:
         results["pressure"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numOverallPSI_TextBoxElement']"))
     except:
@@ -165,11 +161,10 @@ def page3(driver):
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
     except:
         print("failed to click next button")
-#--------------------------------------------------------------------------------
 
 def page4(driver):
     try:
-        results["section length"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
+        results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
     except:
         print("failed when entering section length")
     try:

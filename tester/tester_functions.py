@@ -13,17 +13,25 @@ def login(driver: webdriver.Edge, username, password):
     choose_random_textbox_value(driver,(By.NAME, 'Password'),[password])
     click_element(driver, (By.ID, "login-button"))
 
-def choose_random_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False):
+# chooses a combobox value. Can be from all possible options or from a list of user-defined options
+# TODO: add support for 'first' and 'last' choice options
+def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False, choice = "random", manual_values: list = None):
     dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
     dropdown = Select(dropdown_element)
-    choice = random.choice(dropdown.options).text
-    if not allow_empty_value:
-        while choice == "":
+
+    if choice == "random":
+        if manual_values != None:
+            choice = random.choice(manual_values)
+        else:
             choice = random.choice(dropdown.options).text
+            if not allow_empty_value:
+                while choice == "":
+                    choice = random.choice(dropdown.options).text
+
     dropdown.select_by_visible_text(choice)
     return choice
 
-def choose_random_textbox_value(driver: webdriver.Edge, selection, list):
+def choose_textbox_value(driver: webdriver.Edge, selection, list):
     choice = random.choice(list)
     textbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
     textbox.click()
