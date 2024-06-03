@@ -1,3 +1,13 @@
 clearance, spacing, snow load, pipe type, diameter, fill, pipe count, section length, overall weight, cross member width, frame spacing, total frames
 24,6,20,Electrical Metallic Tubing (EMT),3.5,31,3,100,52.38,35,10,11
 19,6,60,Intermediate Metal Conduit (IMC),4,40,7,100,230.09,76,,51
+19,7,20,Rigid Metal Conduit (RMC),3,31,3,100,37.53,38,17,7
+13,2,0,Rigid Metal Conduit (RMC),4,53,8,100,220.32,50,2,51
+17,5,20,Rigid Metal Conduit (RMC),1,40,9,100,19.68,54,12,10
+22,9,10,Rigid Metal Conduit (RMC),0.75,53,4,100,6.36,48,10,11
+18,8,0,Intermediate Metal Conduit (IMC),1,31,4,100,5.12,44,12,10
+22,9,60,Electrical Metallic Tubing (EMT),2.5,31,6,100,84.9,78,4,26
+13,7,5,Electrical Metallic Tubing (EMT),0.5,53,7,100,7.28,60,10,11
+17,5,10,Electrical Metallic Tubing (EMT),4,40,3,100,75.42,32,10,11
+22,10,5,Intermediate Metal Conduit (IMC),3,40,1,100,8.77,24,20,6
+13,5,10,Rigid Metal Conduit (RMC),0.5,31,9,100,12.87,56,10,11

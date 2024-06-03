@@ -70,7 +70,7 @@ if __name__ == '__main__':
                         results = pipe.auto(driver)
                         csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe") 
                 case "conduit":
-                    for _ in range(2):
+                    for _ in range(10):
                         results = conduit.auto(driver)
                         csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
             a = input("tool?: ")

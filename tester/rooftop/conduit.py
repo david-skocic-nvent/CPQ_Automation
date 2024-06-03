@@ -3,11 +3,12 @@ from selenium.webdriver.common.action_chains import ActionChains
 from tester_functions import *
 import time
 
-MATERIAL = ['Water', 'Gas']
-HOLDER = ["Clamp", "Hanger", "Roller"]
 SNOW_LOAD = [0,5,10,20,40,60]
+FILL = [31,40,53]
 results = {}
 
+# runs all four pages and returns their output dictionary to add to the csv file
+# returns to the same place that it started, so it can run continuously
 def auto(driver):
     global results
     results = {}
@@ -23,12 +24,8 @@ def auto(driver):
     time.sleep(1)
     return results
 
-
-def page1(driver: webdriver.Edge):
-#--------------------------------------------------------------------------------
 #Filling in first page of values
-
-    time.sleep(1)
+def page1(driver: webdriver.Edge):
     #input value for ground clearance
     try:
         results["clearance"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
@@ -47,15 +44,14 @@ def page1(driver: webdriver.Edge):
     except:
         print("Failed when filling snow load field")
     
+    #click next 
     try:
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext1_WebkitOuterClickLayer']"), multiple=True, element_index=1)
     except:
         print("failed to click next button")
-#--------------------------------------------------------------------------------
 
-def page2(driver: webdriver.Edge):
-#--------------------------------------------------------------------------------
 #Filling in second page of values
+def page2(driver: webdriver.Edge):
     try:
         results["pipe type"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     except:
@@ -67,7 +63,7 @@ def page2(driver: webdriver.Edge):
         print("Failed when filling pipe diameter field")
     time.sleep(.5)
     try:
-        results["fill"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPercentFill_TextBoxElement']"),[31,40,53])
+        results["fill"] = choose_random_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPercentFill_TextBoxElement']"),FILL)
     except:
         print("Failed when filling wire fill field")
 
@@ -132,7 +128,6 @@ def page3(driver: webdriver.Edge):
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
     except:
         print("failed to click next button")
-#--------------------------------------------------------------------------------
 
 def page4(driver):
     try:

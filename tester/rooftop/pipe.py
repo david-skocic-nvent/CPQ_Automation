@@ -70,9 +70,8 @@ def page1(driver):
         print("failed to click next button")
 #--------------------------------------------------------------------------------
 
+# fills in second page of values
 def page2(driver):
-#--------------------------------------------------------------------------------
-#Filling in second page of values
     try:
         results["pipe type"] = choose_random_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     except:
