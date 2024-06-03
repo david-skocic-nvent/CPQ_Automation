@@ -70,4 +70,4 @@ if __name__ == '__main__':
                 case "pipe":
                     for _ in range(8):
                         results = pipe.auto(driver)
-                        output_results_to_csv(field_names=PIPE_FIELD_NAMES, dict = results)
+                        output_results_to_csv(field_names=PIPE_FIELD_NAMES, dict = results) 
