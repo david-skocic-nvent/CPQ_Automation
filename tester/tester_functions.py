@@ -7,6 +7,12 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
+
+def login(driver: webdriver.Edge, username, password):
+    choose_random_textbox_value(driver,(By.ID, 'username'),[username])
+    choose_random_textbox_value(driver,(By.NAME, 'Password'),[password])
+    click_element(driver, (By.ID, "login-button"))
+
 def choose_random_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False):
     dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
     dropdown = Select(dropdown_element)
@@ -36,3 +42,7 @@ def click_element(driver: webdriver.Edge, selection, multiple = False, element_i
     
     element = WebDriverWait(driver,10).until(EC.element_to_be_clickable(selection))
     element.click()
+
+def dump_html_to_file(driver: webdriver.Edge, filename):
+    with open(filename, 'w') as f:
+        f.write(driver.page_source)
