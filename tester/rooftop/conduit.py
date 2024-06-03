@@ -53,7 +53,7 @@ def page1(driver: webdriver.Edge):
         print("failed to click next button")
 #--------------------------------------------------------------------------------
 
-def page2(driver):
+def page2(driver: webdriver.Edge):
 #--------------------------------------------------------------------------------
 #Filling in second page of values
     try:
@@ -91,7 +91,7 @@ def page2(driver):
     except:
         print("failed to click complete button")
 
-def read_values_from_page2(driver):
+def read_values_from_page2(driver: webdriver.Edge):
     try:
         results["overall weight"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboSumWeight_ComboBoxElement']"))
     except:
@@ -110,7 +110,7 @@ def read_values_from_page2(driver):
     except:
         print("failed to click complete button")
     
-def page3(driver):
+def page3(driver: webdriver.Edge):
     try:
         table = driver.find_elements(By.CSS_SELECTOR, "div[data-id*='dw-listview-bodyScroller_']")
         for element in table:
@@ -152,4 +152,3 @@ def page4(driver):
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macComplete_WebkitOuterClickLayer']"), multiple=True, element_index=1)
     except:
         print("failed to click complete button")
-    print(results)
