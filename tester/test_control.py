@@ -76,4 +76,5 @@ if __name__ == '__main__':
                         csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
                 case "duct":
                     results = duct.auto(driver)
+                    print(results)
             a = input("tool?: ")
