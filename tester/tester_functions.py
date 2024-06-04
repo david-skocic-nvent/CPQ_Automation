@@ -16,40 +16,52 @@ def login(driver: webdriver.Edge, username, password):
 # chooses a combobox value. Can be from all possible options or from a list of user-defined options
 # TODO: add support for 'first' and 'last' choice options
 def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False, choice = "random", manual_values: list = None):
-    dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
-    dropdown = Select(dropdown_element)
+    try:
+        dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
+        dropdown = Select(dropdown_element)
 
-    if choice == "random":
-        if manual_values != None:
-            choice = random.choice(manual_values)
-        else:
-            choice = random.choice(dropdown.options).text
-            if not allow_empty_value:
-                while choice == "":
-                    choice = random.choice(dropdown.options).text
+        if choice == "random":
+            if manual_values != None:
+                choice = random.choice(manual_values)
+            else:
+                choice = random.choice(dropdown.options).text
+                if not allow_empty_value:
+                    while choice == "":
+                        choice = random.choice(dropdown.options).text
 
-    dropdown.select_by_visible_text(choice)
-    return choice
+        dropdown.select_by_visible_text(choice)
+        return choice
+    except:
+        print("No combobox value could be chosen for " + str(selection))
+        return None
 
 def choose_textbox_value(driver: webdriver.Edge, selection, list):
-    choice = random.choice(list)
-    textbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
-    textbox.click()
-    ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()
-    textbox.send_keys(choice)
-    return choice
+    try:
+        choice = random.choice(list)
+        textbox = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
+        textbox.click()
+        ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()
+        textbox.send_keys(choice)
+        return choice
+    except:
+        print("No textbox value could be chosen for "+ str(selection))
 
 def read_value(driver: webdriver.Edge, selection):
-    element = driver.find_element(selection[0], selection[1])
-    return element.get_attribute("value")
-
+    try:
+        element = driver.find_element(selection[0], selection[1])
+        return element.get_attribute("value")
+    except:
+        print("value from " + str(selection) + " could not be read")
 def click_element(driver: webdriver.Edge, selection, multiple = False, element_index = 0):
-    if multiple:
-        elements = driver.find_elements(selection[0], selection[1])
-        selection = (By.ID, elements[element_index].get_attribute("id"))
-    
-    element = WebDriverWait(driver,10).until(EC.element_to_be_clickable(selection))
-    element.click()
+    try:
+        if multiple:
+            elements = driver.find_elements(selection[0], selection[1])
+            selection = (By.ID, elements[element_index].get_attribute("id"))
+        
+        element = WebDriverWait(driver,10).until(EC.element_to_be_clickable(selection))
+        element.click()
+    except:
+        print(str(selection) + " could not be clicked")
 
 def dump_html_to_file(driver: webdriver.Edge, filename):
     with open(filename, 'w') as f:
