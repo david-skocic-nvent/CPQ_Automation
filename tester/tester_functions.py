@@ -21,13 +21,12 @@ def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value =
         dropdown = Select(dropdown_element)
 
         if choice == "random":
-            if manual_values != None:
-                choice = random.choice(manual_values)
-            else:
-                choice = random.choice(dropdown.options).text
-                if not allow_empty_value:
-                    while choice == "":
-                        choice = random.choice(dropdown.options).text
+            choice = random.choice(dropdown.options).text
+            if not allow_empty_value:
+                while choice == "":
+                    choice = random.choice(dropdown.options).text
+        elif choice == "manual":
+            choice = random.choice(manual_values)
 
         dropdown.select_by_visible_text(choice)
         return choice
@@ -35,6 +34,8 @@ def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value =
         print("No combobox value could be chosen for " + str(selection))
         return None
 
+#Chooses a random value from the list argument to put into the textbox.
+#A list with only one element can be used for a direct input value
 def choose_textbox_value(driver: webdriver.Edge, selection, list):
     try:
         choice = random.choice(list)
@@ -52,6 +53,7 @@ def read_value(driver: webdriver.Edge, selection):
         return element.get_attribute("value")
     except:
         print("value from " + str(selection) + " could not be read")
+        
 def click_element(driver: webdriver.Edge, selection, multiple = False, element_index = 0):
     try:
         if multiple:
