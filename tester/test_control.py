@@ -1,15 +1,9 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from write_to_output import output_results_to_csv
-from pathlib import Path
+from fileout import csvout
+from tester_functions import login
 import rooftop.pipe as pipe
 import rooftop.conduit as conduit
-import time
+import rooftop.duct as duct
 from dotenv import load_dotenv
 import os
 
@@ -22,26 +16,16 @@ PIPE_FIELD_NAMES = ["holder", "clearance", "spacing", "snow load", "pipe type", 
                 "material", "pipe count", "section length", "pressure", "overall weight", "cross member width",
                 "frame spacing", "hanger size", "total frames"]
 
+CONDUIT_FIELD_NAMES = ["clearance", "spacing", "snow load", "pipe type", "diameter", "fill", "pipe count",
+                       "section length", "overall weight", "cross member width", "frame spacing", "total frames"]
+
 LINK = "http://10.4.75.133:8020/Apps/Rooftop_1_MNL/"
-
-
-def login(driver: webdriver.Edge):
-    element = driver.find_element(By.ID, 'username')
-    element.send_keys(USERNAME)
-    element = driver.find_element(By.NAME, 'Password')
-    element.send_keys(PASSWORD)
-    button = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID, "login-button")))
-    button.click()
-
-def write_html_to_temp_file():
-    with open("html_output.txt", 'w') as f:
-        f.write(driver.page_source)
 
 if __name__ == '__main__':
     driver = webdriver.Edge()
     driver.get(LINK)
 
-    login(driver)
+    login(driver, USERNAME, PASSWORD)
 
     a = input("How do you want to run tests?: ")
 
@@ -60,10 +44,8 @@ if __name__ == '__main__':
                         pipe.page3(driver)
                     case "p4":
                         pipe.page4(driver)
-                    case "dump":
-                        write_html_to_temp_file(driver)
                     case "write results":
-                        output_results_to_csv(field_names=PIPE_FIELD_NAMES, dict=pipe.results)
+                        csvout(field_names=PIPE_FIELD_NAMES, dict=pipe.results)
                 a = input("a: ")
         elif a == "conduit":
             while (a != "end"):
@@ -78,10 +60,8 @@ if __name__ == '__main__':
                         conduit.page3(driver)
                     case "p4":
                         conduit.page4(driver)
-                    case "dump":
-                        write_html_to_temp_file()
                     case "write results":
-                        output_results_to_csv(field_names=PIPE_FIELD_NAMES, dict=pipe.results)
+                        csvout(field_names=PIPE_FIELD_NAMES, dict=pipe.results)
                 a = input("a: ")
     elif a == "auto":
         while (a != "end"):
@@ -89,8 +69,11 @@ if __name__ == '__main__':
                 case "pipe":
                     for _ in range(8):
                         results = pipe.auto(driver)
-                        output_results_to_csv(field_names=PIPE_FIELD_NAMES, dict = results) 
+                        csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe") 
                 case "conduit":
-                    for _ in range(2):
+                    for _ in range(10):
                         results = conduit.auto(driver)
+                        csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
+                case "duct":
+                    results = duct.auto(driver)
             a = input("tool?: ")
