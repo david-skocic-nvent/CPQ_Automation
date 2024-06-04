@@ -14,18 +14,17 @@ def login(driver: webdriver.Edge, username, password):
     click_element(driver, (By.ID, "login-button"))
 
 # chooses a combobox value. Can be from all possible options or from a list of user-defined options
-# TODO: add support for 'first' and 'last' choice options
-def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False, choice = "random", manual_values: list = None):
+def choose_combobox_value(driver: webdriver.Edge, selection, allow_empty_value = False, manual=False, manual_values: list = None):
     try:
         dropdown_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(selection))
         dropdown = Select(dropdown_element)
 
-        if choice == "random":
+        if not manual:
             choice = random.choice(dropdown.options).text
             if not allow_empty_value:
                 while choice == "":
                     choice = random.choice(dropdown.options).text
-        elif choice == "manual":
+        else:
             choice = random.choice(manual_values)
 
         dropdown.select_by_visible_text(choice)
@@ -53,7 +52,7 @@ def read_value(driver: webdriver.Edge, selection):
         return element.get_attribute("value")
     except:
         print("value from " + str(selection) + " could not be read")
-        
+
 def click_element(driver: webdriver.Edge, selection, multiple = False, element_index = 0):
     try:
         if multiple:

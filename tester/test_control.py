@@ -1,5 +1,5 @@
 from selenium import webdriver
-from fileout import csvout
+from fileout import *
 from tester_functions import login
 import rooftop.pipe as pipe
 import rooftop.conduit as conduit
@@ -22,6 +22,7 @@ CONDUIT_FIELD_NAMES = ["clearance", "spacing", "snow load", "pipe type", "diamet
 LINK = "http://10.4.75.133:8020/Apps/Rooftop_1_MNL/"
 
 if __name__ == '__main__':
+    driver = 1
     driver = webdriver.Edge()
     driver.get(LINK)
 
@@ -69,11 +70,16 @@ if __name__ == '__main__':
                 case "pipe":
                     for _ in range(8):
                         results = pipe.auto(driver)
-                        csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe") 
+                        csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe")
                 case "conduit":
-                    for _ in range(10):
-                        results = conduit.auto(driver)
-                        csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
+                    dictreader = csvin("conduit")
+                    results = []
+                    for d in dictreader:
+                        results.append(d)
+                    print(conduit.auto(driver, random=False, manual_inputs=results[0]))
+                    #for _ in range(10):
+                    #    results = conduit.auto(driver)
+                    #    csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
                 case "duct":
                     results = duct.auto(driver)
                     print(results)
