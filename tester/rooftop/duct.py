@@ -28,95 +28,44 @@ def auto(driver):
 #Filling in first page of values
 def page1(driver: webdriver.Edge):
     #input value for ground clearance
-    try:
-        results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
-    except:
-        print("Failed when filling ground clearance field")
+    results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), [x for x in range(12,25)])
     
     #input value for pipe spacing
-    try:
-        if random.choice(EXTRA_CROSS_MEMBER):
-            results["extra cross member"] = True
-            click_element(driver, (By.CSS_SELECTOR, "input[id*='chkTopBar_CheckBoxElement']"))
-        else:
-            results["extra cross member"] = False
-    except:
-        print("Failed when clicking extra cross member field")
+    if random.choice(EXTRA_CROSS_MEMBER):
+        results["extra cross member"] = True
+        click_element(driver, (By.CSS_SELECTOR, "input[id*='chkTopBar_CheckBoxElement']"))
+    else:
+        results["extra cross member"] = False
     
     #input value for snow load
-    try:
-        results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
-    except:
-        print("Failed when filling snow load field")
+    results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SNOW_LOAD)
     
     #click next 
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")) #, multiple=True, element_index=1)
-    except:
-        print("failed to click next button")
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")) #, multiple=True, element_index=1)
 
 #Filling in second page of values
 def page2(driver: webdriver.Edge):
-    try:
-        results["shape"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
-    except:
-        print("Failed when filling shape field")
+    results["shape"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"))
     time.sleep(1)
-    try:
-        if results["shape"] == "Round":
-            results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctDia_TextBoxElement']"),[x for x in range(10,51)])
-        else:
-            results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctWidth_TextBoxElement']"),[x for x in range(10,51)])
-            results["height"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctHeight_TextBoxElement']"),[x for x in range(10,51)])
-    except:
-        print("Failed when filling size field(s)")
+    if results["shape"] == "Round":
+        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctDia_TextBoxElement']"),[x for x in range(10,51)])
+    else:
+        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctWidth_TextBoxElement']"),[x for x in range(10,51)])
+        results["height"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctHeight_TextBoxElement']"),[x for x in range(10,51)])
     time.sleep(.5)
 
-    try:
-        results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"))
-    except:
-        print("Failed when filling gauge field")
-
-    try:
-        results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
-    except:
-        print("Failed when filling insulation thickness field") 
-
-    try:
-        results["length"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctSegment_ComboBoxElement']"))
-    except:
-        print("Failed when filling insulation density field")
-
-    try:
-        results["insulation density"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationDensity_ComboBoxElement']"))
-    except:
-        print("Failed when filling insulation density field")
-
+    results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"))
+    results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"))
+    results["length"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctSegment_ComboBoxElement']"))
+    results["insulation density"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationDensity_ComboBoxElement']"))
     time.sleep(1)
-
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
-    except:
-        print("failed to click complete button")
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
 
 def read_values_from_page2(driver: webdriver.Edge):
-    try:
-        results["overall weight"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboSumWeight_ComboBoxElement']"))
-    except:
-        print("failed to read Overall Weight")
-    try:
-        results["cross member width"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboWidthCrossMember_ComboBoxElement']"))
-    except:
-        print("failed to read Cross Member length")
-    try:
-        results["frame spacing"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboMaxSpacingtoUse_ComboBoxElement']"))
-    except:
-        print("failed to read maximum H frame spacing")
-
-    try:
-        click_element(driver, (By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
-    except:
-        print("failed to click complete button")
+    results["overall weight"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboSumWeight_ComboBoxElement']"))
+    results["cross member width"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboWidthCrossMember_ComboBoxElement']"))
+    results["frame spacing"] = read_value(driver,(By.CSS_SELECTOR, "select[id*='cboMaxSpacingtoUse_ComboBoxElement']"))
+    click_element(driver, (By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
     
 def page3(driver: webdriver.Edge):
     try:
@@ -129,33 +78,15 @@ def page3(driver: webdriver.Edge):
                 actions.perform()
     except:
         print("failed to select table row")
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macEditPipeInfo_WebkitOuterClickLayer']"))
-    except:
-        print("failed to click edit pipe type button")
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macEditPipeInfo_WebkitOuterClickLayer']"))
     time.sleep(2)
     read_values_from_page2(driver)
     time.sleep(2)
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
-    except:
-        print("failed to click next button")
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
 
 def page4(driver):
-    try:
-        results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
-    except:
-        print("failed when entering section length")
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macAddSectionLength_WebkitOuterClickLayer']"))
-    except:
-        print("failed to click add to table button")
+    results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [100])
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macAddSectionLength_WebkitOuterClickLayer']"))
     time.sleep(1)
-    try:
-        results["total frames"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numTotalHFrames_TextBoxElement']"))
-    except:
-        print("failed when reading total number of H frames")
-    try:
-        click_element(driver,(By.CSS_SELECTOR, "div[id*='macComplete_WebkitOuterClickLayer']"), multiple=True, element_index=1)
-    except:
-        print("failed to click complete button")
+    results["total frames"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numTotalHFrames_TextBoxElement']"))
+    click_element(driver,(By.CSS_SELECTOR, "div[id*='macComplete_WebkitOuterClickLayer']"), multiple=True, element_index=1)
