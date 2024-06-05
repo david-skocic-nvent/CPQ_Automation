@@ -7,8 +7,8 @@ import random as rand
 AUTO_SNOW_LOAD = [0,5,10,20,40,60]
 AUTO_EXTRA_CROSS_MEMBER = [True, False]
 AUTO_CLEARANCE = [x for x in range(12,25)]
-AUTO_WIDTH = [x for x in range(10,51)]
-AUTO_HEIGHT = [x for x in range(10,51)]
+AUTO_WIDTH = [6,12,24,36,48]
+AUTO_HEIGHT = [6,12,24,36,48]
 results = {}
 
 # runs all four pages and returns their output dictionary to add to the csv file
@@ -54,13 +54,13 @@ def auto(driver, random=True, manual_inputs={}):
     results = {}
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macDuct_WebkitOuterClickLayer']"))
     time.sleep(3)
-    page1(driver)
+    page1(driver, random)
     time.sleep(5)
-    page2(driver)
+    page2(driver, random)
     time.sleep(2)
-    page3(driver)
+    page3(driver, random)
     time.sleep(3)
-    page4(driver)
+    page4(driver, random)
     time.sleep(1)
     return results
 
@@ -91,16 +91,14 @@ def page2(driver: webdriver.Edge, random=True):
     else:
         results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctWidth_TextBoxElement']"),Width)
         results["height"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctHeight_TextBoxElement']"),Height)
-    time.sleep(.5)
-
-    results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"), manual=(not random), manual_values=Gauge)
-    time.sleep(.5)
-    results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"), manual=(not random), manual_values=InsulationThickness)
-    time.sleep(.5)
+    time.sleep(1)
     results["length"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctSegment_ComboBoxElement']"), manual=(not random), manual_values=Length)
-    time.sleep(.5)
+    time.sleep(.1)
+    results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"), manual=(not random), manual_values=InsulationThickness)
+    time.sleep(.1)
     results["insulation density"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationDensity_ComboBoxElement']"), manual=(not random), manual_values=InsulationDensity)
     time.sleep(1)
+    results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"), manual=(not random), manual_values=Gauge)
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
 
 def read_values_from_page2(driver: webdriver.Edge):

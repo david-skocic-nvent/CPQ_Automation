@@ -58,9 +58,6 @@ def auto(driver, random = True, manual_inputs = {}):
 
 #Filling in first page of values
 def page1(driver: webdriver.Edge, random = True):
-    print(Clearance)
-    print(Spacing)
-    print(SnowLoad)
     #input value for ground clearance
     results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), Clearance)
     #input value for pipe spacing
