@@ -8,32 +8,40 @@ AUTO_SNOW_LOAD = [0,5,10,20,40,60]
 AUTO_FILL = [31,40,53]
 AUTO_CLEARANCE = [x for x in range(12,25)]
 AUTO_SPACING = [x for x in range(2,11)]
-inputs = {}
 results = {}
 
 # runs all four pages and returns their output dictionary to add to the csv file
 # returns to the same place that it started, so it can run continuously
 def auto(driver, random = True, manual_inputs = {}):
-    global inputs
     global results
     global SnowLoad
     global Clearance
     global Spacing
     global Fill
     global PipeCount
-    inputs = manual_inputs
+    global PipeType
+    global Diameter
+    global SectionLength
+    #Saving values as default auto values for textbox fills and empty lists for comboboxes
     if random:
         SnowLoad = AUTO_SNOW_LOAD
         Clearance = AUTO_CLEARANCE
         Spacing = AUTO_SPACING
         Fill = AUTO_FILL
         PipeCount = rand.randint(1,10)
+        PipeType = []
+        Diameter = []
+        SectionLength = [100]
+    #saving values from manual input dict. saved as lists of one item to work with tester_functions
     else:
-        inputs = manual_inputs
-        PipeCount = inputs['pipe count']
-        Clearance = inputs['clearance']
-        Spacing = inputs['spacing']
-        SnowLoad = inputs['snow load']
+        PipeCount = int(manual_inputs['pipe count'])
+        Clearance = [manual_inputs['clearance']]
+        Spacing = [manual_inputs['spacing']]
+        SnowLoad = [manual_inputs['snow load']]
+        Fill = [manual_inputs['fill']]
+        PipeType = [manual_inputs['pipe type']]
+        Diameter = [manual_inputs["diameter"]]
+        SectionLength = [manual_inputs['section length']]
     results = {}
 
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macConduit_WebkitOuterClickLayer']"))
@@ -50,9 +58,10 @@ def auto(driver, random = True, manual_inputs = {}):
 
 #Filling in first page of values
 def page1(driver: webdriver.Edge, random = True):
-    global Clearance
+    print(Clearance)
+    print(Spacing)
+    print(SnowLoad)
     #input value for ground clearance
-
     results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), Clearance)
     #input value for pipe spacing
     results["spacing"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPipeSpacing_TextBoxElement']"), Spacing)
@@ -63,9 +72,9 @@ def page1(driver: webdriver.Edge, random = True):
 
 #Filling in second page of values
 def page2(driver: webdriver.Edge, random = True):
-    results["pipe type"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"), manual=(not random), manual_values=[inputs['pipe type']])
+    results["pipe type"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"), manual=(not random), manual_values=PipeType)
     time.sleep(1)
-    results["diameter"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"), manual=(not random), manual_values=[inputs['diameter']])
+    results["diameter"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeDia_ComboBoxElement']"), manual=(not random), manual_values=Diameter)
     time.sleep(.5)
     results["fill"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numPercentFill_TextBoxElement']"), Fill)
 
@@ -73,7 +82,6 @@ def page2(driver: webdriver.Edge, random = True):
         slider_element = driver.find_element(By.CSS_SELECTOR, "div[id*='sldNumPipes_SliderTrackElement']")
         actions = ActionChains(driver)
         results["pipe count"] = PipeCount
-       # print ("Pipe count:" + str(pipe_count))
         for _ in range(PipeCount - 1):
             actions.move_by_offset(slider_element.location['x'] + slider_element.size['width'] - 5, slider_element.location['y'] + 1).click()
             actions.move_by_offset(-(slider_element.location['x'] + slider_element.size['width'] - 5), -(slider_element.location['y'] + 1))
@@ -109,7 +117,7 @@ def page3(driver: webdriver.Edge, random = True):
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
 
 def page4(driver, random = True):
-    results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), [inputs['section length']])
+    results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), SectionLength)
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macAddSectionLength_WebkitOuterClickLayer']"))
     time.sleep(1)
     results["total frames"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numTotalHFrames_TextBoxElement']"))

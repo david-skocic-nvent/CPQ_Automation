@@ -19,6 +19,9 @@ PIPE_FIELD_NAMES = ["holder", "clearance", "spacing", "snow load", "pipe type", 
 CONDUIT_FIELD_NAMES = ["clearance", "spacing", "snow load", "pipe type", "diameter", "fill", "pipe count",
                        "section length", "overall weight", "cross member width", "frame spacing", "total frames"]
 
+DUCT_FIELD_NAMES = ["clearance", "extra cross member", "snow load", "shape", "width", "height", "gauge", "insulation thickness",
+                    "length", "insulation density", "overall weight", "cross member width", "frame spacing", "section length", "total frames"]
+
 LINK = "http://10.4.75.133:8020/Apps/Rooftop_1_MNL/"
 
 if __name__ == '__main__':
@@ -68,19 +71,37 @@ if __name__ == '__main__':
         while (a != "end"):
             match (a):
                 case "pipe":
-                    for _ in range(8):
-                        results = pipe.auto(driver)
-                        csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe")
-                case "conduit":
+                    dictreader = csvin("pipe")
+                    results = []
+                    for d in dictreader:
+                        results.append(d)
+                    print(results[0])
+                    print(pipe.auto(driver, random=False, manual_inputs=results[0]))
+                    #for _ in range(8):
+                    #    results = pipe.auto(driver)
+                    #    csvout(field_names=PIPE_FIELD_NAMES, dict = results, toolname = "pipe")
+                case "conduit1":
                     dictreader = csvin("conduit")
                     results = []
                     for d in dictreader:
                         results.append(d)
+                    print(results[0])
                     print(conduit.auto(driver, random=False, manual_inputs=results[0]))
+
                     #for _ in range(10):
                     #    results = conduit.auto(driver)
                     #    csvout(field_names=CONDUIT_FIELD_NAMES, dict = results, toolname = "conduit") 
-                case "duct":
-                    results = duct.auto(driver)
+                case "conduit2":
+                    results = conduit.auto(driver)
                     print(results)
+                case "duct":
+                    dictreader = csvin("duct")
+                    results = []
+                    for d in dictreader:
+                        results.append(d)
+                    print(results[0])
+                    print(duct.auto(driver, random=False, manual_inputs=results[0]))
+                    #results = duct.auto(driver)
+                    #print(results)
+                    #csvout(DUCT_FIELD_NAMES, results, "duct")
             a = input("tool?: ")
