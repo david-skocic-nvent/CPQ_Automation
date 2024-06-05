@@ -13,7 +13,7 @@ USERNAME = os.getenv("CPQ_USERNAME")
 PASSWORD = os.getenv("CPQ_PASSWORD")
 
 PIPE_FIELD_NAMES = ["holder", "clearance", "spacing", "snow load", "pipe type", "diameter", "insulation",
-                "material", "pipe count", "section length", "pressure", "overall weight", "cross member width",
+                "material", "pipe count", "section length", "overall weight", "cross member width",
                 "frame spacing", "hanger size", "total frames"]
 
 CONDUIT_FIELD_NAMES = ["clearance", "spacing", "snow load", "pipe type", "diameter", "fill", "pipe count",

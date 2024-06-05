@@ -122,7 +122,6 @@ def read_values_from_page2(driver):
     click_element(driver, (By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
     
 def page3(driver: webdriver.Edge, random = True):
-    results["pressure"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numOverallPSI_TextBoxElement']"))
     try:
         table = driver.find_elements(By.CSS_SELECTOR, "div[data-id*='dw-listview-bodyScroller_']")
         for element in table:
