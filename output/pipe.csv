@@ -101,3 +101,7 @@ Hanger,17,8,10,CPVC - Schedule 40,10,1,Gas,9,100,0,80,4,0,26
 Hanger,23,7,10,Copper - type K,5,1,Gas,4,100,57.24,68,18,8,7
 Clamp,21,8,60,Copper - type K,2,0.75,Water,9,100,118.8,112,6,3.5,18
 Roller,20,3,20,Copper - type L,12,0.0,Water,8,100,775.12,150,,12,51
+Hanger,18,7,0,Iron - Schedule 40,10,0.75,Water,6,100,471.9,122,,12,51
+Hanger,19,10,20,Copper - type L,3.5,0.0,Water,2,100,23,38,11,3.5,11
+Hanger,13,5,40,Copper - type L,1.25,0.5,Water,7,100,36.33,54,7,2,16
+Roller,12,5,60,Iron - Schedule 80,12,0.0,Gas,2,,243.2,42,,12,0

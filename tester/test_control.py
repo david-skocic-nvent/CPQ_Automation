@@ -16,6 +16,10 @@ NUMBER_OF_THREADS = 1
 
 LINK = "http://10.4.75.133:8020/Apps/Rooftop_1_MNL/"
 
+VALID_TOOLS = ["p", "pipe", "d", "duct", "c", "conduit"]
+
+# creates and returns a list of webdrivers and logs them into the CPQ website
+# there are NUMBER_OF_THREADS drivers in the list so each thread can execute one driver
 def make_drivers():
     drivers = []
     for i in range (NUMBER_OF_THREADS):
@@ -24,6 +28,8 @@ def make_drivers():
         login(drivers[i], USERNAME, PASSWORD)
     return drivers
 
+# finds and returns the number of tests each thread has to execute based on the total number of tests desired
+# This is not simply division because with 35 tests and 3 threads you need 12, 12, and 11 tests for the respective threads
 def get_thread_execution_counts(total_execution_count):
     thread_run_counts = []
     threads_left = NUMBER_OF_THREADS
@@ -33,7 +39,10 @@ def get_thread_execution_counts(total_execution_count):
         total_execution_count -= thread_run_counts[-1]
     return thread_run_counts
 
-if __name__ == '__main__':
+# a basic cli that allows the user to debug and run the tool
+# to get into debug mode, type debug when it says "Press enter to begin"
+def run_cli():
+    global drivers
     a = input("Press enter to begin: ")
 
     if a == "debug":
@@ -85,64 +94,62 @@ if __name__ == '__main__':
         while (a != "end"):
             a = input("what would you like to run?: ")
             args = a.split()
-            if len(args) != 3:
-                continue
-            args[2] = int(args[2])
-            match args[0]:
-                case "p":
-                    match args[1]:
-                        case "--direct" | "d":
-                            dictreader = csvin("pipe")
-                            results = []
-                            for d in dictreader:
-                                results.append(d)
-                            #print(pipe.auto(driver, random=False, manual_inputs=results[args[2]]))
-                        case "--random" | "r":
-                            execution_counts = get_thread_execution_counts(args[2])
-                            threads = []
-                            for i in range(NUMBER_OF_THREADS):
-                                threads.append(threading.Thread(target=pipe.auto, args=(drivers[i], execution_counts[i]), name=f"thread {i+1}"))
+            out = process_args(args)
+            if out is not None:
+                print(out)
 
-                            for i in range (NUMBER_OF_THREADS):
-                                threads[i].start()
-                            
-                            for i in range(NUMBER_OF_THREADS):
-                                threads[i].join()
-                case "c":
-                    match args[1]:
-                        case "--direct" | "d":
-                            dictreader = csvin("conduit")
-                            results = []
-                            for d in dictreader:
-                                results.append(d)
-                            #print(conduit.auto(driver, random=False, manual_inputs=results[args[2]]))
-                        case "--random" | "r":
-                            execution_counts = get_thread_execution_counts(args[2])
-                            threads = []
-                            for i in range(NUMBER_OF_THREADS):
-                                threads.append(threading.Thread(target=conduit.auto, args=(drivers[i], execution_counts[i]), name=f"thread {i+1}"))
+'''
+case "--direct" | "d":
+dictreader = csvin("pipe")
+results = []
+for d in dictreader:
+    results.append(d)'''   
 
-                            for i in range (NUMBER_OF_THREADS):
-                                threads[i].start()
-                            
-                            for i in range(NUMBER_OF_THREADS):
-                                threads[i].join()
-                case "d":
-                    match args[1]:
-                        case "--direct" | "d":
-                            dictreader = csvin("duct")
-                            results = []
-                            for d in dictreader:
-                                results.append(d)
-                            print(duct.auto(random=False, manual_inputs=results[args[2]]))
-                        case "--random" | "r":
-                            execution_counts = get_thread_execution_counts(args[2])
-                            threads = []
-                            for i in range(NUMBER_OF_THREADS):
-                                threads.append(threading.Thread(target=duct.auto, args=(drivers[i], execution_counts[i]), name=f"thread {i+1}"))
+def process_args(args: list):
+    random_test = True
+    execution_count = 1
+    tool = args.pop(0)
+    
+    if tool not in VALID_TOOLS:
+        return "Invalid tool entered"
+    
+    while len(args) > 0:
+        arg = args.pop(0)
+        if arg[0] == '-':
+            match arg:
+                case "-r" | "--random":
+                    random_test = True
+                case "-c":
+                    if len(args) == 0:
+                        return "Usage: -c <number_of_executions>"
+                    count = args.pop(0)
+                    if not (count.isnumeric()):
+                        return "Usage: -c <number_of_executions>"
+                    else:
+                        execution_count = int(count)
+                case "-d" | "--direct":
+                    random_test = False
+    
+    match tool:
+        case "p" | "pipe":
+            run_tool(pipe.auto, random_test=random_test, execution_count=execution_count)
+        case "d" | "duct":
+            run_tool(duct.auto, random_test=random_test, execution_count=execution_count)
+        case "c" | "conduit":
+            run_tool(conduit.auto, random_test=random_test, execution_count=execution_count)
+    
+def run_tool (tool_target, random_test=True, execution_count=1, direct_inputs = {}):
+    if random_test:
+        execution_counts = get_thread_execution_counts(execution_count)
+        threads = []
+        for i in range(NUMBER_OF_THREADS):
+            threads.append(threading.Thread(target=tool_target, args=(drivers[i], execution_counts[i]), name=f"thread {i+1}"))
 
-                            for i in range (NUMBER_OF_THREADS):
-                                threads[i].start()
-                            
-                            for i in range(NUMBER_OF_THREADS):
-                                threads[i].join()
+        for i in range (NUMBER_OF_THREADS):
+            threads[i].start()
+        
+        for i in range(NUMBER_OF_THREADS):
+            threads[i].join()
+
+if __name__ == '__main__':
+    run_cli()

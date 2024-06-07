@@ -104,3 +104,5 @@ clearance,extra cross member,snow load,shape,width,height,gauge,insulation thick
 14,False,0,Round,12,,24,1.5,5,.75,100,5.84,16,8,14
 14,False,40,Rectangle,24,6,16,2.5,10,1.5,100,111.44,30,8,14
 20,True,0,Rectangle,12,36,11,1,4,0,100,40.24,14,8,14
+13,False,5,Round,6,,22,0,10,0,100,3.53,6,8,14
+17,True,20,Round,36,,27,1.5,4,1,100,62.51,40,6,18

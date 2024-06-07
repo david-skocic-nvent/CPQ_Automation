@@ -104,3 +104,4 @@ clearance,spacing,snow load,pipe type,diameter,fill,pipe count,section length,ov
 15,7,10,Rigid Metal Conduit (RMC),3,31,8,100,89.04,88,10,11
 24,4,10,Rigid Metal Conduit (RMC),1.5,53,1,100,2.61,10,14,9
 13,7,20,Electrical Metallic Tubing (EMT),3.5,40,6,100,128.94,70,9,13
+20,3,60,Electrical Metallic Tubing (EMT),2,40,7,100,76.02,38,8.5,13

@@ -15,99 +15,96 @@ AUTO_EXTRA_CROSS_MEMBER = [True, False]
 AUTO_CLEARANCE = [x for x in range(12,25)]
 AUTO_WIDTH = [6,12,24,36,48]
 AUTO_HEIGHT = [6,12,24,36,48]
+AUTO_GAUGE = []
+AUTO_SHAPE = []
+AUTO_INSULATION_THICKNESS = []
+AUTO_LENGTH = []
+AUTO_INSULATION_DENSITY = []
+AUTO_SECTION_LENGTH = [100]
+
 
 # runs all four pages and returns their output dictionary to add to the csv file
 # returns to the same place that it started, so it can run continuously
 def auto(driver, executions, random=True, manual_inputs={}):
-    global Clearance
-    global SnowLoad
-    global ExtraCrossMember
-    global Width
-    global Height
-    global Gauge
-    global Shape
-    global InsulationThickness
-    global Length
-    global InsulationDensity
-    global SectionLength
-    if random:
-        Clearance = AUTO_CLEARANCE
-        SnowLoad = AUTO_SNOW_LOAD
-        ExtraCrossMember = AUTO_EXTRA_CROSS_MEMBER
-        Width = AUTO_WIDTH
-        Height = AUTO_HEIGHT
-        Gauge = []
-        Shape = []
-        InsulationThickness = []
-        Length = []
-        InsulationDensity = []
-        SectionLength = [100]
-    else:
-        Clearance = [manual_inputs['clearance']]
-        SnowLoad = [manual_inputs['snow load']]
-        ExtraCrossMember = [bool(manual_inputs['extra cross member'])]
-        Width = [manual_inputs['width']]
-        Height = [manual_inputs['height']]
-        Gauge = [manual_inputs['gauge']]
-        Shape = [manual_inputs['shape']]
-        InsulationThickness = [manual_inputs['insulation thickness']]
-        Length = [manual_inputs['length']]
-        InsulationDensity = [manual_inputs['insulation density']]
-        SectionLength = [manual_inputs['section length']]
-
     for i in range(executions):
         results = {}
         click_element(driver,(By.CSS_SELECTOR, "div[id*='macDuct_WebkitOuterClickLayer']"))
         time.sleep(3)
-        page1(driver, results, random)
+        page1(driver, results, random, manual_inputs)
         time.sleep(5)
-        page2(driver, results, random)
+        page2(driver, results, random, manual_inputs)
         time.sleep(2)
         page3(driver, results, random)
         time.sleep(3)
-        page4(driver, results, random)
+        page4(driver, results, random, manual_inputs)
         time.sleep(1)
         csvout(field_names=FIELD_NAMES, dict_to_write=results, toolname=TOOLNAME)
         print(f"thread {threading.current_thread().name} finished test execution {i + 1}")
 
 #Filling in first page of values
-def page1(driver: webdriver.Edge, results, random=True):
-    choose_combobox_value(driver, (By.CSS_SELECTOR, "select[id*='cboCrossMemberType_ComboBoxElement']"), manual=True, manual_values=["Double Sided A12A Strut"])
-    choose_combobox_value(driver, (By.CSS_SELECTOR, "select[id*='cboFootType_ComboBoxElement']"), manual=True, manual_values=["Heavy Duty"])
+def page1(driver: webdriver.Edge, results, random=True, inputs = {}):
+    if random:
+        clearance = AUTO_CLEARANCE
+        extra_cross_member = AUTO_EXTRA_CROSS_MEMBER
+        snow_load = AUTO_SNOW_LOAD
+    else:
+        clearance = [inputs['clearance']]
+        extra_cross_member = [inputs['extra cross member']]
+        snow_load = [inputs['snow load']]
+    
+    #choose_combobox_value(driver, (By.CSS_SELECTOR, "select[id*='cboCrossMemberType_ComboBoxElement']"), manual=True, manual_values=["Double Sided A12A Strut"])
+    #choose_combobox_value(driver, (By.CSS_SELECTOR, "select[id*='cboFootType_ComboBoxElement']"), manual=True, manual_values=["Heavy Duty"])
     time.sleep(1)
     #input value for ground clearance
-    results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), Clearance)
+    results["clearance"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numGndClearance_TextBoxElement']"), clearance)
     
     #input value for pipe spacing
-    if rand.choice(ExtraCrossMember):
+    if rand.choice(extra_cross_member):
         results["extra cross member"] = True
         click_element(driver, (By.CSS_SELECTOR, "input[id*='chkTopBar_CheckBoxElement']"))
     else:
         results["extra cross member"] = False
     
     #input value for snow load
-    results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), SnowLoad)
+    results["snow load"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSnowLoad_TextBoxElement']"), snow_load)
     
     #click next 
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext2_WebkitOuterClickLayer']")) #, multiple=True, element_index=1)
 
 #Filling in second page of values
-def page2(driver: webdriver.Edge, results, random=True):
-    results["shape"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"), manual=(not random), manual_values=Shape)
+def page2(driver: webdriver.Edge, results, random=True, inputs={}):
+    if random:
+        shape = AUTO_SHAPE
+        width = AUTO_WIDTH
+        height = AUTO_HEIGHT
+        length = AUTO_LENGTH
+        insulation_thickness = AUTO_INSULATION_THICKNESS
+        insulation_density = AUTO_INSULATION_DENSITY
+        gauge = AUTO_GAUGE
+    else:
+        shape = [inputs['shape']]
+        if shape[0] == "Rectangle":
+            height = [inputs['height']]
+        width = [inputs['width']]
+        length = [inputs['length']]
+        insulation_density = [inputs['insulation density']]
+        insulation_thickness = [inputs['insulation thickness']]
+        gauge = [inputs['gauge']]
+    results["shape"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboPipeType_ComboBoxElement']"), manual=(not random), manual_values=shape)
     time.sleep(1)
     if results["shape"] == "Round":
-        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctDia_TextBoxElement']"),Width)
+        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctDia_TextBoxElement']"),width)
     else:
-        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctWidth_TextBoxElement']"),Width)
-        results["height"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctHeight_TextBoxElement']"),Height)
+        results["width"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctWidth_TextBoxElement']"),width)
+        results["height"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numDuctHeight_TextBoxElement']"),height)
     time.sleep(1)
-    results["length"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctSegment_ComboBoxElement']"), manual=(not random), manual_values=Length)
+    results["length"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctSegment_ComboBoxElement']"), manual=(not random), manual_values=length)
     time.sleep(.1)
-    results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"), manual=(not random), manual_values=InsulationThickness)
+    results["insulation thickness"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationThickness_ComboBoxElement']"), manual=(not random), manual_values=insulation_thickness)
     time.sleep(.1)
-    results["insulation density"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationDensity_ComboBoxElement']"), manual=(not random), manual_values=InsulationDensity)
+    results["insulation density"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboInsulationDensity_ComboBoxElement']"), manual=(not random), manual_values=insulation_density)
     time.sleep(1)
-    results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"), manual=(not random), manual_values=Gauge)
+    results["gauge"] = choose_combobox_value(driver,(By.CSS_SELECTOR, "select[id*='cboDuctGage_ComboBoxElement']"), manual=(not random), manual_values=gauge)
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macUpdatePipeInfo_WebkitOuterClickLayer']"))
 
 def read_values_from_page2(driver: webdriver.Edge, results):
@@ -133,8 +130,12 @@ def page3(driver: webdriver.Edge, results, random=True):
     time.sleep(2)
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macNext3_WebkitOuterClickLayer']"))
 
-def page4(driver, results, random=True):
-    results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), SectionLength)
+def page4(driver, results, random=True, inputs={}):
+    if random:
+        section_length = AUTO_SECTION_LENGTH
+    else:
+        section_length = [inputs['section length']]
+    results["section length"] = choose_textbox_value(driver,(By.CSS_SELECTOR, "input[id*='numSectionLength_TextBoxElement']"), section_length)
     click_element(driver,(By.CSS_SELECTOR, "div[id*='macAddSectionLength_WebkitOuterClickLayer']"))
     time.sleep(2)
     results["total frames"] = read_value(driver,(By.CSS_SELECTOR, "input[id*='numTotalHFrames_TextBoxElement']"))
