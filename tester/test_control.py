@@ -1,9 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.edge.options import Options
 from fileout import *
 from tester_functions import login
 import rooftop.pipe as pipe
 import rooftop.conduit as conduit
 import rooftop.duct as duct
+import fasteners.fasteners as fastener
 import threading
 import math
 from dotenv import load_dotenv
@@ -16,14 +18,16 @@ NUMBER_OF_THREADS = 1
 
 LINK = "http://10.4.75.133:8020/Apps/Rooftop_1_MNL/"
 
-VALID_TOOLS = ["p", "pipe", "d", "duct", "c", "conduit"]
+VALID_TOOLS = ["p", "pipe", "d", "duct", "c", "conduit", "f", "fastener"]
 
 # creates and returns a list of webdrivers and logs them into the CPQ website
 # there are NUMBER_OF_THREADS drivers in the list so each thread can execute one driver
 def make_drivers():
     drivers = []
+    options = Options()
+    options.add_argument("--window-size=1920,1080")
     for i in range (NUMBER_OF_THREADS):
-        drivers.append(webdriver.Edge())
+        drivers.append(webdriver.Edge(options=options))
         drivers[i].get(LINK)
         login(drivers[i], USERNAME, PASSWORD)
     return drivers
@@ -41,6 +45,7 @@ def get_thread_execution_counts(total_execution_count):
 
 # a basic cli that allows the user to debug and run the tool
 # to get into debug mode, type debug when it says "Press enter to begin"
+# TODO: add debug to cli
 def run_cli():
     global drivers
     a = input("Press enter to begin: ")
@@ -105,6 +110,7 @@ results = []
 for d in dictreader:
     results.append(d)'''   
 
+# TODO add manual inputs
 def process_args(args: list):
     random_test = True
     execution_count = 1
@@ -137,6 +143,8 @@ def process_args(args: list):
             run_tool(duct.auto, random_test=random_test, execution_count=execution_count)
         case "c" | "conduit":
             run_tool(conduit.auto, random_test=random_test, execution_count=execution_count)
+        case "f" | "fastener":
+            run_tool(fastener.auto, random_test=random_test, execution_count=execution_count)
     
 def run_tool (tool_target, random_test=True, execution_count=1, direct_inputs = {}):
     if random_test:
