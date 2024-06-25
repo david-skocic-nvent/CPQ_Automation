@@ -57,8 +57,27 @@ def page1 (driver: webdriver.Edge):
             time.sleep(.5)
             results["certification"] = choose_combobox_value (driver, (By.XPATH, "//select[contains(@id, 'Certification_ComboBoxElement')]"))
             time.sleep(2)
-            read_From_table(driver, 1)
-    
-    time.sleep(5)
-    print(results)
 
+    read_From_table(driver, 1)
+    print(results)
+    click_element (driver, selection=(By.XPATH, "//a[contains(@href, 'javascript:window.ActiveSpecification.next();')]"))
+
+def page2 (driver: webdriver.Edge, supporting):
+    match supporting:
+        case "Conduits":
+            results["environment"] = choose_combobox_value (driver, (By.XPATH, "//select[contains(@id, 'Environment_ComboBoxElement')]"))
+            time.sleep(.5)
+            results["environment"] = choose_combobox_value (driver, (By.XPATH, "//select[contains(@id, 'InstallationOrientation_ComboBoxElement')]"))
+            time.sleep(.5)
+            results["environment"] = choose_combobox_value (driver, (By.XPATH, "//select[contains(@id, 'ClosingMechanism_ComboBoxElement')]"))
+            time.sleep(.5)
+    
+
+    read_From_table(driver, 1)
+    print(results)
+    click_element (driver, selection=(By.XPATH, "//a[contains(@href, 'javascript:window.ActiveSpecification.next();')]"))
+
+def page3(driver: webdriver.Edge, supporting):
+    match supporting:
+        case "Conduits":
+            
