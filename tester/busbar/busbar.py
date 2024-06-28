@@ -8,20 +8,31 @@ from dotenv import load_dotenv
 import time
 import os
 from typing import List
+from constants import *
 load_dotenv()
 USERNAME = os.getenv("TACTON_USERNAME")
 PASSWORD = os.getenv("TACTON_PASSWORD")
-
-FIELD_NAMES = ["part number", "configuration", "bar thickness", "bar width", "bar length", "hole pattern", "hole size", "material"]
-LINK = "https://nventefs-admin.tactoncpq.com/!tickets%7ET-00000938/solution/list"
-HTML_DUMP_FILE_PATH = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\dump.html"
 
 drivers: List[webdriver.Edge] = []
 threads: List[threading.Thread] = []
 drivers_in_use = []
 NUMBER_OF_THREADS = 1
-ALL_TEST_VALUES_FILE_PATH = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\parsed_numbers.csv"
-COMPLETED_PARTS_FILE_PATH = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\part_prices.csv"
+
+def configure_tool (tool):
+    global completed_parts_path
+    global tool_button_xpath
+    global run_test
+    global parsed_numbers_path
+    if tool == GROUND:
+        completed_parts_path = COMPLETED_PARTS_FILE_PATH_GROUND
+        parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_GROUND
+        tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[1]'
+        run_test = run_test_ground
+    elif tool == TELECOM:
+        completed_parts_path = COMPLETED_PARTS_FILE_PATH_TELECOM
+        parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_TELECOM
+        tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[2]'
+        run_test = run_test_telecom
 
 def make_drivers():
     global drivers
@@ -53,11 +64,10 @@ def read_csv_list (file_path):
         return_list.append(row)
     return return_list
 
-def write_csv(row):
-    csv_file = open("C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\part_prices.csv", "a", newline='')
+def write_csv(file_path, row):
+    csv_file = open(file_path, "a", newline='')
     writer = csv.writer(csv_file)
     writer.writerow(row)
-    
 
 def click_to_part_number_logic (driver):
     # clicks my project
@@ -66,8 +76,8 @@ def click_to_part_number_logic (driver):
     click_element(driver, (By.XPATH, '//*[@id="objectTab-null-overview"]/div[2]/div[1]/section[1]/div[1]/div[2]/div/a'))
     # clicks the busbar button
     click_element(driver, (By.XPATH, '//*[@id="table122206"]/tbody/tr[1]/td[2]'))
-    # clicks the electrical ground button
-    click_element(driver, (By.XPATH, '//*[@id="config-middle"]/div/div/div[2]/div/div/div[1]'))
+    # clicks the button for the right tool
+    click_element(driver, (By.XPATH, tool_button_xpath))
     # clicks the part number logic button
     click_element(driver, (By.XPATH, '//*[@id="config-left-column"]/ul/ul/li[2]'))
 
@@ -79,8 +89,35 @@ def get_out_of_selection (driver: webdriver.Edge):
     body = driver.find_element(By.TAG_NAME, 'body')
     body.send_keys(Keys.TAB)
 
+def run_test_telecom(driver, values):
+    choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-4609c11402-752f-4449-95d2-850a398973a8"]'), [values["prefix"]])
+    get_out_of_selection(driver)
+    time.sleep(1)
+    try_to_exit_warning (driver)
 
-def run_test(driver, values):
+    choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-46427860a6-e530-4307-b69e-b748fed3471b"]'), [values["configuration"]])
+    get_out_of_selection(driver)
+    time.sleep(1)
+    try_to_exit_warning (driver)
+
+    choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-46eb578ade-85e5-4036-81f5-2700316724ee"]'), [values["length"]])
+    get_out_of_selection(driver)
+    time.sleep(1)
+    try_to_exit_warning (driver)
+
+    choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-461605fd72-2d71-41a3-b471-d108a1d77bb6"]'), [values["number of holes"]])
+    get_out_of_selection(driver)
+    time.sleep(1)
+    try_to_exit_warning (driver)
+
+    choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-46bc4bc784-be3a-4cd2-a046-f5daf217323c"]'), ["a\b" + values["material"]])
+    get_out_of_selection(driver)
+    time.sleep(3)
+    try_to_exit_warning (driver)
+
+    read_prices(driver, values)
+
+def run_test_ground(driver, values):
     choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8cbc05ee-34f6-43f9-a1d0-af9a771b7ac0-46e978dfe6-a6a6-4bbf-8d0e-dd802ba7fbac"]'), [values["configuration"]])
     get_out_of_selection(driver)
     time.sleep(1)
@@ -114,12 +151,12 @@ def run_test(driver, values):
     choose_textbox_value(driver, (By.XPATH, '//*[@id="typeahead-widget-null-8cbc05ee-34f6-43f9-a1d0-af9a771b7ac0-46028e1b03-2f59-4b5d-ab93-a5fe5903969c"]'), ["a\b" + values["material"]])
     time.sleep(0.5)
     get_out_of_selection(driver)
-    time.sleep(1)
+    time.sleep(3)
     try_to_exit_warning(driver)
 
     read_prices(driver, values)
 
-def read_prices (driver, values):
+def read_prices(driver, values):
     return_list = []
     return_list.append(values["part number"])
     return_list.append(read_value(driver, (By.XPATH, '//*[@id="PricingEditorTable"]/table/tfoot/tr/th[2]/span/span')))
@@ -131,24 +168,25 @@ def read_prices (driver, values):
         return_list.append(read_value(driver, (By.XPATH, f'//*[@id="bom-item-{i}"]/td[6]/span/span')))
 
     # a last check to see if the part number is put in correctly
+    part_number_on_site = read_value (driver, (By.XPATH, '//*[@id="widget-null-90a80895-c989-4fe3-8d3e-8f141408f9b9-4616533bf9-3595-470c-9006-a4615b24d6dd-row"]/div[2]/div/div/input')) 
 
-    if return_list[0] != read_value (driver, (By.XPATH, '//*[@id="widget-null-90a80895-c989-4fe3-8d3e-8f141408f9b9-4616533bf9-3595-470c-9006-a4615b24d6dd-row"]/div[2]/div/div/input')):
-        print (f"Part number {[return_list[0]]} was entered incorrectly.")
+    if return_list[0] != part_number_on_site:
+        print (f"Part number {[return_list[0]]} was entered incorrectly. {part_number_on_site} was entered instead")
     else:
-        write_csv(return_list)
+        write_csv(completed_parts_path, return_list)
 
-def main():
+def main(tool):
     global drivers
-    tests = read_csv_dict_list(ALL_TEST_VALUES_FILE_PATH)
-    completed_tests = read_csv_list(COMPLETED_PARTS_FILE_PATH)
+
+    configure_tool(tool)
+
+    tests = read_csv_dict_list(parsed_numbers_path)
+    completed_tests = read_csv_list(completed_parts_path)
 
     # get a list of the completed part numbers
     completed_part_numbers = []
     for row in completed_tests:
         completed_part_numbers.append(row[0])
-
-    print(len(completed_part_numbers))
-    print(len(tests))
 
     tests_to_remove = []
 
@@ -162,30 +200,33 @@ def main():
     for test in tests_to_remove:
         tests.remove(test)
 
+    # 
     for test in tests:
-        if test["hole size"] != "other":
-            print(test["part number"])
+        print(test["part number"])
 
     make_drivers()
 
+    # get to part number logic part of the program
     for i in range(NUMBER_OF_THREADS):
         threads.append(threading.Thread(target=click_to_part_number_logic, args = (drivers[i],)))
         threads[-1].start()
         print(threads[-1].is_alive())
 
+    # wait for threads to finish
     for i in range(NUMBER_OF_THREADS):
         threads[i].join()
 
+    # loop through the remaining tests, removing one every time 
     while len(tests) > 0:
         for i, thread in enumerate(threads):
             if not thread.is_alive():
-                while tests[0]["hole size"] == "other":
-                    tests.pop(0)
                 threads[i] = threading.Thread(target=run_test, args=(drivers[i],tests[0]))
                 threads[i].start()
-                print (f"Started running test {i}")
+                print (f"Started running test for {tests[0]["part number"]}")
                 i = i + 1
                 tests.pop(0)
         time.sleep(2)
 
     time.sleep(5)
+
+main(TELECOM)

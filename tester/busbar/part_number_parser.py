@@ -1,8 +1,8 @@
 import csv
+from constants import *
 
-FIELD_NAMES = ["part number", "configuration", "bar thickness", "bar width", "bar length", "hole pattern", "hole size", "material"]
 
-configurations = {
+egb_configurations = {
     'A': "(A) Busbar, Insulators and Brackets",
     'B': "(B) Busbar and Brackets",
     'C': "(C) Busbar Only",
@@ -26,9 +26,41 @@ hole_sizes = {
     'B': "9/16 in",
 }
 
+telecom_configuration = {
+    'A':"(A) Busbar, Insulators and Brackets",
+    'C':"(C) Busbar Only",
+    'F':"(F) Busbar, Insulators, Brackets and Plexiglass Cover"
+}
+
+telecom_lengths = [
+    "06L",
+    "12L",
+    "16L",
+    "18L",
+    "20L",
+    "24L",
+    "29L"
+]
+
+telecom_number_of_holes = [
+    "18P", 
+    "41P",
+    "02P",
+    "06P",
+    "08P",
+    "10P",
+    "12P",
+    "14P",
+    "15P",
+    "19P",
+    "23P",
+    "27P",
+    "33P"
+]
+
 other_count = 0
 
-def parse(s):
+def parse_ground(s):
     global other_count
     configuration = None
     thickness = None
@@ -50,7 +82,7 @@ def parse(s):
         temp_string += s[0]
         
         if configuration == None:
-            configuration = configurations[temp_string]
+            configuration = egb_configurations[temp_string]
             temp_string = ""
             #print(configuration)
             return_dict["configuration"] = configuration
@@ -96,9 +128,6 @@ def parse(s):
     elif s[0] == 'T':
         material = "Tinned Copper"
         s = s[1:]
-
-
-
     if len(s) > 0 : 
         #print("unable to process this part number")
         return False
@@ -108,24 +137,92 @@ def parse(s):
 
     return return_dict
 
+def parse_telecom(s):
+    global other_count
+    prefix = None
+    configuration = None
+    length = None
+    material = None
+    number_of_holes = None
+    return_dict = {}
 
-f = open("C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\part_numbers_from_sheet.txt", "r")
+    return_dict["part number"] = s
 
-part_numbers = f.read().split()
+    temp_string = ""
+    while (len(s)) > 0:
+        temp_string += s[0]
+        if prefix == None:
+            if (len(temp_string) == 3 and temp_string == "TGB") or (len(temp_string) == 4):
+                    prefix = temp_string
+                    temp_string = ""
+                    return_dict["prefix"] = prefix
+        elif configuration == None:
+            configuration = telecom_configuration[temp_string]
+            temp_string = ""
+            return_dict["configuration"] = configuration
+        elif length == None:
+            if len(temp_string) == 3:
+                length = temp_string
+                if length not in telecom_lengths:
+                    return False
+                temp_string = "" 
+                return_dict["length"] = length
+        elif number_of_holes == None:
+            if len(temp_string) == 3:
+                number_of_holes = temp_string
+                if number_of_holes not in telecom_number_of_holes:
+                    return False
+                temp_string = ""
+                return_dict["number of holes"] = number_of_holes
+        else:
+            break
+        s = s[1:]
+    if s == "":
+        material = "Copper"
+    elif s[0] == 'T':
+        material = "Tinned Copper"
+        s = s[1:]
+    if len(s) > 0 : 
+        return False
+    
+    return_dict["material"] = material
 
-f.close()
+    print(return_dict)
+    return return_dict
 
-dict_list = []
 
-for num in part_numbers:
-    dict_list.append(parse(num))
-    if dict_list[-1] == False:
-        dict_list.pop(-1)
-print(dict_list)
+def run_parser (tool):
+    if tool == "ground":
+        raw_part_number_path = RAW_PART_NUMBERS_FILE_PATH_GROUND
+        parsed_part_number_path = PARSED_NUMBERS_FILE_PATH_GROUND
+        field_names = FIELD_NAMES_GROUND
+        parse = parse_ground
+    elif tool == "telecom":
+        raw_part_number_path = RAW_PART_NUMBERS_FILE_PATH_TELECOM
+        parsed_part_number_path = PARSED_NUMBERS_FILE_PATH_TELECOM
+        field_names = FIELD_NAMES_TELECOM
+        parse = parse_telecom
 
-csv_file = open("C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\parsed_numbers.csv", "w", newline='')
+    f = open(raw_part_number_path, "r")
+    part_numbers = f.read().split()
+    f.close()
 
-writer = csv.DictWriter(csv_file, fieldnames=FIELD_NAMES)
-writer.writeheader()
-writer.writerows(dict_list)
-csv_file.close()
+    dict_list = []
+
+    # add parsed numbers to the parsed
+    for num in part_numbers:
+        parsed_num = parse(num)
+        if parsed_num not in dict_list:
+            dict_list.append(parsed_num)
+        if dict_list[-1] == False:
+            dict_list.pop(-1)
+    print(len(dict_list))
+    
+    # write parsed parts to parsed number file
+    csv_file = open(parsed_part_number_path, "w", newline='')
+    writer = csv.DictWriter(csv_file, fieldnames=field_names)
+    writer.writeheader()
+    writer.writerows(dict_list)
+    csv_file.close()
+
+run_parser(TELECOM)

@@ -1,0 +1,35 @@
+part number,prefix,configuration,length,number of holes,material
+TMGBA12L15P,TMGB,"(A) Busbar, Insulators and Brackets",12L,15P,Copper
+TMGBA12L15PT,TMGB,"(A) Busbar, Insulators and Brackets",12L,15P,Tinned Copper
+TMGBA16L19P,TMGB,"(A) Busbar, Insulators and Brackets",16L,19P,Copper
+TMGBA16L19PT,TMGB,"(A) Busbar, Insulators and Brackets",16L,19P,Tinned Copper
+TMGBA18L23P,TMGB,"(A) Busbar, Insulators and Brackets",18L,23P,Copper
+TMGBA18L23PT,TMGB,"(A) Busbar, Insulators and Brackets",18L,23P,Tinned Copper
+TMGBA20L27P,TMGB,"(A) Busbar, Insulators and Brackets",20L,27P,Copper
+TMGBA20L27PT,TMGB,"(A) Busbar, Insulators and Brackets",20L,27P,Tinned Copper
+TMGBA24L33P,TMGB,"(A) Busbar, Insulators and Brackets",24L,33P,Copper
+TMGBA24L33PT,TMGB,"(A) Busbar, Insulators and Brackets",24L,33P,Tinned Copper
+TMGBA29L41P,TMGB,"(A) Busbar, Insulators and Brackets",29L,41P,Copper
+TMGBA29L41PT,TMGB,"(A) Busbar, Insulators and Brackets",29L,41P,Tinned Copper
+TMGBC20L27P,TMGB,(C) Busbar Only,20L,27P,Copper
+TMGBF12L15PT,TMGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12L,15P,Tinned Copper
+TMGBF24L33P,TMGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",24L,33P,Copper
+TMGBF24L33PT,TMGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",24L,33P,Tinned Copper
+TGBA06L02P,TGB,"(A) Busbar, Insulators and Brackets",06L,02P,Copper
+TGBA06L02PT,TGB,"(A) Busbar, Insulators and Brackets",06L,02P,Tinned Copper
+TGBA12L06P,TGB,"(A) Busbar, Insulators and Brackets",12L,06P,Copper
+TGBA12L06PT,TGB,"(A) Busbar, Insulators and Brackets",12L,06P,Tinned Copper
+TGBA16L08P,TGB,"(A) Busbar, Insulators and Brackets",16L,08P,Copper
+TGBA16L08PT,TGB,"(A) Busbar, Insulators and Brackets",16L,08P,Tinned Copper
+TGBA18L10P,TGB,"(A) Busbar, Insulators and Brackets",18L,10P,Copper
+TGBA18L10PT,TGB,"(A) Busbar, Insulators and Brackets",18L,10P,Tinned Copper
+TGBA20L12P,TGB,"(A) Busbar, Insulators and Brackets",20L,12P,Copper
+TGBA20L12PT,TGB,"(A) Busbar, Insulators and Brackets",20L,12P,Tinned Copper
+TGBA24L14P,TGB,"(A) Busbar, Insulators and Brackets",24L,14P,Copper
+TGBA24L14PT,TGB,"(A) Busbar, Insulators and Brackets",24L,14P,Tinned Copper
+TGBA29L18P,TGB,"(A) Busbar, Insulators and Brackets",29L,18P,Copper
+TGBA29L18PT,TGB,"(A) Busbar, Insulators and Brackets",29L,18P,Tinned Copper
+TGBF06L02P,TGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",06L,02P,Copper
+TGBF06L02PT,TGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",06L,02P,Tinned Copper
+TGBF12L06PT,TGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12L,06P,Tinned Copper
+TGBF24L14PT,TGB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",24L,14P,Tinned Copper
