@@ -2,7 +2,7 @@ import csv
 from constants import *
 
 
-egb_configurations = {
+ground_configurations = {
     'A': "(A) Busbar, Insulators and Brackets",
     'B': "(B) Busbar and Brackets",
     'C': "(C) Busbar Only",
@@ -10,13 +10,13 @@ egb_configurations = {
     'F': "(F) Busbar, Insulators, Brackets and Plexiglass Cover"
 }
 
-bar_thicknesses = {
+ground_bar_thicknesses = {
     '14': "14 - 1/4",
     '38': "38 - 3/8",
     '12': "12 - 1/2"
 }
 
-hole_sizes = {
+ground_hole_sizes = {
     'A': {
         'A': "7/16 in",
         'B': "5/8 in",
@@ -127,7 +127,50 @@ hole_sizes = {
     }
 }
 
-telecom_configuration = {
+ground_pigtail_codes = {
+    '1G': "#6 Solid Copper Wire",
+    '1T': "#2 Solid Copper Wire, Tinned",
+    '1K': "#4 Solid Copper Wire, Tinned",
+    '1V': "#2 Concentric Copper Cable, 7 Strand",
+    '1L': "#4 Concentric Copper Cable, 7 Strand",
+    '2C': "1/0 Concentric Copper Cable, 7 Strand",
+    '2G': "2/0 Concentric Copper Cable, 7 Strand",
+    '2L': "3/0 Concentric Copper Cable, 19 Strand",
+    '2Q': "4/0 Concentric Copper Cable, 7 Strand",
+    '2V': "250 KCM Concentric Copper Cable, 19 Strand",
+    '3D': "350 KCM Concentric Copper Cable, 37 Strand",
+    '3Q': "500 KCM Concentric Copper Cable, 37 Strand",
+    '4L': "750 KCM Concentric Copper Cable, 61 Strand",
+}
+
+ground_pigtail_lengths = {
+    'A': "1 ft",
+    'B': "2 ft",
+    'C': "3 ft",
+    'D': "4 ft",
+    'E': "5 ft",
+    'F': "6 ft",
+    'G': "7 ft",
+    'H': "8 ft",
+    'J': "9 ft",
+    'K': "10 ft",
+    'L': "12 ft",
+    'M': "14 ft",
+    'N': "16 ft",
+    'P': "18 ft",
+    'Q': "20 ft",
+    'R': "22 ft",
+    'S': "24 ft",
+    'T': "26 ft",
+    'U': "28 ft",
+    'V': "30 ft",
+    'W': "32 ft",
+    'X': "34 ft",
+    'Y': "36 ft",
+    'Z': "38 ft",
+}
+
+telecom_configurations = {
     'A':"(A) Busbar, Insulators and Brackets",
     'C':"(C) Busbar Only",
     'F':"(F) Busbar, Insulators, Brackets and Plexiglass Cover"
@@ -159,140 +202,102 @@ telecom_number_of_holes = [
     "33P"
 ]
 
-other_count = 0
-
 def parse_ground(s):
-    global other_count
-    configuration = None
-    thickness = None
-    width = None
-    length = None
-    hole_pattern = None
-    hole_size = None
-    material = None
     return_dict = {}
 
     return_dict["part number"] = s
+    try:
+        # filter out any non-EGB
+        if s[0:3] != "EGB":
+            return False
+        s = s[3:]
 
-    if s[0:3] != "EGB":
-        #print("Bad part number")
-        return False
-    s = s[3:]
-    temp_string = ""
-    while (len(s)) > 0:
-        temp_string += s[0]
-        
-        if configuration == None:
-            configuration = egb_configurations[temp_string]
-            temp_string = ""
-            #print(configuration)
-            return_dict["configuration"] = configuration
-        elif thickness == None:
-            if len(temp_string) == 2:
-                thickness = temp_string
-                temp_string = ""
-                #print(thickness)
-                return_dict["bar thickness"] = thickness
-        elif width == None:
-            width = temp_string
-            temp_string = ""
-            #print(width)
-            return_dict["bar width"] = width
-        elif length == None:
-            if not s[1].isnumeric():
-                length = temp_string
-                temp_string = "" 
-                #print(length)
-                return_dict["bar length"] = length
-        elif hole_pattern == None:
-            hole_pattern = temp_string
-            temp_string = ""
-            return_dict["hole pattern"] = hole_pattern
-            #print(hole_pattern)
-        elif hole_size == None:
-            if temp_string == hole_pattern:
-                if hole_pattern != 'N':
-                    hole_size = "7/16 in"
-                else:
-                    hole_size = "No Hole Pattern"
-                return_dict["hole size"] = hole_size
-            else:
-                hole_size = "other"
-                other_count += 1
-                return_dict["hole size"] = hole_size
-                #print(hole_size)
+        # get configuration, thickness and width from the string
+        return_dict["configuration"] = ground_configurations[s[0]]
+        return_dict["bar thickness"] = ground_bar_thicknesses[s[1:3]]
+        return_dict["bar width"] = s[3]
+        s = s[4:]
+
+        # check if bar length is 2 or 3 digits and add it accordingly
+        if s[2].isnumeric():
+            return_dict["bar length"] = s[0:3]
+            s = s[3:]
         else:
-            break
-        s = s[1:]
-    if s == "":
-        material = "Copper"
-    elif s[0] == 'T':
-        material = "Tinned Copper"
-        s = s[1:]
-    if len(s) > 0 : 
-        #print("unable to process this part number")
-        return False
-    
-    return_dict["material"] = material
-    #print(material)
+            return_dict["bar length"] = s[0:2]
+            s = s[2:]
+        # get hole pattern from the next character, then base hole size on said hole pattern       
+        return_dict["hole pattern"] = s[0]
+        return_dict["hole size"] = ground_hole_sizes[return_dict["hole pattern"]][s[1]]
+        s = s[2:]
 
-    return return_dict
+        # if the part number is over, then it is just copper, otherwise if theres a T, its tinned copper
+        if s == "":
+            return_dict["material"] = "Copper"
+        elif s[0] == 'T':
+            return_dict["material"] = "Tinned Copper"
+            s = s[1:]
+        
+        # if string is empty, the part is done. Otherwise get the pigtail code from the remaining characters
+        if len(s) > 0: 
+            return_dict["pigtail code"] = ground_pigtail_codes[s[0:2]]
+            return_dict["pigtail length"] = ground_pigtail_lengths[s[2]]
+            s = s[3:]
+            if len(s) > 0:
+                return False
+        else:
+            return_dict["pigtail code"] = '-'
+            return_dict["pigtail length"] = '-'
+            
+        return return_dict
+    
+    # if a value was not in any of the dictionaries, the part is invalid (at least to enter into the website)
+    except KeyError:
+        return False
 
 def parse_telecom(s):
-    global other_count
-    prefix = None
-    configuration = None
-    length = None
-    material = None
-    number_of_holes = None
     return_dict = {}
 
-    return_dict["part number"] = s
-
-    temp_string = ""
-    while (len(s)) > 0:
-        temp_string += s[0]
-        if prefix == None:
-            if (len(temp_string) == 3 and temp_string == "TGB") or (len(temp_string) == 4):
-                    prefix = temp_string
-                    temp_string = ""
-                    return_dict["prefix"] = prefix
-        elif configuration == None:
-            configuration = telecom_configuration[temp_string]
-            temp_string = ""
-            return_dict["configuration"] = configuration
-        elif length == None:
-            if len(temp_string) == 3:
-                length = temp_string
-                if length not in telecom_lengths:
-                    return False
-                temp_string = "" 
-                return_dict["length"] = length
-        elif number_of_holes == None:
-            if len(temp_string) == 3:
-                number_of_holes = temp_string
-                if number_of_holes not in telecom_number_of_holes:
-                    return False
-                temp_string = ""
-                return_dict["number of holes"] = number_of_holes
+    try:
+        # set prefix and filter out parts that arent telecom
+        return_dict["part number"] = s
+        if s[0:3] == "TGB":
+            return_dict["prefix"] = "TGB"
+            s = s[3:]
+        elif s[0:4] == "TMGB":
+            return_dict["prefix"] = "TMGB"
+            s = s[4:]
         else:
-            break
-        s = s[1:]
-    if s == "":
-        material = "Copper"
-    elif s[0] == 'T':
-        material = "Tinned Copper"
-        s = s[1:]
-    if len(s) > 0 : 
-        return False
-    
-    return_dict["material"] = material
+            return False
 
-    print(return_dict)
-    return return_dict
+        # fill in next few values based on string if they are allowed
+        return_dict["configuration"] = telecom_configurations[s[0]]
+        if s[1:4] not in telecom_lengths:
+            return False
+        return_dict["length"] = s[1:4]
+        if s[4:7] not in telecom_number_of_holes:
+            return False
+        return_dict["number of holes"] = s[4:7]
+        s = s[7:]
+
+        # if there is anything left in the string then it is indicating tinned copper or is incorrect
+        if len(s) > 0:
+            if s[0] == 'T':
+                return_dict["material"] = "Tinned Copper"
+            else:
+                return False
+        else:
+            return_dict["material"] = "Copper"
+
+        return return_dict
+    
+    # if something wasnt in a dictionary then its not on the website
+    except KeyError:
+        return False
+
 
 
 def run_parser (tool):
+
     if tool == "ground":
         raw_part_number_path = RAW_PART_NUMBERS_FILE_PATH_GROUND
         parsed_part_number_path = PARSED_NUMBERS_FILE_PATH_GROUND
@@ -311,13 +316,14 @@ def run_parser (tool):
     dict_list = []
 
     # add parsed numbers to the parsed
+    print(len(part_numbers))
     for num in part_numbers:
         parsed_num = parse(num)
         if parsed_num not in dict_list:
             dict_list.append(parsed_num)
         if dict_list[-1] == False:
             dict_list.pop(-1)
-    print(len(dict_list))
+    print(dict_list)
     
     # write parsed parts to parsed number file
     csv_file = open(parsed_part_number_path, "w", newline='')
@@ -326,4 +332,4 @@ def run_parser (tool):
     writer.writerows(dict_list)
     csv_file.close()
 
-run_parser(TELECOM)
+run_parser(GROUND)

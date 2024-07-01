@@ -1,582 +1,584 @@
-part number,configuration,bar thickness,bar width,bar length,hole pattern,hole size,material
-EGBA142144EE,"(A) Busbar, Insulators and Brackets",14,2,144,E,7/16 in,Copper
-EGBA144144LL,"(A) Busbar, Insulators and Brackets",14,4,144,L,7/16 in,Copper
-EGBA142120EE,"(A) Busbar, Insulators and Brackets",14,2,120,E,7/16 in,Copper
-EGBA142120JJ,"(A) Busbar, Insulators and Brackets",14,2,120,J,7/16 in,Copper
-EGBA143120DGT,"(A) Busbar, Insulators and Brackets",14,3,120,D,other,Tinned Copper
-EGBA144120CCT,"(A) Busbar, Insulators and Brackets",14,4,120,C,7/16 in,Tinned Copper
-EGBA144120NN,"(A) Busbar, Insulators and Brackets",14,4,120,N,No Hole Pattern,Copper
-EGBA146120NN,"(A) Busbar, Insulators and Brackets",14,6,120,N,No Hole Pattern,Copper
-EGBA384120BB,"(A) Busbar, Insulators and Brackets",38,4,120,B,7/16 in,Copper
-EGBA384120CB,"(A) Busbar, Insulators and Brackets",38,4,120,C,other,Copper
-EGBA14296BB,"(A) Busbar, Insulators and Brackets",14,2,96,B,7/16 in,Copper
-EGBA14296BD,"(A) Busbar, Insulators and Brackets",14,2,96,B,other,Copper
-EGBA14296NN,"(A) Busbar, Insulators and Brackets",14,2,96,N,No Hole Pattern,Copper
-EGBA14396EC,"(A) Busbar, Insulators and Brackets",14,3,96,E,other,Copper
-EGBA14396NN,"(A) Busbar, Insulators and Brackets",14,3,96,N,No Hole Pattern,Copper
-EGBA14496CC,"(A) Busbar, Insulators and Brackets",14,4,96,C,7/16 in,Copper
-EGBA14496EE,"(A) Busbar, Insulators and Brackets",14,4,96,E,7/16 in,Copper
-EGBA14496NN,"(A) Busbar, Insulators and Brackets",14,4,96,N,No Hole Pattern,Copper
-EGBC14296NN,(C) Busbar Only,14,2,96,N,No Hole Pattern,Copper
-EGBA14384CCT,"(A) Busbar, Insulators and Brackets",14,3,84,C,7/16 in,Tinned Copper
-EGBD14284NN,(D) Busbar and Insulators,14,2,84,N,No Hole Pattern,Copper
-EGBA14480GG,"(A) Busbar, Insulators and Brackets",14,4,80,G,7/16 in,Copper
-EGBA14172NN,"(A) Busbar, Insulators and Brackets",14,1,72,N,No Hole Pattern,Copper
-EGBA14272NN,"(A) Busbar, Insulators and Brackets",14,2,72,N,No Hole Pattern,Copper
-EGBA14372GG,"(A) Busbar, Insulators and Brackets",14,3,72,G,7/16 in,Copper
-EGBA14472BB,"(A) Busbar, Insulators and Brackets",14,4,72,B,7/16 in,Copper
-EGBA14472CB,"(A) Busbar, Insulators and Brackets",14,4,72,C,other,Copper
-EGBA14472CC,"(A) Busbar, Insulators and Brackets",14,4,72,C,7/16 in,Copper
-EGBA14270EE,"(A) Busbar, Insulators and Brackets",14,2,70,E,7/16 in,Copper
-EGBA12460NN,"(A) Busbar, Insulators and Brackets",12,4,60,N,No Hole Pattern,Copper
-EGBA14260BB,"(A) Busbar, Insulators and Brackets",14,2,60,B,7/16 in,Copper
-EGBA14260JJ,"(A) Busbar, Insulators and Brackets",14,2,60,J,7/16 in,Copper
-EGBA14260NN,"(A) Busbar, Insulators and Brackets",14,2,60,N,No Hole Pattern,Copper
-EGBA14360DGT,"(A) Busbar, Insulators and Brackets",14,3,60,D,other,Tinned Copper
-EGBA14460CC,"(A) Busbar, Insulators and Brackets",14,4,60,C,7/16 in,Copper
-EGBA14460CCT,"(A) Busbar, Insulators and Brackets",14,4,60,C,7/16 in,Tinned Copper
-EGBA14460GG,"(A) Busbar, Insulators and Brackets",14,4,60,G,7/16 in,Copper
-EGBA14660CC,"(A) Busbar, Insulators and Brackets",14,6,60,C,7/16 in,Copper
-EGBA38460BB,"(A) Busbar, Insulators and Brackets",38,4,60,B,7/16 in,Copper
-EGBA38460NN,"(A) Busbar, Insulators and Brackets",38,4,60,N,No Hole Pattern,Copper
-EGBA14256JJ,"(A) Busbar, Insulators and Brackets",14,2,56,J,7/16 in,Copper
-EGBA14354CC,"(A) Busbar, Insulators and Brackets",14,3,54,C,7/16 in,Copper
-EGBA14250BD,"(A) Busbar, Insulators and Brackets",14,2,50,B,other,Copper
-EGBA14450EB,"(A) Busbar, Insulators and Brackets",14,4,50,E,other,Copper
-EGBA12448NN,"(A) Busbar, Insulators and Brackets",12,4,48,N,No Hole Pattern,Copper
-EGBA14148NN,"(A) Busbar, Insulators and Brackets",14,1,48,N,No Hole Pattern,Copper
-EGBA14248BB,"(A) Busbar, Insulators and Brackets",14,2,48,B,7/16 in,Copper
-EGBA14248GG,"(A) Busbar, Insulators and Brackets",14,2,48,G,7/16 in,Copper
-EGBA14248JJ,"(A) Busbar, Insulators and Brackets",14,2,48,J,7/16 in,Copper
-EGBA14248NN,"(A) Busbar, Insulators and Brackets",14,2,48,N,No Hole Pattern,Copper
-EGBA14348CC,"(A) Busbar, Insulators and Brackets",14,3,48,C,7/16 in,Copper
-EGBA14348DGT,"(A) Busbar, Insulators and Brackets",14,3,48,D,other,Tinned Copper
-EGBA14348NN,"(A) Busbar, Insulators and Brackets",14,3,48,N,No Hole Pattern,Copper
-EGBA14448AA,"(A) Busbar, Insulators and Brackets",14,4,48,A,7/16 in,Copper
-EGBA14448BB,"(A) Busbar, Insulators and Brackets",14,4,48,B,7/16 in,Copper
-EGBA14448CB,"(A) Busbar, Insulators and Brackets",14,4,48,C,other,Copper
-EGBA14448CC,"(A) Busbar, Insulators and Brackets",14,4,48,C,7/16 in,Copper
-EGBA14448CCT,"(A) Busbar, Insulators and Brackets",14,4,48,C,7/16 in,Tinned Copper
-EGBA14448FF,"(A) Busbar, Insulators and Brackets",14,4,48,F,7/16 in,Copper
-EGBA14448GG,"(A) Busbar, Insulators and Brackets",14,4,48,G,7/16 in,Copper
-EGBA14448LL,"(A) Busbar, Insulators and Brackets",14,4,48,L,7/16 in,Copper
-EGBA14448MM,"(A) Busbar, Insulators and Brackets",14,4,48,M,7/16 in,Copper
-EGBA14448NN,"(A) Busbar, Insulators and Brackets",14,4,48,N,No Hole Pattern,Copper
-EGBA14448NNT,"(A) Busbar, Insulators and Brackets",14,4,48,N,No Hole Pattern,Tinned Copper
-EGBA14448RR,"(A) Busbar, Insulators and Brackets",14,4,48,R,7/16 in,Copper
-EGBA14648BB,"(A) Busbar, Insulators and Brackets",14,6,48,B,7/16 in,Copper
-EGBA14648CC,"(A) Busbar, Insulators and Brackets",14,6,48,C,7/16 in,Copper
-EGBA14648NN,"(A) Busbar, Insulators and Brackets",14,6,48,N,No Hole Pattern,Copper
-EGBA38248EE,"(A) Busbar, Insulators and Brackets",38,2,48,E,7/16 in,Copper
-EGBA38448BB,"(A) Busbar, Insulators and Brackets",38,4,48,B,7/16 in,Copper
-EGBA38448CB,"(A) Busbar, Insulators and Brackets",38,4,48,C,other,Copper
-EGBA38448CC,"(A) Busbar, Insulators and Brackets",38,4,48,C,7/16 in,Copper
-EGBA38448GG,"(A) Busbar, Insulators and Brackets",38,4,48,G,7/16 in,Copper
-EGBA38448LL,"(A) Busbar, Insulators and Brackets",38,4,48,L,7/16 in,Copper
-EGBA38448NN,"(A) Busbar, Insulators and Brackets",38,4,48,N,No Hole Pattern,Copper
-EGBC14248NN,(C) Busbar Only,14,2,48,N,No Hole Pattern,Copper
-EGBC14448NN,(C) Busbar Only,14,4,48,N,No Hole Pattern,Copper
-EGBF12448CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,48,C,other,Copper
-EGBF12448CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,48,C,7/16 in,Copper
-EGBF14448CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,48,C,7/16 in,Copper
-EGBF14448CCT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,48,C,7/16 in,Tinned Copper
-EGBA12842NN,"(A) Busbar, Insulators and Brackets",12,8,42,N,No Hole Pattern,Copper
-EGBA14442CB,"(A) Busbar, Insulators and Brackets",14,4,42,C,other,Copper
-EGBA14442CC,"(A) Busbar, Insulators and Brackets",14,4,42,C,7/16 in,Copper
-EGBA38642LL,"(A) Busbar, Insulators and Brackets",38,6,42,L,7/16 in,Copper
-EGBA14240EET,"(A) Busbar, Insulators and Brackets",14,2,40,E,7/16 in,Tinned Copper
-EGBA14440CC,"(A) Busbar, Insulators and Brackets",14,4,40,C,7/16 in,Copper
-EGBB14240EE,(B) Busbar and Brackets,14,2,40,E,7/16 in,Copper
-EGBF14440QQ,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,40,Q,7/16 in,Copper
-EGBA12436MM,"(A) Busbar, Insulators and Brackets",12,4,36,M,7/16 in,Copper
-EGBA12636CC,"(A) Busbar, Insulators and Brackets",12,6,36,C,7/16 in,Copper
-EGBA12636LL,"(A) Busbar, Insulators and Brackets",12,6,36,L,7/16 in,Copper
-EGBA14236BB,"(A) Busbar, Insulators and Brackets",14,2,36,B,7/16 in,Copper
-EGBA14236BD,"(A) Busbar, Insulators and Brackets",14,2,36,B,other,Copper
-EGBA14236DD,"(A) Busbar, Insulators and Brackets",14,2,36,D,7/16 in,Copper
-EGBA14236EE,"(A) Busbar, Insulators and Brackets",14,2,36,E,7/16 in,Copper
-EGBA14236GG,"(A) Busbar, Insulators and Brackets",14,2,36,G,7/16 in,Copper
-EGBA14236NN,"(A) Busbar, Insulators and Brackets",14,2,36,N,No Hole Pattern,Copper
-EGBA14236NNT,"(A) Busbar, Insulators and Brackets",14,2,36,N,No Hole Pattern,Tinned Copper
-EGBA14336BB,"(A) Busbar, Insulators and Brackets",14,3,36,B,7/16 in,Copper
-EGBA14336BBT,"(A) Busbar, Insulators and Brackets",14,3,36,B,7/16 in,Tinned Copper
-EGBA14336CC,"(A) Busbar, Insulators and Brackets",14,3,36,C,7/16 in,Copper
-EGBA14336DGT,"(A) Busbar, Insulators and Brackets",14,3,36,D,other,Tinned Copper
-EGBA14336NN,"(A) Busbar, Insulators and Brackets",14,3,36,N,No Hole Pattern,Copper
-EGBA14436AA,"(A) Busbar, Insulators and Brackets",14,4,36,A,7/16 in,Copper
-EGBA14436AAT,"(A) Busbar, Insulators and Brackets",14,4,36,A,7/16 in,Tinned Copper
-EGBA14436BB,"(A) Busbar, Insulators and Brackets",14,4,36,B,7/16 in,Copper
-EGBA14436CB,"(A) Busbar, Insulators and Brackets",14,4,36,C,other,Copper
-EGBA14436CC,"(A) Busbar, Insulators and Brackets",14,4,36,C,7/16 in,Copper
-EGBA14436CCT,"(A) Busbar, Insulators and Brackets",14,4,36,C,7/16 in,Tinned Copper
-EGBA14436DD,"(A) Busbar, Insulators and Brackets",14,4,36,D,7/16 in,Copper
-EGBA14436EE,"(A) Busbar, Insulators and Brackets",14,4,36,E,7/16 in,Copper
-EGBA14436GG,"(A) Busbar, Insulators and Brackets",14,4,36,G,7/16 in,Copper
-EGBA14436JJ,"(A) Busbar, Insulators and Brackets",14,4,36,J,7/16 in,Copper
-EGBA14436LL,"(A) Busbar, Insulators and Brackets",14,4,36,L,7/16 in,Copper
-EGBA14436LLT,"(A) Busbar, Insulators and Brackets",14,4,36,L,7/16 in,Tinned Copper
-EGBA14436MM,"(A) Busbar, Insulators and Brackets",14,4,36,M,7/16 in,Copper
-EGBA14436NN,"(A) Busbar, Insulators and Brackets",14,4,36,N,No Hole Pattern,Copper
-EGBA14436QQ,"(A) Busbar, Insulators and Brackets",14,4,36,Q,7/16 in,Copper
-EGBA14436QQT,"(A) Busbar, Insulators and Brackets",14,4,36,Q,7/16 in,Tinned Copper
-EGBA14436RR,"(A) Busbar, Insulators and Brackets",14,4,36,R,7/16 in,Copper
-EGBA14636BB,"(A) Busbar, Insulators and Brackets",14,6,36,B,7/16 in,Copper
-EGBA14636CC,"(A) Busbar, Insulators and Brackets",14,6,36,C,7/16 in,Copper
-EGBA14636LL,"(A) Busbar, Insulators and Brackets",14,6,36,L,7/16 in,Copper
-EGBA14636NN,"(A) Busbar, Insulators and Brackets",14,6,36,N,No Hole Pattern,Copper
-EGBA14636QQ,"(A) Busbar, Insulators and Brackets",14,6,36,Q,7/16 in,Copper
-EGBA14636RR,"(A) Busbar, Insulators and Brackets",14,6,36,R,7/16 in,Copper
-EGBA14836CC,"(A) Busbar, Insulators and Brackets",14,8,36,C,7/16 in,Copper
-EGBA14836NN,"(A) Busbar, Insulators and Brackets",14,8,36,N,No Hole Pattern,Copper
-EGBA14836RR,"(A) Busbar, Insulators and Brackets",14,8,36,R,7/16 in,Copper
-EGBA38236GG,"(A) Busbar, Insulators and Brackets",38,2,36,G,7/16 in,Copper
-EGBA38436EE,"(A) Busbar, Insulators and Brackets",38,4,36,E,7/16 in,Copper
-EGBA38636JJ,"(A) Busbar, Insulators and Brackets",38,6,36,J,7/16 in,Copper
-EGBC14236NN,(C) Busbar Only,14,2,36,N,No Hole Pattern,Copper
-EGBF12436CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,36,C,other,Copper
-EGBF12436LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,36,L,7/16 in,Copper
-EGBF14436CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,36,C,7/16 in,Copper
-EGBA14434CC,"(A) Busbar, Insulators and Brackets",14,4,34,C,7/16 in,Copper
-EGBA14434DD,"(A) Busbar, Insulators and Brackets",14,4,34,D,7/16 in,Copper
-EGBA14433DBT,"(A) Busbar, Insulators and Brackets",14,4,33,D,other,Tinned Copper
-EGBB14433DBT,(B) Busbar and Brackets,14,4,33,D,other,Tinned Copper
-EGBA14432BB,"(A) Busbar, Insulators and Brackets",14,4,32,B,7/16 in,Copper
-EGBA14432CC,"(A) Busbar, Insulators and Brackets",14,4,32,C,7/16 in,Copper
-EGBA14432GG,"(A) Busbar, Insulators and Brackets",14,4,32,G,7/16 in,Copper
-EGBA14230BB,"(A) Busbar, Insulators and Brackets",14,2,30,B,7/16 in,Copper
-EGBA14230EE,"(A) Busbar, Insulators and Brackets",14,2,30,E,7/16 in,Copper
-EGBA14230EET,"(A) Busbar, Insulators and Brackets",14,2,30,E,7/16 in,Tinned Copper
-EGBA14230HH,"(A) Busbar, Insulators and Brackets",14,2,30,H,7/16 in,Copper
-EGBA14330CC,"(A) Busbar, Insulators and Brackets",14,3,30,C,7/16 in,Copper
-EGBA14430BB,"(A) Busbar, Insulators and Brackets",14,4,30,B,7/16 in,Copper
-EGBA14430CC,"(A) Busbar, Insulators and Brackets",14,4,30,C,7/16 in,Copper
-EGBA14430CCT,"(A) Busbar, Insulators and Brackets",14,4,30,C,7/16 in,Tinned Copper
-EGBA14430LL,"(A) Busbar, Insulators and Brackets",14,4,30,L,7/16 in,Copper
-EGBA14430NN,"(A) Busbar, Insulators and Brackets",14,4,30,N,No Hole Pattern,Copper
-EGBA14630NN,"(A) Busbar, Insulators and Brackets",14,6,30,N,No Hole Pattern,Copper
-EGBA14630RR,"(A) Busbar, Insulators and Brackets",14,6,30,R,7/16 in,Copper
-EGBA14830CC,"(A) Busbar, Insulators and Brackets",14,8,30,C,7/16 in,Copper
-EGBA38430CC,"(A) Busbar, Insulators and Brackets",38,4,30,C,7/16 in,Copper
-EGBA38430NN,"(A) Busbar, Insulators and Brackets",38,4,30,N,No Hole Pattern,Copper
-EGBA38630LL,"(A) Busbar, Insulators and Brackets",38,6,30,L,7/16 in,Copper
-EGBB14230EET,(B) Busbar and Brackets,14,2,30,E,7/16 in,Tinned Copper
-EGBB14330CB,(B) Busbar and Brackets,14,3,30,C,other,Copper
-EGBC12230NN,(C) Busbar Only,12,2,30,N,No Hole Pattern,Copper
-EGBA14428BDT,"(A) Busbar, Insulators and Brackets",14,4,28,B,other,Tinned Copper
-EGBA14428CC,"(A) Busbar, Insulators and Brackets",14,4,28,C,7/16 in,Copper
-EGBA14428NN,"(A) Busbar, Insulators and Brackets",14,4,28,N,No Hole Pattern,Copper
-EGBC14428CC,(C) Busbar Only,14,4,28,C,7/16 in,Copper
-EGBF12426CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,26,C,other,Copper
-EGBA12224BB,"(A) Busbar, Insulators and Brackets",12,2,24,B,7/16 in,Copper
-EGBA12224NN,"(A) Busbar, Insulators and Brackets",12,2,24,N,No Hole Pattern,Copper
-EGBA12424CC,"(A) Busbar, Insulators and Brackets",12,4,24,C,7/16 in,Copper
-EGBA12424NN,"(A) Busbar, Insulators and Brackets",12,4,24,N,No Hole Pattern,Copper
-EGBA12624CC,"(A) Busbar, Insulators and Brackets",12,6,24,C,7/16 in,Copper
-EGBA12624NN,"(A) Busbar, Insulators and Brackets",12,6,24,N,No Hole Pattern,Copper
-EGBA12624RR,"(A) Busbar, Insulators and Brackets",12,6,24,R,7/16 in,Copper
-EGBA12824NN,"(A) Busbar, Insulators and Brackets",12,8,24,N,No Hole Pattern,Copper
-EGBA14124NN,"(A) Busbar, Insulators and Brackets",14,1,24,N,No Hole Pattern,Copper
-EGBA14224BB,"(A) Busbar, Insulators and Brackets",14,2,24,B,7/16 in,Copper
-EGBA14224BBT,"(A) Busbar, Insulators and Brackets",14,2,24,B,7/16 in,Tinned Copper
-EGBA14224BE,"(A) Busbar, Insulators and Brackets",14,2,24,B,other,Copper
-EGBA14224DD,"(A) Busbar, Insulators and Brackets",14,2,24,D,7/16 in,Copper
-EGBA14224EE,"(A) Busbar, Insulators and Brackets",14,2,24,E,7/16 in,Copper
-EGBA14224EET,"(A) Busbar, Insulators and Brackets",14,2,24,E,7/16 in,Tinned Copper
-EGBA14224GE,"(A) Busbar, Insulators and Brackets",14,2,24,G,other,Copper
-EGBA14224GG,"(A) Busbar, Insulators and Brackets",14,2,24,G,7/16 in,Copper
-EGBA14224GGT,"(A) Busbar, Insulators and Brackets",14,2,24,G,7/16 in,Tinned Copper
-EGBA14224HH,"(A) Busbar, Insulators and Brackets",14,2,24,H,7/16 in,Copper
-EGBA14224JJ,"(A) Busbar, Insulators and Brackets",14,2,24,J,7/16 in,Copper
-EGBA14224NN,"(A) Busbar, Insulators and Brackets",14,2,24,N,No Hole Pattern,Copper
-EGBA14324AA,"(A) Busbar, Insulators and Brackets",14,3,24,A,7/16 in,Copper
-EGBA14324BB,"(A) Busbar, Insulators and Brackets",14,3,24,B,7/16 in,Copper
-EGBA14324BBT,"(A) Busbar, Insulators and Brackets",14,3,24,B,7/16 in,Tinned Copper
-EGBA14324CC,"(A) Busbar, Insulators and Brackets",14,3,24,C,7/16 in,Copper
-EGBA14324CCT,"(A) Busbar, Insulators and Brackets",14,3,24,C,7/16 in,Tinned Copper
-EGBA14324CF,"(A) Busbar, Insulators and Brackets",14,3,24,C,other,Copper
-EGBA14324DGT,"(A) Busbar, Insulators and Brackets",14,3,24,D,other,Tinned Copper
-EGBA14324EC,"(A) Busbar, Insulators and Brackets",14,3,24,E,other,Copper
-EGBA14324GG,"(A) Busbar, Insulators and Brackets",14,3,24,G,7/16 in,Copper
-EGBA14324LL,"(A) Busbar, Insulators and Brackets",14,3,24,L,7/16 in,Copper
-EGBA14324LLT,"(A) Busbar, Insulators and Brackets",14,3,24,L,7/16 in,Tinned Copper
-EGBA14324NN,"(A) Busbar, Insulators and Brackets",14,3,24,N,No Hole Pattern,Copper
-EGBA14424AA,"(A) Busbar, Insulators and Brackets",14,4,24,A,7/16 in,Copper
-EGBA14424AAT,"(A) Busbar, Insulators and Brackets",14,4,24,A,7/16 in,Tinned Copper
-EGBA14424BB,"(A) Busbar, Insulators and Brackets",14,4,24,B,7/16 in,Copper
-EGBA14424BBT,"(A) Busbar, Insulators and Brackets",14,4,24,B,7/16 in,Tinned Copper
-EGBA14424BC,"(A) Busbar, Insulators and Brackets",14,4,24,B,other,Copper
-EGBA14424BD,"(A) Busbar, Insulators and Brackets",14,4,24,B,other,Copper
-EGBA14424BFT,"(A) Busbar, Insulators and Brackets",14,4,24,B,other,Tinned Copper
-EGBA14424CA,"(A) Busbar, Insulators and Brackets",14,4,24,C,other,Copper
-EGBA14424CB,"(A) Busbar, Insulators and Brackets",14,4,24,C,other,Copper
-EGBA14424CBT,"(A) Busbar, Insulators and Brackets",14,4,24,C,other,Tinned Copper
-EGBA14424CCT,"(A) Busbar, Insulators and Brackets",14,4,24,C,7/16 in,Tinned Copper
-EGBA14424DD,"(A) Busbar, Insulators and Brackets",14,4,24,D,7/16 in,Copper
-EGBA14424DDT,"(A) Busbar, Insulators and Brackets",14,4,24,D,7/16 in,Tinned Copper
-EGBA14424EE,"(A) Busbar, Insulators and Brackets",14,4,24,E,7/16 in,Copper
-EGBA14424FF,"(A) Busbar, Insulators and Brackets",14,4,24,F,7/16 in,Copper
-EGBA14424GG,"(A) Busbar, Insulators and Brackets",14,4,24,G,7/16 in,Copper
-EGBA14424GGT,"(A) Busbar, Insulators and Brackets",14,4,24,G,7/16 in,Tinned Copper
-EGBA14424JJ,"(A) Busbar, Insulators and Brackets",14,4,24,J,7/16 in,Copper
-EGBA14424JJT,"(A) Busbar, Insulators and Brackets",14,4,24,J,7/16 in,Tinned Copper
-EGBA14424KK,"(A) Busbar, Insulators and Brackets",14,4,24,K,7/16 in,Copper
-EGBA14424LLT,"(A) Busbar, Insulators and Brackets",14,4,24,L,7/16 in,Tinned Copper
-EGBA14424MM,"(A) Busbar, Insulators and Brackets",14,4,24,M,7/16 in,Copper
-EGBA14424MMT,"(A) Busbar, Insulators and Brackets",14,4,24,M,7/16 in,Tinned Copper
-EGBA14424NN,"(A) Busbar, Insulators and Brackets",14,4,24,N,No Hole Pattern,Copper
-EGBA14424NNT,"(A) Busbar, Insulators and Brackets",14,4,24,N,No Hole Pattern,Tinned Copper
-EGBA14424QQ,"(A) Busbar, Insulators and Brackets",14,4,24,Q,7/16 in,Copper
-EGBA14424QQT,"(A) Busbar, Insulators and Brackets",14,4,24,Q,7/16 in,Tinned Copper
-EGBA14424RR,"(A) Busbar, Insulators and Brackets",14,4,24,R,7/16 in,Copper
-EGBA14424RRT,"(A) Busbar, Insulators and Brackets",14,4,24,R,7/16 in,Tinned Copper
-EGBA14824DG,"(A) Busbar, Insulators and Brackets",14,8,24,D,other,Copper
-EGBA14824LL,"(A) Busbar, Insulators and Brackets",14,8,24,L,7/16 in,Copper
-EGBA14824MM,"(A) Busbar, Insulators and Brackets",14,8,24,M,7/16 in,Copper
-EGBA14824NN,"(A) Busbar, Insulators and Brackets",14,8,24,N,No Hole Pattern,Copper
-EGBA38424BB,"(A) Busbar, Insulators and Brackets",38,4,24,B,7/16 in,Copper
-EGBA38424CC,"(A) Busbar, Insulators and Brackets",38,4,24,C,7/16 in,Copper
-EGBA38424DD,"(A) Busbar, Insulators and Brackets",38,4,24,D,7/16 in,Copper
-EGBA38624CC,"(A) Busbar, Insulators and Brackets",38,6,24,C,7/16 in,Copper
-EGBA38624LL,"(A) Busbar, Insulators and Brackets",38,6,24,L,7/16 in,Copper
-EGBB14324CB,(B) Busbar and Brackets,14,3,24,C,other,Copper
-EGBB14424CC,(B) Busbar and Brackets,14,4,24,C,7/16 in,Copper
-EGBB14424EE,(B) Busbar and Brackets,14,4,24,E,7/16 in,Copper
-EGBB14424JE,(B) Busbar and Brackets,14,4,24,J,other,Copper
-EGBB38324NN,(B) Busbar and Brackets,38,3,24,N,No Hole Pattern,Copper
-EGBC14124NN,(C) Busbar Only,14,1,24,N,No Hole Pattern,Copper
-EGBC14224NN,(C) Busbar Only,14,2,24,N,No Hole Pattern,Copper
-EGBC14424NN,(C) Busbar Only,14,4,24,N,No Hole Pattern,Copper
-EGBD14224BB,(D) Busbar and Insulators,14,2,24,B,7/16 in,Copper
-EGBF12424CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,24,C,other,Copper
-EGBF12424CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12,4,24,C,7/16 in,Copper
-EGBF14424CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,24,C,7/16 in,Copper
-EGBF14424GG,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,24,G,7/16 in,Copper
-EGBF14424LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,24,L,7/16 in,Copper
-EGBF14424RR,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,24,R,7/16 in,Copper
-EGBA14222EET,"(A) Busbar, Insulators and Brackets",14,2,22,E,7/16 in,Tinned Copper
-EGBA14422BD,"(A) Busbar, Insulators and Brackets",14,4,22,B,other,Copper
-EGBA14421RR,"(A) Busbar, Insulators and Brackets",14,4,21,R,7/16 in,Copper
-EGBA12420NN,"(A) Busbar, Insulators and Brackets",12,4,20,N,No Hole Pattern,Copper
-EGBA14220BB,"(A) Busbar, Insulators and Brackets",14,2,20,B,7/16 in,Copper
-EGBA14220BE,"(A) Busbar, Insulators and Brackets",14,2,20,B,other,Copper
-EGBA14220DGT,"(A) Busbar, Insulators and Brackets",14,2,20,D,other,Tinned Copper
-EGBA14220EE,"(A) Busbar, Insulators and Brackets",14,2,20,E,7/16 in,Copper
-EGBA14220HH,"(A) Busbar, Insulators and Brackets",14,2,20,H,7/16 in,Copper
-EGBA14220JJ,"(A) Busbar, Insulators and Brackets",14,2,20,J,7/16 in,Copper
-EGBA14220NN,"(A) Busbar, Insulators and Brackets",14,2,20,N,No Hole Pattern,Copper
-EGBA14320BB,"(A) Busbar, Insulators and Brackets",14,3,20,B,7/16 in,Copper
-EGBA14320CC,"(A) Busbar, Insulators and Brackets",14,3,20,C,7/16 in,Copper
-EGBA14420AA,"(A) Busbar, Insulators and Brackets",14,4,20,A,7/16 in,Copper
-EGBA14420BB,"(A) Busbar, Insulators and Brackets",14,4,20,B,7/16 in,Copper
-EGBA14420CB,"(A) Busbar, Insulators and Brackets",14,4,20,C,other,Copper
-EGBA14420CBT,"(A) Busbar, Insulators and Brackets",14,4,20,C,other,Tinned Copper
-EGBA14420CC,"(A) Busbar, Insulators and Brackets",14,4,20,C,7/16 in,Copper
-EGBA14420CCT,"(A) Busbar, Insulators and Brackets",14,4,20,C,7/16 in,Tinned Copper
-EGBA14420FF,"(A) Busbar, Insulators and Brackets",14,4,20,F,7/16 in,Copper
-EGBA14420GG,"(A) Busbar, Insulators and Brackets",14,4,20,G,7/16 in,Copper
-EGBA14420HH,"(A) Busbar, Insulators and Brackets",14,4,20,H,7/16 in,Copper
-EGBA14420LL,"(A) Busbar, Insulators and Brackets",14,4,20,L,7/16 in,Copper
-EGBA14420LLT,"(A) Busbar, Insulators and Brackets",14,4,20,L,7/16 in,Tinned Copper
-EGBA14420MM,"(A) Busbar, Insulators and Brackets",14,4,20,M,7/16 in,Copper
-EGBA14420NN,"(A) Busbar, Insulators and Brackets",14,4,20,N,No Hole Pattern,Copper
-EGBA14420QQ,"(A) Busbar, Insulators and Brackets",14,4,20,Q,7/16 in,Copper
-EGBA14420QQT,"(A) Busbar, Insulators and Brackets",14,4,20,Q,7/16 in,Tinned Copper
-EGBA14420RR,"(A) Busbar, Insulators and Brackets",14,4,20,R,7/16 in,Copper
-EGBA38320BF,"(A) Busbar, Insulators and Brackets",38,3,20,B,other,Copper
-EGBA38420CC,"(A) Busbar, Insulators and Brackets",38,4,20,C,7/16 in,Copper
-EGBB14420CC,(B) Busbar and Brackets,14,4,20,C,7/16 in,Copper
-EGBF14420CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,20,C,7/16 in,Copper
-EGBF14420LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,20,L,7/16 in,Copper
-EGBF14420LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,20,L,7/16 in,Tinned Copper
-EGBA12418EE,"(A) Busbar, Insulators and Brackets",12,4,18,E,7/16 in,Copper
-EGBA12418MM,"(A) Busbar, Insulators and Brackets",12,4,18,M,7/16 in,Copper
-EGBA12418NN,"(A) Busbar, Insulators and Brackets",12,4,18,N,No Hole Pattern,Copper
-EGBA14118NN,"(A) Busbar, Insulators and Brackets",14,1,18,N,No Hole Pattern,Copper
-EGBA14218BB,"(A) Busbar, Insulators and Brackets",14,2,18,B,7/16 in,Copper
-EGBA14218EE,"(A) Busbar, Insulators and Brackets",14,2,18,E,7/16 in,Copper
-EGBA14218GG,"(A) Busbar, Insulators and Brackets",14,2,18,G,7/16 in,Copper
-EGBA14218HH,"(A) Busbar, Insulators and Brackets",14,2,18,H,7/16 in,Copper
-EGBA14218HHT,"(A) Busbar, Insulators and Brackets",14,2,18,H,7/16 in,Tinned Copper
-EGBA14218NN,"(A) Busbar, Insulators and Brackets",14,2,18,N,No Hole Pattern,Copper
-EGBA14318DD,"(A) Busbar, Insulators and Brackets",14,3,18,D,7/16 in,Copper
-EGBA14318GG,"(A) Busbar, Insulators and Brackets",14,3,18,G,7/16 in,Copper
-EGBA14318NN,"(A) Busbar, Insulators and Brackets",14,3,18,N,No Hole Pattern,Copper
-EGBA14418AA,"(A) Busbar, Insulators and Brackets",14,4,18,A,7/16 in,Copper
-EGBA14418BB,"(A) Busbar, Insulators and Brackets",14,4,18,B,7/16 in,Copper
-EGBA14418BC,"(A) Busbar, Insulators and Brackets",14,4,18,B,other,Copper
-EGBA14418BD,"(A) Busbar, Insulators and Brackets",14,4,18,B,other,Copper
-EGBA14418CC,"(A) Busbar, Insulators and Brackets",14,4,18,C,7/16 in,Copper
-EGBA14418CCT,"(A) Busbar, Insulators and Brackets",14,4,18,C,7/16 in,Tinned Copper
-EGBA14418DD,"(A) Busbar, Insulators and Brackets",14,4,18,D,7/16 in,Copper
-EGBA14418EE,"(A) Busbar, Insulators and Brackets",14,4,18,E,7/16 in,Copper
-EGBA14418FF,"(A) Busbar, Insulators and Brackets",14,4,18,F,7/16 in,Copper
-EGBA14418FFT,"(A) Busbar, Insulators and Brackets",14,4,18,F,7/16 in,Tinned Copper
-EGBA14418GG,"(A) Busbar, Insulators and Brackets",14,4,18,G,7/16 in,Copper
-EGBA14418JJ,"(A) Busbar, Insulators and Brackets",14,4,18,J,7/16 in,Copper
-EGBA14418LL,"(A) Busbar, Insulators and Brackets",14,4,18,L,7/16 in,Copper
-EGBA14418LLT,"(A) Busbar, Insulators and Brackets",14,4,18,L,7/16 in,Tinned Copper
-EGBA14418MM,"(A) Busbar, Insulators and Brackets",14,4,18,M,7/16 in,Copper
-EGBA14418NN,"(A) Busbar, Insulators and Brackets",14,4,18,N,No Hole Pattern,Copper
-EGBA38418BB,"(A) Busbar, Insulators and Brackets",38,4,18,B,7/16 in,Copper
-EGBA38418DB,"(A) Busbar, Insulators and Brackets",38,4,18,D,other,Copper
-EGBA38418NN,"(A) Busbar, Insulators and Brackets",38,4,18,N,No Hole Pattern,Copper
-EGBB14318CB,(B) Busbar and Brackets,14,3,18,C,other,Copper
-EGBB14418BB,(B) Busbar and Brackets,14,4,18,B,7/16 in,Copper
-EGBC14118HH,(C) Busbar Only,14,1,18,H,7/16 in,Copper
-EGBC14218EET,(C) Busbar Only,14,2,18,E,7/16 in,Tinned Copper
-EGBF14318CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,3,18,C,7/16 in,Copper
-EGBF14418CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,18,C,7/16 in,Copper
-EGBF14418CCT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,18,C,7/16 in,Tinned Copper
-EGBF14418LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,18,L,7/16 in,Copper
-EGBA12416AA,"(A) Busbar, Insulators and Brackets",12,4,16,A,7/16 in,Copper
-EGBA12416BD,"(A) Busbar, Insulators and Brackets",12,4,16,B,other,Copper
-EGBA12416CA,"(A) Busbar, Insulators and Brackets",12,4,16,C,other,Copper
-EGBA14116HH,"(A) Busbar, Insulators and Brackets",14,1,16,H,7/16 in,Copper
-EGBA14216BB,"(A) Busbar, Insulators and Brackets",14,2,16,B,7/16 in,Copper
-EGBA14216EE,"(A) Busbar, Insulators and Brackets",14,2,16,E,7/16 in,Copper
-EGBA14216GG,"(A) Busbar, Insulators and Brackets",14,2,16,G,7/16 in,Copper
-EGBA14216HH,"(A) Busbar, Insulators and Brackets",14,2,16,H,7/16 in,Copper
-EGBA14216NN,"(A) Busbar, Insulators and Brackets",14,2,16,N,No Hole Pattern,Copper
-EGBA14216NNT,"(A) Busbar, Insulators and Brackets",14,2,16,N,No Hole Pattern,Tinned Copper
-EGBA14316CC,"(A) Busbar, Insulators and Brackets",14,3,16,C,7/16 in,Copper
-EGBA14416AA,"(A) Busbar, Insulators and Brackets",14,4,16,A,7/16 in,Copper
-EGBA14416AAT,"(A) Busbar, Insulators and Brackets",14,4,16,A,7/16 in,Tinned Copper
-EGBA14416BB,"(A) Busbar, Insulators and Brackets",14,4,16,B,7/16 in,Copper
-EGBA14416CA,"(A) Busbar, Insulators and Brackets",14,4,16,C,other,Copper
-EGBA14416CC,"(A) Busbar, Insulators and Brackets",14,4,16,C,7/16 in,Copper
-EGBA14416CCT,"(A) Busbar, Insulators and Brackets",14,4,16,C,7/16 in,Tinned Copper
-EGBA14416CF,"(A) Busbar, Insulators and Brackets",14,4,16,C,other,Copper
-EGBA14416LL,"(A) Busbar, Insulators and Brackets",14,4,16,L,7/16 in,Copper
-EGBA14416LLT,"(A) Busbar, Insulators and Brackets",14,4,16,L,7/16 in,Tinned Copper
-EGBA14416NN,"(A) Busbar, Insulators and Brackets",14,4,16,N,No Hole Pattern,Copper
-EGBA14416NNT,"(A) Busbar, Insulators and Brackets",14,4,16,N,No Hole Pattern,Tinned Copper
-EGBA38416GG,"(A) Busbar, Insulators and Brackets",38,4,16,G,7/16 in,Copper
-EGBC14316LL,(C) Busbar Only,14,3,16,L,7/16 in,Copper
-EGBC14416AA,(C) Busbar Only,14,4,16,A,7/16 in,Copper
-EGBC14416CAT,(C) Busbar Only,14,4,16,C,other,Tinned Copper
-EGBD14416JET,(D) Busbar and Insulators,14,4,16,J,other,Tinned Copper
-EGBF14416LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,16,L,7/16 in,Copper
-EGBF14416LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,16,L,7/16 in,Tinned Copper
-EGBA14215BDT,"(A) Busbar, Insulators and Brackets",14,2,15,B,other,Tinned Copper
-EGBA14215EET,"(A) Busbar, Insulators and Brackets",14,2,15,E,7/16 in,Tinned Copper
-EGBA14215GG,"(A) Busbar, Insulators and Brackets",14,2,15,G,7/16 in,Copper
-EGBA14215JJ,"(A) Busbar, Insulators and Brackets",14,2,15,J,7/16 in,Copper
-EGBA14215JJT,"(A) Busbar, Insulators and Brackets",14,2,15,J,7/16 in,Tinned Copper
-EGBA14215NN,"(A) Busbar, Insulators and Brackets",14,2,15,N,No Hole Pattern,Copper
-EGBA14415CC,"(A) Busbar, Insulators and Brackets",14,4,15,C,7/16 in,Copper
-EGBA14415CCT,"(A) Busbar, Insulators and Brackets",14,4,15,C,7/16 in,Tinned Copper
-EGBA14415GG,"(A) Busbar, Insulators and Brackets",14,4,15,G,7/16 in,Copper
-EGBA14415LL,"(A) Busbar, Insulators and Brackets",14,4,15,L,7/16 in,Copper
-EGBC14215NN,(C) Busbar Only,14,2,15,N,No Hole Pattern,Copper
-EGBA12414BB,"(A) Busbar, Insulators and Brackets",12,4,14,B,7/16 in,Copper
-EGBA14214BB,"(A) Busbar, Insulators and Brackets",14,2,14,B,7/16 in,Copper
-EGBA14214BDT,"(A) Busbar, Insulators and Brackets",14,2,14,B,other,Tinned Copper
-EGBA14214EE,"(A) Busbar, Insulators and Brackets",14,2,14,E,7/16 in,Copper
-EGBA14214GCT,"(A) Busbar, Insulators and Brackets",14,2,14,G,other,Tinned Copper
-EGBA14214HH,"(A) Busbar, Insulators and Brackets",14,2,14,H,7/16 in,Copper
-EGBA14214NN,"(A) Busbar, Insulators and Brackets",14,2,14,N,No Hole Pattern,Copper
-EGBA14414AA,"(A) Busbar, Insulators and Brackets",14,4,14,A,7/16 in,Copper
-EGBA14414BB,"(A) Busbar, Insulators and Brackets",14,4,14,B,7/16 in,Copper
-EGBA14414BF,"(A) Busbar, Insulators and Brackets",14,4,14,B,other,Copper
-EGBA14414CB,"(A) Busbar, Insulators and Brackets",14,4,14,C,other,Copper
-EGBA14414CC,"(A) Busbar, Insulators and Brackets",14,4,14,C,7/16 in,Copper
-EGBA14414EE,"(A) Busbar, Insulators and Brackets",14,4,14,E,7/16 in,Copper
-EGBA14414FF,"(A) Busbar, Insulators and Brackets",14,4,14,F,7/16 in,Copper
-EGBA14414GG,"(A) Busbar, Insulators and Brackets",14,4,14,G,7/16 in,Copper
-EGBA14414KK,"(A) Busbar, Insulators and Brackets",14,4,14,K,7/16 in,Copper
-EGBA14414LL,"(A) Busbar, Insulators and Brackets",14,4,14,L,7/16 in,Copper
-EGBA14414MM,"(A) Busbar, Insulators and Brackets",14,4,14,M,7/16 in,Copper
-EGBA14414NN,"(A) Busbar, Insulators and Brackets",14,4,14,N,No Hole Pattern,Copper
-EGBA14414RR,"(A) Busbar, Insulators and Brackets",14,4,14,R,7/16 in,Copper
-EGBB14214NN,(B) Busbar and Brackets,14,2,14,N,No Hole Pattern,Copper
-EGBB14414CC,(B) Busbar and Brackets,14,4,14,C,7/16 in,Copper
-EGBA14213NN,"(A) Busbar, Insulators and Brackets",14,2,13,N,No Hole Pattern,Copper
-EGBB14313GGT,(B) Busbar and Brackets,14,3,13,G,7/16 in,Tinned Copper
-EGBC14213EB,(C) Busbar Only,14,2,13,E,other,Copper
-EGBA12212NN,"(A) Busbar, Insulators and Brackets",12,2,12,N,No Hole Pattern,Copper
-EGBA12412AA,"(A) Busbar, Insulators and Brackets",12,4,12,A,7/16 in,Copper
-EGBA12412CC,"(A) Busbar, Insulators and Brackets",12,4,12,C,7/16 in,Copper
-EGBA12412GG,"(A) Busbar, Insulators and Brackets",12,4,12,G,7/16 in,Copper
-EGBA12412NN,"(A) Busbar, Insulators and Brackets",12,4,12,N,No Hole Pattern,Copper
-EGBA12612LL,"(A) Busbar, Insulators and Brackets",12,6,12,L,7/16 in,Copper
-EGBA12612NN,"(A) Busbar, Insulators and Brackets",12,6,12,N,No Hole Pattern,Copper
-EGBA14112EE,"(A) Busbar, Insulators and Brackets",14,1,12,E,7/16 in,Copper
-EGBA14112HH,"(A) Busbar, Insulators and Brackets",14,1,12,H,7/16 in,Copper
-EGBA14112NN,"(A) Busbar, Insulators and Brackets",14,1,12,N,No Hole Pattern,Copper
-EGBA14212BB,"(A) Busbar, Insulators and Brackets",14,2,12,B,7/16 in,Copper
-EGBA14212BBT,"(A) Busbar, Insulators and Brackets",14,2,12,B,7/16 in,Tinned Copper
-EGBA14212BD,"(A) Busbar, Insulators and Brackets",14,2,12,B,other,Copper
-EGBA14212DD,"(A) Busbar, Insulators and Brackets",14,2,12,D,7/16 in,Copper
-EGBA14212DDT,"(A) Busbar, Insulators and Brackets",14,2,12,D,7/16 in,Tinned Copper
-EGBA14212EB,"(A) Busbar, Insulators and Brackets",14,2,12,E,other,Copper
-EGBA14212ECT,"(A) Busbar, Insulators and Brackets",14,2,12,E,other,Tinned Copper
-EGBA14212EE,"(A) Busbar, Insulators and Brackets",14,2,12,E,7/16 in,Copper
-EGBA14212EET,"(A) Busbar, Insulators and Brackets",14,2,12,E,7/16 in,Tinned Copper
-EGBA14212GG,"(A) Busbar, Insulators and Brackets",14,2,12,G,7/16 in,Copper
-EGBA14212HH,"(A) Busbar, Insulators and Brackets",14,2,12,H,7/16 in,Copper
-EGBA14212HHT,"(A) Busbar, Insulators and Brackets",14,2,12,H,7/16 in,Tinned Copper
-EGBA14212JJ,"(A) Busbar, Insulators and Brackets",14,2,12,J,7/16 in,Copper
-EGBA14212JJT,"(A) Busbar, Insulators and Brackets",14,2,12,J,7/16 in,Tinned Copper
-EGBA14212NN,"(A) Busbar, Insulators and Brackets",14,2,12,N,No Hole Pattern,Copper
-EGBA14212NNT,"(A) Busbar, Insulators and Brackets",14,2,12,N,No Hole Pattern,Tinned Copper
-EGBA14312BB,"(A) Busbar, Insulators and Brackets",14,3,12,B,7/16 in,Copper
-EGBA14312BBT,"(A) Busbar, Insulators and Brackets",14,3,12,B,7/16 in,Tinned Copper
-EGBA14312CC,"(A) Busbar, Insulators and Brackets",14,3,12,C,7/16 in,Copper
-EGBA14312EE,"(A) Busbar, Insulators and Brackets",14,3,12,E,7/16 in,Copper
-EGBA14312GG,"(A) Busbar, Insulators and Brackets",14,3,12,G,7/16 in,Copper
-EGBA14312HH,"(A) Busbar, Insulators and Brackets",14,3,12,H,7/16 in,Copper
-EGBA14312LL,"(A) Busbar, Insulators and Brackets",14,3,12,L,7/16 in,Copper
-EGBA14312MM,"(A) Busbar, Insulators and Brackets",14,3,12,M,7/16 in,Copper
-EGBA14312MMT,"(A) Busbar, Insulators and Brackets",14,3,12,M,7/16 in,Tinned Copper
-EGBA14312NN,"(A) Busbar, Insulators and Brackets",14,3,12,N,No Hole Pattern,Copper
-EGBA14412AA,"(A) Busbar, Insulators and Brackets",14,4,12,A,7/16 in,Copper
-EGBA14412AAT,"(A) Busbar, Insulators and Brackets",14,4,12,A,7/16 in,Tinned Copper
-EGBA14412BB,"(A) Busbar, Insulators and Brackets",14,4,12,B,7/16 in,Copper
-EGBA14412BBT,"(A) Busbar, Insulators and Brackets",14,4,12,B,7/16 in,Tinned Copper
-EGBA14412BD,"(A) Busbar, Insulators and Brackets",14,4,12,B,other,Copper
-EGBA14412BE,"(A) Busbar, Insulators and Brackets",14,4,12,B,other,Copper
-EGBA14412CB,"(A) Busbar, Insulators and Brackets",14,4,12,C,other,Copper
-EGBA14412CBT,"(A) Busbar, Insulators and Brackets",14,4,12,C,other,Tinned Copper
-EGBA14412CC,"(A) Busbar, Insulators and Brackets",14,4,12,C,7/16 in,Copper
-EGBA14412CCT,"(A) Busbar, Insulators and Brackets",14,4,12,C,7/16 in,Tinned Copper
-EGBA14412CF,"(A) Busbar, Insulators and Brackets",14,4,12,C,other,Copper
-EGBA14412DD,"(A) Busbar, Insulators and Brackets",14,4,12,D,7/16 in,Copper
-EGBA14412DG,"(A) Busbar, Insulators and Brackets",14,4,12,D,other,Copper
-EGBA14412EC,"(A) Busbar, Insulators and Brackets",14,4,12,E,other,Copper
-EGBA14412EE,"(A) Busbar, Insulators and Brackets",14,4,12,E,7/16 in,Copper
-EGBA14412FF,"(A) Busbar, Insulators and Brackets",14,4,12,F,7/16 in,Copper
-EGBA14412GET,"(A) Busbar, Insulators and Brackets",14,4,12,G,other,Tinned Copper
-EGBA14412GGT,"(A) Busbar, Insulators and Brackets",14,4,12,G,7/16 in,Tinned Copper
-EGBA14412HH,"(A) Busbar, Insulators and Brackets",14,4,12,H,7/16 in,Copper
-EGBA14412JE,"(A) Busbar, Insulators and Brackets",14,4,12,J,other,Copper
-EGBA14412JJ,"(A) Busbar, Insulators and Brackets",14,4,12,J,7/16 in,Copper
-EGBA14412KK,"(A) Busbar, Insulators and Brackets",14,4,12,K,7/16 in,Copper
-EGBA14412LB,"(A) Busbar, Insulators and Brackets",14,4,12,L,other,Copper
-EGBA14412LL,"(A) Busbar, Insulators and Brackets",14,4,12,L,7/16 in,Copper
-EGBA14412LLT,"(A) Busbar, Insulators and Brackets",14,4,12,L,7/16 in,Tinned Copper
-EGBA14412MM,"(A) Busbar, Insulators and Brackets",14,4,12,M,7/16 in,Copper
-EGBA14412MMT,"(A) Busbar, Insulators and Brackets",14,4,12,M,7/16 in,Tinned Copper
-EGBA14412NNT,"(A) Busbar, Insulators and Brackets",14,4,12,N,No Hole Pattern,Tinned Copper
-EGBA14412QQ,"(A) Busbar, Insulators and Brackets",14,4,12,Q,7/16 in,Copper
-EGBA14412QQT,"(A) Busbar, Insulators and Brackets",14,4,12,Q,7/16 in,Tinned Copper
-EGBA14412RR,"(A) Busbar, Insulators and Brackets",14,4,12,R,7/16 in,Copper
-EGBA14412RRT,"(A) Busbar, Insulators and Brackets",14,4,12,R,7/16 in,Tinned Copper
-EGBA14612AA,"(A) Busbar, Insulators and Brackets",14,6,12,A,7/16 in,Copper
-EGBA14612BB,"(A) Busbar, Insulators and Brackets",14,6,12,B,7/16 in,Copper
-EGBA14612BF,"(A) Busbar, Insulators and Brackets",14,6,12,B,other,Copper
-EGBA14612CC,"(A) Busbar, Insulators and Brackets",14,6,12,C,7/16 in,Copper
-EGBA14812BB,"(A) Busbar, Insulators and Brackets",14,8,12,B,7/16 in,Copper
-EGBA38212EE,"(A) Busbar, Insulators and Brackets",38,2,12,E,7/16 in,Copper
-EGBA38212NN,"(A) Busbar, Insulators and Brackets",38,2,12,N,No Hole Pattern,Copper
-EGBA38412AA,"(A) Busbar, Insulators and Brackets",38,4,12,A,7/16 in,Copper
-EGBA38412BB,"(A) Busbar, Insulators and Brackets",38,4,12,B,7/16 in,Copper
-EGBA38412CC,"(A) Busbar, Insulators and Brackets",38,4,12,C,7/16 in,Copper
-EGBA38412GG,"(A) Busbar, Insulators and Brackets",38,4,12,G,7/16 in,Copper
-EGBA38412HH,"(A) Busbar, Insulators and Brackets",38,4,12,H,7/16 in,Copper
-EGBA38412NN,"(A) Busbar, Insulators and Brackets",38,4,12,N,No Hole Pattern,Copper
-EGBA38612GG,"(A) Busbar, Insulators and Brackets",38,6,12,G,7/16 in,Copper
-EGBB14112HH,(B) Busbar and Brackets,14,1,12,H,7/16 in,Copper
-EGBB14212JJ,(B) Busbar and Brackets,14,2,12,J,7/16 in,Copper
-EGBB14312CB,(B) Busbar and Brackets,14,3,12,C,other,Copper
-EGBB14412BB,(B) Busbar and Brackets,14,4,12,B,7/16 in,Copper
-EGBB14412CC,(B) Busbar and Brackets,14,4,12,C,7/16 in,Copper
-EGBB14412CCT,(B) Busbar and Brackets,14,4,12,C,7/16 in,Tinned Copper
-EGBC14212BB,(C) Busbar Only,14,2,12,B,7/16 in,Copper
-EGBC14212BFT,(C) Busbar Only,14,2,12,B,other,Tinned Copper
-EGBC14212EE,(C) Busbar Only,14,2,12,E,7/16 in,Copper
-EGBC14212GG,(C) Busbar Only,14,2,12,G,7/16 in,Copper
-EGBC14312NN,(C) Busbar Only,14,3,12,N,No Hole Pattern,Copper
-EGBC14412NN,(C) Busbar Only,14,4,12,N,No Hole Pattern,Copper
-EGBC14412NNT,(C) Busbar Only,14,4,12,N,No Hole Pattern,Tinned Copper
-EGBD14212NN,(D) Busbar and Insulators,14,2,12,N,No Hole Pattern,Copper
-EGBD14412NN,(D) Busbar and Insulators,14,4,12,N,No Hole Pattern,Copper
-EGBF14412CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,12,C,7/16 in,Copper
-EGBF14412LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,12,L,7/16 in,Copper
-EGBF14412LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,12,L,7/16 in,Tinned Copper
-EGBA12210JJ,"(A) Busbar, Insulators and Brackets",12,2,10,J,7/16 in,Copper
-EGBA14110NN,"(A) Busbar, Insulators and Brackets",14,1,10,N,No Hole Pattern,Copper
-EGBA14210BB,"(A) Busbar, Insulators and Brackets",14,2,10,B,7/16 in,Copper
-EGBA14210BE,"(A) Busbar, Insulators and Brackets",14,2,10,B,other,Copper
-EGBA14210EE,"(A) Busbar, Insulators and Brackets",14,2,10,E,7/16 in,Copper
-EGBA14210GG,"(A) Busbar, Insulators and Brackets",14,2,10,G,7/16 in,Copper
-EGBA14210HB,"(A) Busbar, Insulators and Brackets",14,2,10,H,other,Copper
-EGBA14210JE,"(A) Busbar, Insulators and Brackets",14,2,10,J,other,Copper
-EGBA14210JF,"(A) Busbar, Insulators and Brackets",14,2,10,J,other,Copper
-EGBA14210JJ,"(A) Busbar, Insulators and Brackets",14,2,10,J,7/16 in,Copper
-EGBA14210NN,"(A) Busbar, Insulators and Brackets",14,2,10,N,No Hole Pattern,Copper
-EGBA14210SS,"(A) Busbar, Insulators and Brackets",14,2,10,S,7/16 in,Copper
-EGBA14310NN,"(A) Busbar, Insulators and Brackets",14,3,10,N,No Hole Pattern,Copper
-EGBA14410AA,"(A) Busbar, Insulators and Brackets",14,4,10,A,7/16 in,Copper
-EGBA14410AAT,"(A) Busbar, Insulators and Brackets",14,4,10,A,7/16 in,Tinned Copper
-EGBA14410BB,"(A) Busbar, Insulators and Brackets",14,4,10,B,7/16 in,Copper
-EGBA14410CC,"(A) Busbar, Insulators and Brackets",14,4,10,C,7/16 in,Copper
-EGBA14410EE,"(A) Busbar, Insulators and Brackets",14,4,10,E,7/16 in,Copper
-EGBA14410FF,"(A) Busbar, Insulators and Brackets",14,4,10,F,7/16 in,Copper
-EGBA14410GG,"(A) Busbar, Insulators and Brackets",14,4,10,G,7/16 in,Copper
-EGBA14410GGT,"(A) Busbar, Insulators and Brackets",14,4,10,G,7/16 in,Tinned Copper
-EGBA14410LL,"(A) Busbar, Insulators and Brackets",14,4,10,L,7/16 in,Copper
-EGBA14410NN,"(A) Busbar, Insulators and Brackets",14,4,10,N,No Hole Pattern,Copper
-EGBA14410NNT,"(A) Busbar, Insulators and Brackets",14,4,10,N,No Hole Pattern,Tinned Copper
-EGBA14410RR,"(A) Busbar, Insulators and Brackets",14,4,10,R,7/16 in,Copper
-EGBA38410DB,"(A) Busbar, Insulators and Brackets",38,4,10,D,other,Copper
-EGBB14410FF,(B) Busbar and Brackets,14,4,10,F,7/16 in,Copper
-EGBC14110HH,(C) Busbar Only,14,1,10,H,7/16 in,Copper
-EGBC14310LL,(C) Busbar Only,14,3,10,L,7/16 in,Copper
-EGBA14209GGT,"(A) Busbar, Insulators and Brackets",14,2,09,G,7/16 in,Tinned Copper
-EGBA38509AA,"(A) Busbar, Insulators and Brackets",38,5,09,A,7/16 in,Copper
-EGBB14209HHT,(B) Busbar and Brackets,14,2,09,H,7/16 in,Tinned Copper
-EGBA12408NN,"(A) Busbar, Insulators and Brackets",12,4,08,N,No Hole Pattern,Copper
-EGBA14208BB,"(A) Busbar, Insulators and Brackets",14,2,08,B,7/16 in,Copper
-EGBA14208BF,"(A) Busbar, Insulators and Brackets",14,2,08,B,other,Copper
-EGBA14208EE,"(A) Busbar, Insulators and Brackets",14,2,08,E,7/16 in,Copper
-EGBA14208GG,"(A) Busbar, Insulators and Brackets",14,2,08,G,7/16 in,Copper
-EGBA14208HHT,"(A) Busbar, Insulators and Brackets",14,2,08,H,7/16 in,Tinned Copper
-EGBA14208NN,"(A) Busbar, Insulators and Brackets",14,2,08,N,No Hole Pattern,Copper
-EGBA14308JJ,"(A) Busbar, Insulators and Brackets",14,3,08,J,7/16 in,Copper
-EGBA14308NN,"(A) Busbar, Insulators and Brackets",14,3,08,N,No Hole Pattern,Copper
-EGBA14408BB,"(A) Busbar, Insulators and Brackets",14,4,08,B,7/16 in,Copper
-EGBA14408MM,"(A) Busbar, Insulators and Brackets",14,4,08,M,7/16 in,Copper
-EGBA14408NN,"(A) Busbar, Insulators and Brackets",14,4,08,N,No Hole Pattern,Copper
-EGBA14608AA,"(A) Busbar, Insulators and Brackets",14,6,08,A,7/16 in,Copper
-EGBA38308NN,"(A) Busbar, Insulators and Brackets",38,3,08,N,No Hole Pattern,Copper
-EGBC14308LLT,(C) Busbar Only,14,3,08,L,7/16 in,Tinned Copper
-EGBC14408GG,(C) Busbar Only,14,4,08,G,7/16 in,Copper
-EGBA14207BF,"(A) Busbar, Insulators and Brackets",14,2,07,B,other,Copper
-EGBC14307NN,(C) Busbar Only,14,3,07,N,No Hole Pattern,Copper
-EGBA12206NN,"(A) Busbar, Insulators and Brackets",12,2,06,N,No Hole Pattern,Copper
-EGBA14106HH,"(A) Busbar, Insulators and Brackets",14,1,06,H,7/16 in,Copper
-EGBA14106HHT,"(A) Busbar, Insulators and Brackets",14,1,06,H,7/16 in,Tinned Copper
-EGBA14106NN,"(A) Busbar, Insulators and Brackets",14,1,06,N,No Hole Pattern,Copper
-EGBA14206BB,"(A) Busbar, Insulators and Brackets",14,2,06,B,7/16 in,Copper
-EGBA14206BD,"(A) Busbar, Insulators and Brackets",14,2,06,B,other,Copper
-EGBA14206EC,"(A) Busbar, Insulators and Brackets",14,2,06,E,other,Copper
-EGBA14206EE,"(A) Busbar, Insulators and Brackets",14,2,06,E,7/16 in,Copper
-EGBA14206EET,"(A) Busbar, Insulators and Brackets",14,2,06,E,7/16 in,Tinned Copper
-EGBA14206GG,"(A) Busbar, Insulators and Brackets",14,2,06,G,7/16 in,Copper
-EGBA14206JJ,"(A) Busbar, Insulators and Brackets",14,2,06,J,7/16 in,Copper
-EGBA14206NN,"(A) Busbar, Insulators and Brackets",14,2,06,N,No Hole Pattern,Copper
-EGBA14206NNT,"(A) Busbar, Insulators and Brackets",14,2,06,N,No Hole Pattern,Tinned Copper
-EGBA14206SS,"(A) Busbar, Insulators and Brackets",14,2,06,S,7/16 in,Copper
-EGBA14306CC,"(A) Busbar, Insulators and Brackets",14,3,06,C,7/16 in,Copper
-EGBA14306NN,"(A) Busbar, Insulators and Brackets",14,3,06,N,No Hole Pattern,Copper
-EGBA14406CC,"(A) Busbar, Insulators and Brackets",14,4,06,C,7/16 in,Copper
-EGBA14406CCT,"(A) Busbar, Insulators and Brackets",14,4,06,C,7/16 in,Tinned Copper
-EGBA14406LL,"(A) Busbar, Insulators and Brackets",14,4,06,L,7/16 in,Copper
-EGBA14406NN,"(A) Busbar, Insulators and Brackets",14,4,06,N,No Hole Pattern,Copper
-EGBB14106NN,(B) Busbar and Brackets,14,1,06,N,No Hole Pattern,Copper
-EGBB14206EET,(B) Busbar and Brackets,14,2,06,E,7/16 in,Tinned Copper
-EGBB14206NN,(B) Busbar and Brackets,14,2,06,N,No Hole Pattern,Copper
-EGBC14106EE,(C) Busbar Only,14,1,06,E,7/16 in,Copper
-EGBC14206NN,(C) Busbar Only,14,2,06,N,No Hole Pattern,Copper
-EGBF14406LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,06,L,7/16 in,Copper
-EGBF14406LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14,4,06,L,7/16 in,Tinned Copper
-EGBA14204NN,"(A) Busbar, Insulators and Brackets",14,2,04,N,No Hole Pattern,Copper
-EGBA14424CC,"(A) Busbar, Insulators and Brackets",14,4,24,C,7/16 in,Copper
-EGBA14424LL,"(A) Busbar, Insulators and Brackets",14,4,24,L,7/16 in,Copper
-EGBA14412GG,"(A) Busbar, Insulators and Brackets",14,4,12,G,7/16 in,Copper
-EGBA14412NN,"(A) Busbar, Insulators and Brackets",14,4,12,N,No Hole Pattern,Copper
-EGBA14618CC,"(A) Busbar, Insulators and Brackets",14,6,18,C,7/16 in,Copper
-EGBA14630CC,"(A) Busbar, Insulators and Brackets",14,6,30,C,7/16 in,Copper
-EGBA14612GG,"(A) Busbar, Insulators and Brackets",14,6,12,G,7/16 in,Copper
-EGBA14624LL,"(A) Busbar, Insulators and Brackets",14,6,24,L,7/16 in,Copper
-EGBA14612NN,"(A) Busbar, Insulators and Brackets",14,6,12,N,No Hole Pattern,Copper
+part number,configuration,bar thickness,bar width,bar length,hole pattern,hole size,material,pigtail code,pigtail length
+EGBA142144EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,144,E,7/16 in,Copper,-,-
+EGBA144144LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,144,L,7/16 in,Copper,-,-
+EGBA142120EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,120,E,7/16 in,Copper,-,-
+EGBA142120JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,120,J,7/16 in,Copper,-,-
+EGBA143120DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,120,D,1/2 in,Tinned Copper,-,-
+EGBA144120CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,120,C,7/16 in,Tinned Copper,-,-
+EGBA144120NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,120,N,No Hole Pattern,Copper,-,-
+EGBA146120NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,120,N,No Hole Pattern,Copper,-,-
+EGBA384120BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,120,B,7/16 in,Copper,-,-
+EGBA384120CB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,120,C,9/16 in,Copper,-,-
+EGBA14296BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,96,B,7/16 in,Copper,-,-
+EGBA14296BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,96,B,3/8 in,Copper,-,-
+EGBA14296NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,96,N,No Hole Pattern,Copper,-,-
+EGBA14396EC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,96,E,3/8 in,Copper,-,-
+EGBA14396NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,96,N,No Hole Pattern,Copper,-,-
+EGBA14496CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,96,C,7/16 in,Copper,-,-
+EGBA14496EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,96,E,7/16 in,Copper,-,-
+EGBA14496NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,96,N,No Hole Pattern,Copper,-,-
+EGBC14296NN,(C) Busbar Only,14 - 1/4,2,96,N,No Hole Pattern,Copper,-,-
+EGBA14384CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,84,C,7/16 in,Tinned Copper,-,-
+EGBD14284NN,(D) Busbar and Insulators,14 - 1/4,2,84,N,No Hole Pattern,Copper,-,-
+EGBA14480GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,80,G,7/16 in,Copper,-,-
+EGBA14172NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,72,N,No Hole Pattern,Copper,-,-
+EGBA14272NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,72,N,No Hole Pattern,Copper,-,-
+EGBA14372GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,72,G,7/16 in,Copper,-,-
+EGBA14472BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,72,B,7/16 in,Copper,-,-
+EGBA14472CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,72,C,9/16 in,Copper,-,-
+EGBA14472CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,72,C,7/16 in,Copper,-,-
+EGBA14270EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,70,E,7/16 in,Copper,-,-
+EGBA12460NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,60,N,No Hole Pattern,Copper,-,-
+EGBA14260BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,60,B,7/16 in,Copper,-,-
+EGBA14260JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,60,J,7/16 in,Copper,-,-
+EGBA14260NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,60,N,No Hole Pattern,Copper,-,-
+EGBA14360DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,60,D,1/2 in,Tinned Copper,-,-
+EGBA14460CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,60,C,7/16 in,Copper,-,-
+EGBA14460CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,60,C,7/16 in,Tinned Copper,-,-
+EGBA14460GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,60,G,7/16 in,Copper,-,-
+EGBA14660CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,60,C,7/16 in,Copper,-,-
+EGBA38460BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,60,B,7/16 in,Copper,-,-
+EGBA38460NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,60,N,No Hole Pattern,Copper,-,-
+EGBA14256JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,56,J,7/16 in,Copper,-,-
+EGBA14354CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,54,C,7/16 in,Copper,-,-
+EGBA14250BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,50,B,3/8 in,Copper,-,-
+EGBA14450EB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,50,E,9/16 in,Copper,-,-
+EGBA12448NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,48,N,No Hole Pattern,Copper,-,-
+EGBA14148NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,48,N,No Hole Pattern,Copper,-,-
+EGBA14248BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,48,B,7/16 in,Copper,-,-
+EGBA14248GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,48,G,7/16 in,Copper,-,-
+EGBA14248JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,48,J,7/16 in,Copper,-,-
+EGBA14248NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,48,N,No Hole Pattern,Copper,-,-
+EGBA14348CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,48,C,7/16 in,Copper,-,-
+EGBA14348DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,48,D,1/2 in,Tinned Copper,-,-
+EGBA14348NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,48,N,No Hole Pattern,Copper,-,-
+EGBA14448AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,A,7/16 in,Copper,-,-
+EGBA14448BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,B,7/16 in,Copper,-,-
+EGBA14448CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,C,9/16 in,Copper,-,-
+EGBA14448CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,C,7/16 in,Copper,-,-
+EGBA14448CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,C,7/16 in,Tinned Copper,-,-
+EGBA14448GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,G,7/16 in,Copper,-,-
+EGBA14448LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,L,7/16 in,Copper,-,-
+EGBA14448MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,M,7/16 in,Copper,-,-
+EGBA14448NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,N,No Hole Pattern,Copper,-,-
+EGBA14448NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14448RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,48,R,7/16 in,Copper,-,-
+EGBA14648BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,48,B,7/16 in,Copper,-,-
+EGBA14648CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,48,C,7/16 in,Copper,-,-
+EGBA14648NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,48,N,No Hole Pattern,Copper,-,-
+EGBA38248EE,"(A) Busbar, Insulators and Brackets",38 - 3/8,2,48,E,7/16 in,Copper,-,-
+EGBA38448BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,B,7/16 in,Copper,-,-
+EGBA38448CB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,C,9/16 in,Copper,-,-
+EGBA38448CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,C,7/16 in,Copper,-,-
+EGBA38448GG,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,G,7/16 in,Copper,-,-
+EGBA38448LL,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,L,7/16 in,Copper,-,-
+EGBA38448NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,48,N,No Hole Pattern,Copper,-,-
+EGBC14248NN,(C) Busbar Only,14 - 1/4,2,48,N,No Hole Pattern,Copper,-,-
+EGBC14448NN,(C) Busbar Only,14 - 1/4,4,48,N,No Hole Pattern,Copper,-,-
+EGBF12448CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,48,C,9/16 in,Copper,-,-
+EGBF12448CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,48,C,7/16 in,Copper,-,-
+EGBF14448CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,48,C,7/16 in,Copper,-,-
+EGBF14448CCT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,48,C,7/16 in,Tinned Copper,-,-
+EGBA12842NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,8,42,N,No Hole Pattern,Copper,-,-
+EGBA14442CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,42,C,9/16 in,Copper,-,-
+EGBA14442CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,42,C,7/16 in,Copper,-,-
+EGBA38642LL,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,42,L,7/16 in,Copper,-,-
+EGBA14240EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,40,E,7/16 in,Tinned Copper,-,-
+EGBA14440CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,40,C,7/16 in,Copper,-,-
+EGBB14240EE,(B) Busbar and Brackets,14 - 1/4,2,40,E,7/16 in,Copper,-,-
+EGBF14440QQ,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,40,Q,7/16 in,Copper,-,-
+EGBA12436MM,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,36,M,7/16 in,Copper,-,-
+EGBA12636CC,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,36,C,7/16 in,Copper,-,-
+EGBA12636LL,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,36,L,7/16 in,Copper,-,-
+EGBA14236BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,B,7/16 in,Copper,-,-
+EGBA14236BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,B,3/8 in,Copper,-,-
+EGBA14236DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,D,7/16 in,Copper,-,-
+EGBA14236EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,E,7/16 in,Copper,-,-
+EGBA14236GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,G,7/16 in,Copper,-,-
+EGBA14236NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,N,No Hole Pattern,Copper,-,-
+EGBA14236NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,36,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14336BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,36,B,7/16 in,Copper,-,-
+EGBA14336BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,36,B,7/16 in,Tinned Copper,-,-
+EGBA14336CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,36,C,7/16 in,Copper,-,-
+EGBA14336DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,36,D,1/2 in,Tinned Copper,-,-
+EGBA14336NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,36,N,No Hole Pattern,Copper,-,-
+EGBA14436AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,A,7/16 in,Copper,-,-
+EGBA14436AAT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,A,7/16 in,Tinned Copper,-,-
+EGBA14436BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,B,7/16 in,Copper,-,-
+EGBA14436CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,C,9/16 in,Copper,-,-
+EGBA14436CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,C,7/16 in,Copper,-,-
+EGBA14436CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,C,7/16 in,Tinned Copper,-,-
+EGBA14436DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,D,7/16 in,Copper,-,-
+EGBA14436EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,E,7/16 in,Copper,-,-
+EGBA14436GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,G,7/16 in,Copper,-,-
+EGBA14436JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,J,7/16 in,Copper,-,-
+EGBA14436LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,L,7/16 in,Copper,-,-
+EGBA14436LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,L,7/16 in,Tinned Copper,-,-
+EGBA14436MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,M,7/16 in,Copper,-,-
+EGBA14436NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,N,No Hole Pattern,Copper,-,-
+EGBA14436QQ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,Q,7/16 in,Copper,-,-
+EGBA14436QQT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,Q,7/16 in,Tinned Copper,-,-
+EGBA14436RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,36,R,7/16 in,Copper,-,-
+EGBA14636BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,B,7/16 in,Copper,-,-
+EGBA14636CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,C,7/16 in,Copper,-,-
+EGBA14636LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,L,7/16 in,Copper,-,-
+EGBA14636NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,N,No Hole Pattern,Copper,-,-
+EGBA14636QQ,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,Q,7/16 in,Copper,-,-
+EGBA14636RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,36,R,7/16 in,Copper,-,-
+EGBA14836CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,36,C,7/16 in,Copper,-,-
+EGBA14836NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,36,N,No Hole Pattern,Copper,-,-
+EGBA14836RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,36,R,7/16 in,Copper,-,-
+EGBA38236GG,"(A) Busbar, Insulators and Brackets",38 - 3/8,2,36,G,7/16 in,Copper,-,-
+EGBA38436EE,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,36,E,7/16 in,Copper,-,-
+EGBA38636JJ,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,36,J,7/16 in,Copper,-,-
+EGBC14236NN,(C) Busbar Only,14 - 1/4,2,36,N,No Hole Pattern,Copper,-,-
+EGBD14336CC2QK,(D) Busbar and Insulators,14 - 1/4,3,36,C,7/16 in,,"4/0 Concentric Copper Cable, 7 Strand",10 ft
+EGBF12436CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,36,C,9/16 in,Copper,-,-
+EGBF12436LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,36,L,7/16 in,Copper,-,-
+EGBF14436CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,36,C,7/16 in,Copper,-,-
+EGBA14434CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,34,C,7/16 in,Copper,-,-
+EGBA14434DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,34,D,7/16 in,Copper,-,-
+EGBA14433DBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,33,D,9/16 in,Tinned Copper,-,-
+EGBB14433DBT,(B) Busbar and Brackets,14 - 1/4,4,33,D,9/16 in,Tinned Copper,-,-
+EGBA14432BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,32,B,7/16 in,Copper,-,-
+EGBA14432CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,32,C,7/16 in,Copper,-,-
+EGBA14432GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,32,G,7/16 in,Copper,-,-
+EGBA14230BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,30,B,7/16 in,Copper,-,-
+EGBA14230EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,30,E,7/16 in,Copper,-,-
+EGBA14230EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,30,E,7/16 in,Tinned Copper,-,-
+EGBA14230HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,30,H,7/16 in,Copper,-,-
+EGBA14330CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,30,C,7/16 in,Copper,-,-
+EGBA14430BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,30,B,7/16 in,Copper,-,-
+EGBA14430CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,30,C,7/16 in,Copper,-,-
+EGBA14430CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,30,C,7/16 in,Tinned Copper,-,-
+EGBA14430LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,30,L,7/16 in,Copper,-,-
+EGBA14430NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,30,N,No Hole Pattern,Copper,-,-
+EGBA14630NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,30,N,No Hole Pattern,Copper,-,-
+EGBA14630RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,30,R,7/16 in,Copper,-,-
+EGBA14830CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,30,C,7/16 in,Copper,-,-
+EGBA38430CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,30,C,7/16 in,Copper,-,-
+EGBA38430NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,30,N,No Hole Pattern,Copper,-,-
+EGBA38630LL,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,30,L,7/16 in,Copper,-,-
+EGBB14230EET,(B) Busbar and Brackets,14 - 1/4,2,30,E,7/16 in,Tinned Copper,-,-
+EGBB14330CB,(B) Busbar and Brackets,14 - 1/4,3,30,C,9/16 in,Copper,-,-
+EGBC12230NN,(C) Busbar Only,12 - 1/2,2,30,N,No Hole Pattern,Copper,-,-
+EGBA14428BDT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,28,B,3/8 in,Tinned Copper,-,-
+EGBA14428CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,28,C,7/16 in,Copper,-,-
+EGBA14428NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,28,N,No Hole Pattern,Copper,-,-
+EGBC14428CC,(C) Busbar Only,14 - 1/4,4,28,C,7/16 in,Copper,-,-
+EGBF12426CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,26,C,9/16 in,Copper,-,-
+EGBA12224BB,"(A) Busbar, Insulators and Brackets",12 - 1/2,2,24,B,7/16 in,Copper,-,-
+EGBA12224NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,2,24,N,No Hole Pattern,Copper,-,-
+EGBA12424CC,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,24,C,7/16 in,Copper,-,-
+EGBA12424NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,24,N,No Hole Pattern,Copper,-,-
+EGBA12624CC,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,24,C,7/16 in,Copper,-,-
+EGBA12624NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,24,N,No Hole Pattern,Copper,-,-
+EGBA12624RR,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,24,R,7/16 in,Copper,-,-
+EGBA12824NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,8,24,N,No Hole Pattern,Copper,-,-
+EGBA14124NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,24,N,No Hole Pattern,Copper,-,-
+EGBA14224BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,B,7/16 in,Copper,-,-
+EGBA14224BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,B,7/16 in,Tinned Copper,-,-
+EGBA14224BE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,B,5/16 in,Copper,-,-
+EGBA14224DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,D,7/16 in,Copper,-,-
+EGBA14224EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,E,7/16 in,Copper,-,-
+EGBA14224EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,E,7/16 in,Tinned Copper,-,-
+EGBA14224GE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,G,1/4 in,Copper,-,-
+EGBA14224GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,G,7/16 in,Copper,-,-
+EGBA14224GGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,G,7/16 in,Tinned Copper,-,-
+EGBA14224HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,H,7/16 in,Copper,-,-
+EGBA14224JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,J,7/16 in,Copper,-,-
+EGBA14224NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,24,N,No Hole Pattern,Copper,-,-
+EGBA14324AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,A,7/16 in,Copper,-,-
+EGBA14324BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,B,7/16 in,Copper,-,-
+EGBA14324BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,B,7/16 in,Tinned Copper,-,-
+EGBA14324CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,C,7/16 in,Copper,-,-
+EGBA14324CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,C,7/16 in,Tinned Copper,-,-
+EGBA14324CF,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,C,1/4 in,Copper,-,-
+EGBA14324DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,D,1/2 in,Tinned Copper,-,-
+EGBA14324EC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,E,3/8 in,Copper,-,-
+EGBA14324GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,G,7/16 in,Copper,-,-
+EGBA14324LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,L,7/16 in,Copper,-,-
+EGBA14324LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,L,7/16 in,Tinned Copper,-,-
+EGBA14324NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,24,N,No Hole Pattern,Copper,-,-
+EGBA14424AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,A,7/16 in,Copper,-,-
+EGBA14424AAT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,A,7/16 in,Tinned Copper,-,-
+EGBA14424BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,B,7/16 in,Copper,-,-
+EGBA14424BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,B,7/16 in,Tinned Copper,-,-
+EGBA14424BC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,B,9/16 in,Copper,-,-
+EGBA14424BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,B,3/8 in,Copper,-,-
+EGBA14424BFT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,B,1/4 in,Tinned Copper,-,-
+EGBA14424CA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,C,5/8 in,Copper,-,-
+EGBA14424CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,C,9/16 in,Copper,-,-
+EGBA14424CBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,C,9/16 in,Tinned Copper,-,-
+EGBA14424CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,C,7/16 in,Tinned Copper,-,-
+EGBA14424DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,D,7/16 in,Copper,-,-
+EGBA14424DDT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,D,7/16 in,Tinned Copper,-,-
+EGBA14424EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,E,7/16 in,Copper,-,-
+EGBA14424GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,G,7/16 in,Copper,-,-
+EGBA14424GGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,G,7/16 in,Tinned Copper,-,-
+EGBA14424JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,J,7/16 in,Copper,-,-
+EGBA14424JJT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,J,7/16 in,Tinned Copper,-,-
+EGBA14424KK,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,K,7/16 in,Copper,-,-
+EGBA14424LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,L,7/16 in,Tinned Copper,-,-
+EGBA14424MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,M,7/16 in,Copper,-,-
+EGBA14424MMT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,M,7/16 in,Tinned Copper,-,-
+EGBA14424NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,N,No Hole Pattern,Copper,-,-
+EGBA14424NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14424QQ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,Q,7/16 in,Copper,-,-
+EGBA14424QQT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,Q,7/16 in,Tinned Copper,-,-
+EGBA14424RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,R,7/16 in,Copper,-,-
+EGBA14424RRT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,R,7/16 in,Tinned Copper,-,-
+EGBA14824DG,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,24,D,1/2 in,Copper,-,-
+EGBA14824LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,24,L,7/16 in,Copper,-,-
+EGBA14824MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,24,M,7/16 in,Copper,-,-
+EGBA14824NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,24,N,No Hole Pattern,Copper,-,-
+EGBA38424BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,24,B,7/16 in,Copper,-,-
+EGBA38424CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,24,C,7/16 in,Copper,-,-
+EGBA38424DD,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,24,D,7/16 in,Copper,-,-
+EGBA38624CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,24,C,7/16 in,Copper,-,-
+EGBA38624LL,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,24,L,7/16 in,Copper,-,-
+EGBB14324CB,(B) Busbar and Brackets,14 - 1/4,3,24,C,9/16 in,Copper,-,-
+EGBB14424CC,(B) Busbar and Brackets,14 - 1/4,4,24,C,7/16 in,Copper,-,-
+EGBB14424EE,(B) Busbar and Brackets,14 - 1/4,4,24,E,7/16 in,Copper,-,-
+EGBB14424JE,(B) Busbar and Brackets,14 - 1/4,4,24,J,1/4 in,Copper,-,-
+EGBB38324NN,(B) Busbar and Brackets,38 - 3/8,3,24,N,No Hole Pattern,Copper,-,-
+EGBC14124NN,(C) Busbar Only,14 - 1/4,1,24,N,No Hole Pattern,Copper,-,-
+EGBC14224NN,(C) Busbar Only,14 - 1/4,2,24,N,No Hole Pattern,Copper,-,-
+EGBC14424NN,(C) Busbar Only,14 - 1/4,4,24,N,No Hole Pattern,Copper,-,-
+EGBD14224BB,(D) Busbar and Insulators,14 - 1/4,2,24,B,7/16 in,Copper,-,-
+EGBF12424CB,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,24,C,9/16 in,Copper,-,-
+EGBF12424CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",12 - 1/2,4,24,C,7/16 in,Copper,-,-
+EGBF14424CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,24,C,7/16 in,Copper,-,-
+EGBF14424GG,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,24,G,7/16 in,Copper,-,-
+EGBF14424LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,24,L,7/16 in,Copper,-,-
+EGBF14424RR,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,24,R,7/16 in,Copper,-,-
+EGBA14222EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,22,E,7/16 in,Tinned Copper,-,-
+EGBA14422BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,22,B,3/8 in,Copper,-,-
+EGBA14421RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,21,R,7/16 in,Copper,-,-
+EGBA12420NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,20,N,No Hole Pattern,Copper,-,-
+EGBA14220BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,B,7/16 in,Copper,-,-
+EGBA14220BE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,B,5/16 in,Copper,-,-
+EGBA14220DGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,D,1/2 in,Tinned Copper,-,-
+EGBA14220EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,E,7/16 in,Copper,-,-
+EGBA14220HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,H,7/16 in,Copper,-,-
+EGBA14220JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,J,7/16 in,Copper,-,-
+EGBA14220NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,20,N,No Hole Pattern,Copper,-,-
+EGBA14320BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,20,B,7/16 in,Copper,-,-
+EGBA14320CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,20,C,7/16 in,Copper,-,-
+EGBA14420DG1TE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,D,1/2 in,,"#2 Solid Copper Wire, Tinned",5 ft
+EGBA14420LLT2GT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,L,7/16 in,Tinned Copper,"2/0 Concentric Copper Cable, 7 Strand",26 ft
+EGBA14420AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,A,7/16 in,Copper,-,-
+EGBA14420BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,B,7/16 in,Copper,-,-
+EGBA14420CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,C,9/16 in,Copper,-,-
+EGBA14420CBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,C,9/16 in,Tinned Copper,-,-
+EGBA14420CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,C,7/16 in,Copper,-,-
+EGBA14420CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,C,7/16 in,Tinned Copper,-,-
+EGBA14420GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,G,7/16 in,Copper,-,-
+EGBA14420HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,H,7/16 in,Copper,-,-
+EGBA14420LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,L,7/16 in,Copper,-,-
+EGBA14420LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,L,7/16 in,Tinned Copper,-,-
+EGBA14420MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,M,7/16 in,Copper,-,-
+EGBA14420NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,N,No Hole Pattern,Copper,-,-
+EGBA14420QQ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,Q,7/16 in,Copper,-,-
+EGBA14420QQT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,Q,7/16 in,Tinned Copper,-,-
+EGBA14420RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,20,R,7/16 in,Copper,-,-
+EGBA38320BF,"(A) Busbar, Insulators and Brackets",38 - 3/8,3,20,B,1/4 in,Copper,-,-
+EGBA38420CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,20,C,7/16 in,Copper,-,-
+EGBB14420CC,(B) Busbar and Brackets,14 - 1/4,4,20,C,7/16 in,Copper,-,-
+EGBF14420CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,20,C,7/16 in,Copper,-,-
+EGBF14420LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,20,L,7/16 in,Copper,-,-
+EGBF14420LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,20,L,7/16 in,Tinned Copper,-,-
+EGBA12418EE,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,18,E,7/16 in,Copper,-,-
+EGBA12418MM,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,18,M,7/16 in,Copper,-,-
+EGBA12418NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,18,N,No Hole Pattern,Copper,-,-
+EGBA14118NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,18,N,No Hole Pattern,Copper,-,-
+EGBA14218BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,B,7/16 in,Copper,-,-
+EGBA14218EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,E,7/16 in,Copper,-,-
+EGBA14218GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,G,7/16 in,Copper,-,-
+EGBA14218HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,H,7/16 in,Copper,-,-
+EGBA14218HHT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,H,7/16 in,Tinned Copper,-,-
+EGBA14218NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,18,N,No Hole Pattern,Copper,-,-
+EGBA14318DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,18,D,7/16 in,Copper,-,-
+EGBA14318GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,18,G,7/16 in,Copper,-,-
+EGBA14318NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,18,N,No Hole Pattern,Copper,-,-
+EGBA14418AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,A,7/16 in,Copper,-,-
+EGBA14418BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,B,7/16 in,Copper,-,-
+EGBA14418BC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,B,9/16 in,Copper,-,-
+EGBA14418BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,B,3/8 in,Copper,-,-
+EGBA14418CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,C,7/16 in,Copper,-,-
+EGBA14418CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,C,7/16 in,Tinned Copper,-,-
+EGBA14418DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,D,7/16 in,Copper,-,-
+EGBA14418EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,E,7/16 in,Copper,-,-
+EGBA14418GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,G,7/16 in,Copper,-,-
+EGBA14418JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,J,7/16 in,Copper,-,-
+EGBA14418LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,L,7/16 in,Copper,-,-
+EGBA14418LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,L,7/16 in,Tinned Copper,-,-
+EGBA14418MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,M,7/16 in,Copper,-,-
+EGBA14418NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,18,N,No Hole Pattern,Copper,-,-
+EGBA38418BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,18,B,7/16 in,Copper,-,-
+EGBA38418DB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,18,D,9/16 in,Copper,-,-
+EGBA38418NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,18,N,No Hole Pattern,Copper,-,-
+EGBB14318CB,(B) Busbar and Brackets,14 - 1/4,3,18,C,9/16 in,Copper,-,-
+EGBB14418BB,(B) Busbar and Brackets,14 - 1/4,4,18,B,7/16 in,Copper,-,-
+EGBC14118HH,(C) Busbar Only,14 - 1/4,1,18,H,7/16 in,Copper,-,-
+EGBC14218EET,(C) Busbar Only,14 - 1/4,2,18,E,7/16 in,Tinned Copper,-,-
+EGBF14318CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,3,18,C,7/16 in,Copper,-,-
+EGBF14418CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,18,C,7/16 in,Copper,-,-
+EGBF14418CCT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,18,C,7/16 in,Tinned Copper,-,-
+EGBF14418LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,18,L,7/16 in,Copper,-,-
+EGBA12416AA,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,16,A,7/16 in,Copper,-,-
+EGBA12416BD,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,16,B,3/8 in,Copper,-,-
+EGBA12416CA,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,16,C,5/8 in,Copper,-,-
+EGBA14116HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,16,H,7/16 in,Copper,-,-
+EGBA14216BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,B,7/16 in,Copper,-,-
+EGBA14216EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,E,7/16 in,Copper,-,-
+EGBA14216GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,G,7/16 in,Copper,-,-
+EGBA14216HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,H,7/16 in,Copper,-,-
+EGBA14216NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,N,No Hole Pattern,Copper,-,-
+EGBA14216NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,16,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14316CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,16,C,7/16 in,Copper,-,-
+EGBA14416AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,A,7/16 in,Copper,-,-
+EGBA14416AAT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,A,7/16 in,Tinned Copper,-,-
+EGBA14416BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,B,7/16 in,Copper,-,-
+EGBA14416CA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,C,5/8 in,Copper,-,-
+EGBA14416CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,C,7/16 in,Copper,-,-
+EGBA14416CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,C,7/16 in,Tinned Copper,-,-
+EGBA14416CF,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,C,1/4 in,Copper,-,-
+EGBA14416LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,L,7/16 in,Copper,-,-
+EGBA14416LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,L,7/16 in,Tinned Copper,-,-
+EGBA14416NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,N,No Hole Pattern,Copper,-,-
+EGBA14416NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,16,N,No Hole Pattern,Tinned Copper,-,-
+EGBA38416GG,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,16,G,7/16 in,Copper,-,-
+EGBC14316LL,(C) Busbar Only,14 - 1/4,3,16,L,7/16 in,Copper,-,-
+EGBC14416AA,(C) Busbar Only,14 - 1/4,4,16,A,7/16 in,Copper,-,-
+EGBC14416CAT,(C) Busbar Only,14 - 1/4,4,16,C,5/8 in,Tinned Copper,-,-
+EGBD14416JET,(D) Busbar and Insulators,14 - 1/4,4,16,J,1/4 in,Tinned Copper,-,-
+EGBF14416LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,16,L,7/16 in,Copper,-,-
+EGBF14416LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,16,L,7/16 in,Tinned Copper,-,-
+EGBA14215BDT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,B,3/8 in,Tinned Copper,-,-
+EGBA14215EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,E,7/16 in,Tinned Copper,-,-
+EGBA14215GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,G,7/16 in,Copper,-,-
+EGBA14215JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,J,7/16 in,Copper,-,-
+EGBA14215JJT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,J,7/16 in,Tinned Copper,-,-
+EGBA14215NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,15,N,No Hole Pattern,Copper,-,-
+EGBA14415CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,15,C,7/16 in,Copper,-,-
+EGBA14415CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,15,C,7/16 in,Tinned Copper,-,-
+EGBA14415GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,15,G,7/16 in,Copper,-,-
+EGBA14415LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,15,L,7/16 in,Copper,-,-
+EGBC14215NN,(C) Busbar Only,14 - 1/4,2,15,N,No Hole Pattern,Copper,-,-
+EGBA12414BB,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,14,B,7/16 in,Copper,-,-
+EGBA14214BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,B,7/16 in,Copper,-,-
+EGBA14214BDT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,B,3/8 in,Tinned Copper,-,-
+EGBA14214EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,E,7/16 in,Copper,-,-
+EGBA14214GCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,G,3/8 in,Tinned Copper,-,-
+EGBA14214HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,H,7/16 in,Copper,-,-
+EGBA14214NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,14,N,No Hole Pattern,Copper,-,-
+EGBA14414AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,A,7/16 in,Copper,-,-
+EGBA14414BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,B,7/16 in,Copper,-,-
+EGBA14414BF,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,B,1/4 in,Copper,-,-
+EGBA14414CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,C,9/16 in,Copper,-,-
+EGBA14414CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,C,7/16 in,Copper,-,-
+EGBA14414EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,E,7/16 in,Copper,-,-
+EGBA14414GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,G,7/16 in,Copper,-,-
+EGBA14414KK,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,K,7/16 in,Copper,-,-
+EGBA14414LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,L,7/16 in,Copper,-,-
+EGBA14414MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,M,7/16 in,Copper,-,-
+EGBA14414NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,N,No Hole Pattern,Copper,-,-
+EGBA14414RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,14,R,7/16 in,Copper,-,-
+EGBB14214NN,(B) Busbar and Brackets,14 - 1/4,2,14,N,No Hole Pattern,Copper,-,-
+EGBB14414CC,(B) Busbar and Brackets,14 - 1/4,4,14,C,7/16 in,Copper,-,-
+EGBA14213NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,13,N,No Hole Pattern,Copper,-,-
+EGBB14313GGT,(B) Busbar and Brackets,14 - 1/4,3,13,G,7/16 in,Tinned Copper,-,-
+EGBC14213EB,(C) Busbar Only,14 - 1/4,2,13,E,9/16 in,Copper,-,-
+EGBA12212NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,2,12,N,No Hole Pattern,Copper,-,-
+EGBA12412AA,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,12,A,7/16 in,Copper,-,-
+EGBA12412CC,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,12,C,7/16 in,Copper,-,-
+EGBA12412GG,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,12,G,7/16 in,Copper,-,-
+EGBA12412NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,12,N,No Hole Pattern,Copper,-,-
+EGBA12612LL,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,12,L,7/16 in,Copper,-,-
+EGBA12612NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,6,12,N,No Hole Pattern,Copper,-,-
+EGBA14112EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,12,E,7/16 in,Copper,-,-
+EGBA14112HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,12,H,7/16 in,Copper,-,-
+EGBA14112NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,12,N,No Hole Pattern,Copper,-,-
+EGBA14212EE2GH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,E,7/16 in,,"2/0 Concentric Copper Cable, 7 Strand",8 ft
+EGBA14212BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,B,7/16 in,Copper,-,-
+EGBA14212BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,B,7/16 in,Tinned Copper,-,-
+EGBA14212BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,B,3/8 in,Copper,-,-
+EGBA14212DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,D,7/16 in,Copper,-,-
+EGBA14212DDT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,D,7/16 in,Tinned Copper,-,-
+EGBA14212EB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,E,9/16 in,Copper,-,-
+EGBA14212ECT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,E,3/8 in,Tinned Copper,-,-
+EGBA14212EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,E,7/16 in,Copper,-,-
+EGBA14212EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,E,7/16 in,Tinned Copper,-,-
+EGBA14212GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,G,7/16 in,Copper,-,-
+EGBA14212HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,H,7/16 in,Copper,-,-
+EGBA14212HHT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,H,7/16 in,Tinned Copper,-,-
+EGBA14212JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,J,7/16 in,Copper,-,-
+EGBA14212JJT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,J,7/16 in,Tinned Copper,-,-
+EGBA14212NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,N,No Hole Pattern,Copper,-,-
+EGBA14212NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,12,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14312LL2QA,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,L,7/16 in,,"4/0 Concentric Copper Cable, 7 Strand",1 ft
+EGBA14312BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,B,7/16 in,Copper,-,-
+EGBA14312BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,B,7/16 in,Tinned Copper,-,-
+EGBA14312CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,C,7/16 in,Copper,-,-
+EGBA14312EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,E,7/16 in,Copper,-,-
+EGBA14312GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,G,7/16 in,Copper,-,-
+EGBA14312HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,H,7/16 in,Copper,-,-
+EGBA14312LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,L,7/16 in,Copper,-,-
+EGBA14312MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,M,7/16 in,Copper,-,-
+EGBA14312MMT,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,M,7/16 in,Tinned Copper,-,-
+EGBA14312NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,12,N,No Hole Pattern,Copper,-,-
+EGBA14412AA1TD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,A,7/16 in,,"#2 Solid Copper Wire, Tinned",4 ft
+EGBA14412BBT2GK,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,B,7/16 in,Tinned Copper,"2/0 Concentric Copper Cable, 7 Strand",10 ft
+EGBA14412CCT1TK,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,7/16 in,Tinned Copper,"#2 Solid Copper Wire, Tinned",10 ft
+EGBA14412AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,A,7/16 in,Copper,-,-
+EGBA14412AAT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,A,7/16 in,Tinned Copper,-,-
+EGBA14412BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,B,7/16 in,Copper,-,-
+EGBA14412BBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,B,7/16 in,Tinned Copper,-,-
+EGBA14412BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,B,3/8 in,Copper,-,-
+EGBA14412BE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,B,5/16 in,Copper,-,-
+EGBA14412CB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,9/16 in,Copper,-,-
+EGBA14412CBT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,9/16 in,Tinned Copper,-,-
+EGBA14412CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,7/16 in,Copper,-,-
+EGBA14412CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,7/16 in,Tinned Copper,-,-
+EGBA14412CF,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,C,1/4 in,Copper,-,-
+EGBA14412DD,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,D,7/16 in,Copper,-,-
+EGBA14412DG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,D,1/2 in,Copper,-,-
+EGBA14412EC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,E,3/8 in,Copper,-,-
+EGBA14412EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,E,7/16 in,Copper,-,-
+EGBA14412GET,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,G,1/4 in,Tinned Copper,-,-
+EGBA14412GGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,G,7/16 in,Tinned Copper,-,-
+EGBA14412HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,H,7/16 in,Copper,-,-
+EGBA14412JE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,J,1/4 in,Copper,-,-
+EGBA14412JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,J,7/16 in,Copper,-,-
+EGBA14412KK,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,K,7/16 in,Copper,-,-
+EGBA14412LB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,L,9/16 in,Copper,-,-
+EGBA14412LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,L,7/16 in,Copper,-,-
+EGBA14412LLT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,L,7/16 in,Tinned Copper,-,-
+EGBA14412MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,M,7/16 in,Copper,-,-
+EGBA14412MMT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,M,7/16 in,Tinned Copper,-,-
+EGBA14412NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14412QQ,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,Q,7/16 in,Copper,-,-
+EGBA14412QQT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,Q,7/16 in,Tinned Copper,-,-
+EGBA14412RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,R,7/16 in,Copper,-,-
+EGBA14412RRT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,R,7/16 in,Tinned Copper,-,-
+EGBA14612AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,A,7/16 in,Copper,-,-
+EGBA14612BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,B,7/16 in,Copper,-,-
+EGBA14612BF,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,B,1/4 in,Copper,-,-
+EGBA14612CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,C,7/16 in,Copper,-,-
+EGBA14812BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,8,12,B,7/16 in,Copper,-,-
+EGBA38212EE,"(A) Busbar, Insulators and Brackets",38 - 3/8,2,12,E,7/16 in,Copper,-,-
+EGBA38212NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,2,12,N,No Hole Pattern,Copper,-,-
+EGBA38412AA,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,A,7/16 in,Copper,-,-
+EGBA38412BB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,B,7/16 in,Copper,-,-
+EGBA38412CC,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,C,7/16 in,Copper,-,-
+EGBA38412GG,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,G,7/16 in,Copper,-,-
+EGBA38412HH,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,H,7/16 in,Copper,-,-
+EGBA38412NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,12,N,No Hole Pattern,Copper,-,-
+EGBA38612GG,"(A) Busbar, Insulators and Brackets",38 - 3/8,6,12,G,7/16 in,Copper,-,-
+EGBB14112HH,(B) Busbar and Brackets,14 - 1/4,1,12,H,7/16 in,Copper,-,-
+EGBB14212JJ,(B) Busbar and Brackets,14 - 1/4,2,12,J,7/16 in,Copper,-,-
+EGBB14312CB,(B) Busbar and Brackets,14 - 1/4,3,12,C,9/16 in,Copper,-,-
+EGBB14412BB,(B) Busbar and Brackets,14 - 1/4,4,12,B,7/16 in,Copper,-,-
+EGBB14412CC,(B) Busbar and Brackets,14 - 1/4,4,12,C,7/16 in,Copper,-,-
+EGBB14412CCT,(B) Busbar and Brackets,14 - 1/4,4,12,C,7/16 in,Tinned Copper,-,-
+EGBC14212BB,(C) Busbar Only,14 - 1/4,2,12,B,7/16 in,Copper,-,-
+EGBC14212BFT,(C) Busbar Only,14 - 1/4,2,12,B,1/4 in,Tinned Copper,-,-
+EGBC14212EE,(C) Busbar Only,14 - 1/4,2,12,E,7/16 in,Copper,-,-
+EGBC14212GG,(C) Busbar Only,14 - 1/4,2,12,G,7/16 in,Copper,-,-
+EGBC14312NN,(C) Busbar Only,14 - 1/4,3,12,N,No Hole Pattern,Copper,-,-
+EGBC14412NN,(C) Busbar Only,14 - 1/4,4,12,N,No Hole Pattern,Copper,-,-
+EGBC14412NNT,(C) Busbar Only,14 - 1/4,4,12,N,No Hole Pattern,Tinned Copper,-,-
+EGBD14212NN,(D) Busbar and Insulators,14 - 1/4,2,12,N,No Hole Pattern,Copper,-,-
+EGBD14312CC2QK,(D) Busbar and Insulators,14 - 1/4,3,12,C,7/16 in,,"4/0 Concentric Copper Cable, 7 Strand",10 ft
+EGBD14412NN,(D) Busbar and Insulators,14 - 1/4,4,12,N,No Hole Pattern,Copper,-,-
+EGBF14412CC,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,12,C,7/16 in,Copper,-,-
+EGBF14412LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,12,L,7/16 in,Copper,-,-
+EGBF14412LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,12,L,7/16 in,Tinned Copper,-,-
+EGBA12210JJ,"(A) Busbar, Insulators and Brackets",12 - 1/2,2,10,J,7/16 in,Copper,-,-
+EGBA14110NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,10,N,No Hole Pattern,Copper,-,-
+EGBA14210BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,B,7/16 in,Copper,-,-
+EGBA14210BE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,B,5/16 in,Copper,-,-
+EGBA14210EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,E,7/16 in,Copper,-,-
+EGBA14210GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,G,7/16 in,Copper,-,-
+EGBA14210HB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,H,9/16 in,Copper,-,-
+EGBA14210JE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,J,1/4 in,Copper,-,-
+EGBA14210JF,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,J,1/2 in,Copper,-,-
+EGBA14210JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,J,7/16 in,Copper,-,-
+EGBA14210NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,N,No Hole Pattern,Copper,-,-
+EGBA14210SS,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,10,S,7/16 in,Copper,-,-
+EGBA14310NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,10,N,No Hole Pattern,Copper,-,-
+EGBA14410AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,A,7/16 in,Copper,-,-
+EGBA14410AAT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,A,7/16 in,Tinned Copper,-,-
+EGBA14410BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,B,7/16 in,Copper,-,-
+EGBA14410CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,C,7/16 in,Copper,-,-
+EGBA14410EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,E,7/16 in,Copper,-,-
+EGBA14410GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,G,7/16 in,Copper,-,-
+EGBA14410GGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,G,7/16 in,Tinned Copper,-,-
+EGBA14410LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,L,7/16 in,Copper,-,-
+EGBA14410NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,N,No Hole Pattern,Copper,-,-
+EGBA14410NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14410RR,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,10,R,7/16 in,Copper,-,-
+EGBA38410DB,"(A) Busbar, Insulators and Brackets",38 - 3/8,4,10,D,9/16 in,Copper,-,-
+EGBC14110HH,(C) Busbar Only,14 - 1/4,1,10,H,7/16 in,Copper,-,-
+EGBC14310LL,(C) Busbar Only,14 - 1/4,3,10,L,7/16 in,Copper,-,-
+EGBA14209GGT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,09,G,7/16 in,Tinned Copper,-,-
+EGBA38509AA,"(A) Busbar, Insulators and Brackets",38 - 3/8,5,09,A,7/16 in,Copper,-,-
+EGBB14209HHT,(B) Busbar and Brackets,14 - 1/4,2,09,H,7/16 in,Tinned Copper,-,-
+EGBA12408NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,4,08,N,No Hole Pattern,Copper,-,-
+EGBA14208BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,B,7/16 in,Copper,-,-
+EGBA14208BF,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,B,1/4 in,Copper,-,-
+EGBA14208EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,E,7/16 in,Copper,-,-
+EGBA14208GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,G,7/16 in,Copper,-,-
+EGBA14208HHT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,H,7/16 in,Tinned Copper,-,-
+EGBA14208NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,08,N,No Hole Pattern,Copper,-,-
+EGBA14308AA1TK,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,08,A,7/16 in,,"#2 Solid Copper Wire, Tinned",10 ft
+EGBA14308JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,08,J,7/16 in,Copper,-,-
+EGBA14308NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,08,N,No Hole Pattern,Copper,-,-
+EGBA14408BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,08,B,7/16 in,Copper,-,-
+EGBA14408MM,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,08,M,7/16 in,Copper,-,-
+EGBA14408NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,08,N,No Hole Pattern,Copper,-,-
+EGBA14608AA,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,08,A,7/16 in,Copper,-,-
+EGBA38308NN,"(A) Busbar, Insulators and Brackets",38 - 3/8,3,08,N,No Hole Pattern,Copper,-,-
+EGBC14308LLT,(C) Busbar Only,14 - 1/4,3,08,L,7/16 in,Tinned Copper,-,-
+EGBC14408GG,(C) Busbar Only,14 - 1/4,4,08,G,7/16 in,Copper,-,-
+EGBA14207BF,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,07,B,1/4 in,Copper,-,-
+EGBC14307NN,(C) Busbar Only,14 - 1/4,3,07,N,No Hole Pattern,Copper,-,-
+EGBA12206NN,"(A) Busbar, Insulators and Brackets",12 - 1/2,2,06,N,No Hole Pattern,Copper,-,-
+EGBA14106HH,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,06,H,7/16 in,Copper,-,-
+EGBA14106HHT,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,06,H,7/16 in,Tinned Copper,-,-
+EGBA14106NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,1,06,N,No Hole Pattern,Copper,-,-
+EGBA14206BB,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,B,7/16 in,Copper,-,-
+EGBA14206BD,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,B,3/8 in,Copper,-,-
+EGBA14206EC,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,E,3/8 in,Copper,-,-
+EGBA14206EE,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,E,7/16 in,Copper,-,-
+EGBA14206EET,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,E,7/16 in,Tinned Copper,-,-
+EGBA14206GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,G,7/16 in,Copper,-,-
+EGBA14206JJ,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,J,7/16 in,Copper,-,-
+EGBA14206NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,N,No Hole Pattern,Copper,-,-
+EGBA14206NNT,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,N,No Hole Pattern,Tinned Copper,-,-
+EGBA14206SS,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,06,S,7/16 in,Copper,-,-
+EGBA14306CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,06,C,7/16 in,Copper,-,-
+EGBA14306NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,3,06,N,No Hole Pattern,Copper,-,-
+EGBA14406MM2QC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,06,M,7/16 in,,"4/0 Concentric Copper Cable, 7 Strand",3 ft
+EGBA14406CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,06,C,7/16 in,Copper,-,-
+EGBA14406CCT,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,06,C,7/16 in,Tinned Copper,-,-
+EGBA14406LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,06,L,7/16 in,Copper,-,-
+EGBA14406NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,06,N,No Hole Pattern,Copper,-,-
+EGBB14106NN,(B) Busbar and Brackets,14 - 1/4,1,06,N,No Hole Pattern,Copper,-,-
+EGBB14206EET,(B) Busbar and Brackets,14 - 1/4,2,06,E,7/16 in,Tinned Copper,-,-
+EGBB14206NN,(B) Busbar and Brackets,14 - 1/4,2,06,N,No Hole Pattern,Copper,-,-
+EGBC14106EE,(C) Busbar Only,14 - 1/4,1,06,E,7/16 in,Copper,-,-
+EGBC14206NN,(C) Busbar Only,14 - 1/4,2,06,N,No Hole Pattern,Copper,-,-
+EGBF14406LL,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,06,L,7/16 in,Copper,-,-
+EGBF14406LLT,"(F) Busbar, Insulators, Brackets and Plexiglass Cover",14 - 1/4,4,06,L,7/16 in,Tinned Copper,-,-
+EGBA14204NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,2,04,N,No Hole Pattern,Copper,-,-
+EGBA14424CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,C,7/16 in,Copper,-,-
+EGBA14424LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,24,L,7/16 in,Copper,-,-
+EGBA14412GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,G,7/16 in,Copper,-,-
+EGBA14412NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,4,12,N,No Hole Pattern,Copper,-,-
+EGBA14618CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,18,C,7/16 in,Copper,-,-
+EGBA14630CC,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,30,C,7/16 in,Copper,-,-
+EGBA14612GG,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,G,7/16 in,Copper,-,-
+EGBA14624LL,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,24,L,7/16 in,Copper,-,-
+EGBA14612NN,"(A) Busbar, Insulators and Brackets",14 - 1/4,6,12,N,No Hole Pattern,Copper,-,-
