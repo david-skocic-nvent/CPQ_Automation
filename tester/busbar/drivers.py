@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from CustomDriver import CustomDriver
 from DriverController import DriverController
-from threading import Thread
 import constants
 import os
 from dotenv import load_dotenv
@@ -115,50 +114,4 @@ class TelecomBarDriver(BusbarDriver):
         self.enter_value_exit_warning((By.XPATH, '//*[@id="typeahead-widget-null-8ac1f72b-660a-4476-a585-3587e5e12046-46bc4bc784-be3a-4cd2-a046-f5daf217323c"]'), "a\b" + values["material"])
         self.read_prices(values)
 
-def read_csv_dict_list (file_path):
-    csv_file = open(file_path, "r", newline='')
-    reader = csv.DictReader(csv_file)
-    dict_list = []
-    for row in reader:
-        dict_list.append(row)
-    return dict_list
-
-def read_csv_list (file_path):
-    csv_file = open(file_path, "r", newline='')
-    reader = csv.reader(csv_file)
-    return_list = []
-    for row in reader:
-        return_list.append(row)
-    return return_list
-
-NUMBER_OF_THREADS = 1
-
-if __name__ == '__main__':
-    tests = read_csv_dict_list(constants.PARSED_NUMBERS_FILE_PATH_GROUND)
-    completed_tests = read_csv_list(constants.COMPLETED_PARTS_FILE_PATH_GROUND)
-
-    # get a list of the completed part numbers
-    completed_part_numbers = []
-    for row in completed_tests:
-        completed_part_numbers.append(row[0])
-
-    tests_to_remove = []
-
-    # find all completed tests in tests list and add them to a remove list
-    for test in tests:
-        if test["part number"] in completed_part_numbers:
-            completed_part_numbers.remove(test["part number"])
-            tests_to_remove.append(test)
-
-    # remove all completed tests from tests
-    for test in tests_to_remove:
-        tests.remove(test)
-
-    for test in tests:
-        print(test["part number"])
-    
-    controller = DriverController(driver_type=GroundBarDriver, driver_count=NUMBER_OF_THREADS, test_list=tests)
-    controller.make_drivers(wait_time=1)
-
-    controller.run_tests()
 
