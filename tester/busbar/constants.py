@@ -1,9 +1,15 @@
-PARSED_NUMBERS_FILE_PATH_GROUND = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\parsed_numbers_ground.csv"
-PARSED_NUMBERS_FILE_PATH_TELECOM = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\parsed_numbers_telecom.csv"
-COMPLETED_PARTS_FILE_PATH_GROUND = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\part_prices_ground.csv"
-COMPLETED_PARTS_FILE_PATH_TELECOM = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\part_prices_telecom.csv"
-RAW_PART_NUMBERS_FILE_PATH_GROUND = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\raw_part_numbers_ground.txt"
-RAW_PART_NUMBERS_FILE_PATH_TELECOM = "C:\\Users\\E2023355\\OneDrive - nVent Management Company\\Documents\\VSCode\\Projects\\CPQ\\CPQ_Automation\\tester\\busbar\\raw_part_numbers_telecom.txt"
+from pathlib import Path
+import os
+
+# Get the path of the current file
+BUSBAR_FOLDER_PATH = Path(os.path.abspath(__file__)).parent
+
+PARSED_NUMBERS_FILE_PATH_GROUND = BUSBAR_FOLDER_PATH / "data\\parsed_numbers_ground.csv"
+PARSED_NUMBERS_FILE_PATH_TELECOM = BUSBAR_FOLDER_PATH / "data\\parsed_numbers_telecom.csv"
+COMPLETED_PARTS_FILE_PATH_GROUND = BUSBAR_FOLDER_PATH / "data\\part_prices_ground.csv"
+COMPLETED_PARTS_FILE_PATH_TELECOM = BUSBAR_FOLDER_PATH / "data\\part_prices_telecom.csv"
+RAW_PART_NUMBERS_FILE_PATH_GROUND = BUSBAR_FOLDER_PATH / "data\\raw_part_numbers_ground.txt"
+RAW_PART_NUMBERS_FILE_PATH_TELECOM = BUSBAR_FOLDER_PATH / "data\\raw_part_numbers_telecom.txt"
 
 TELECOM = "telecom"
 GROUND = "ground"

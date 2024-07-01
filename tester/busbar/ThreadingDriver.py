@@ -1,15 +1,14 @@
-from abc import ABC, abstractmethod
-from selenium import webdriver
-import random
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-import time
+from selenium.webdriver.common.by import By
+from abc import ABC, abstractmethod
+from selenium import webdriver
 from threading import Thread
+import random
+import time
 
 # a simple decorator that will retry a function 20 times with a one second break until it returns true
 # exits thread or program if true is never received
@@ -25,7 +24,7 @@ def repeat_until_successful(func):
             #return False
     return wrapper
 
-class CustomDriver(webdriver.Edge, ABC):
+class ThreadingDriver(webdriver.Edge, ABC):
 
     @abstractmethod
     def login(self):

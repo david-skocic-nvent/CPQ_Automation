@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
-from CustomDriver import CustomDriver
-from DriverController import DriverController
+from ThreadingDriver import ThreadingDriver
 import constants
 import os
 from dotenv import load_dotenv
@@ -10,7 +9,7 @@ load_dotenv()
 USERNAME = os.getenv("TACTON_USERNAME")
 PASSWORD = os.getenv("TACTON_PASSWORD")
 
-class BusbarDriver(CustomDriver):
+class BusbarDriver(ThreadingDriver):
     def click_to_part_number_logic (self):
         # clicks my project
         self.click_element((By.XPATH, '//span[text() = "David Skocic"]'))
