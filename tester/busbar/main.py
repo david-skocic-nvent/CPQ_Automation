@@ -2,7 +2,6 @@ from drivers import GroundBarDriver, TelecomBarDriver
 from parsers import GroundParser, TelecomParser
 from DriverController import DriverController
 import csv
-from tester_functions import *
 from constants import *
 
 def read_csv_dict_list (file_path):
