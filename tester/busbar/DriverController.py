@@ -1,16 +1,19 @@
 from time import sleep
+from constants import *
 
 class DriverController():
-    def __init__(self, driver_type, test_list, driver_count=1):
+    def __init__(self, driver_type, currency, test_list, driver_count=1):
         self.driver_type = driver_type
         self.driver_count = driver_count
         self.test_list = test_list
+        self.currency = currency
+
         self.failed_tests = []
         self.drivers = []
 
     def make_drivers(self, wait_time=0):
         for _ in range(self.driver_count):
-            self.drivers.append(self.driver_type())
+            self.drivers.append(self.driver_type(self.currency))
             sleep(wait_time)
 
     def run_tests(self):

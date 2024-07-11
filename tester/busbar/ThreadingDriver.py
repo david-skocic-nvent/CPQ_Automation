@@ -55,7 +55,7 @@ class ThreadingDriver(webdriver.Edge, ABC):
 
     # chooses a combobox value. Can be from all possible options or from a list of user-defined options
     @repeat_until_successful
-    def choose_combobox_value(self, selection, allow_empty_value = False, manual_values: list = None):
+    def choose_combobox_value(self, selection, allow_empty_value = False, manual_values=None):
         try:
             dropdown_element = WebDriverWait(self, 5).until(EC.element_to_be_clickable(selection))
             dropdown = Select(dropdown_element)

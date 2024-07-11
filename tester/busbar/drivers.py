@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from ThreadingDriver import ThreadingDriver
-import constants
+from constants import *
 import os
 from dotenv import load_dotenv
 import time
@@ -70,13 +70,17 @@ class BusbarDriver(ThreadingDriver):
             self.click_element(warning_selection)
 
 class GroundBarDriver(BusbarDriver):
-    def __init__ (self):
+    def __init__ (self, currency):
         self.thread = None
         self.tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[1]'
-        self.completed_parts_path = constants.COMPLETED_PARTS_FILE_PATH_GROUND
-        self.parsed_numbers_path = constants.PARSED_NUMBERS_FILE_PATH_GROUND
+        completed_parts_fname = COMPLETED_PARTS_FILE_NAME_GROUND
+        if currency == EURO:
+            self.completed_parts_path = EURO_FOLDER_PATH / completed_parts_fname
+        elif currency == USD:
+            self.completed_parts_path = USD_FOLDER_PATH / completed_parts_fname
+        self.parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_GROUND
         super().__init__()
-        self.get(constants.LINK)
+        self.get(LINK)
         self.login()
         self.click_to_part_number_logic()
 
@@ -95,13 +99,17 @@ class GroundBarDriver(BusbarDriver):
         self.read_prices(values)
 
 class TelecomBarDriver(BusbarDriver):
-    def __init__ (self):
+    def __init__ (self, currency):
         self.thread = None
         self.tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[2]'
-        self.completed_parts_path = constants.COMPLETED_PARTS_FILE_PATH_TELECOM
-        self.parsed_numbers_path = constants.PARSED_NUMBERS_FILE_PATH_TELECOM
+        completed_parts_fname = COMPLETED_PARTS_FILE_NAME_TELECOM
+        if currency == EURO:
+            self.completed_parts_path = EURO_FOLDER_PATH / completed_parts_fname
+        elif currency == USD:
+            self.completed_parts_path = USD_FOLDER_PATH / completed_parts_fname
+        self.parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_TELECOM
         super().__init__()
-        self.get(constants.LINK)
+        self.get(LINK)
         self.login()
         self.click_to_part_number_logic()
 

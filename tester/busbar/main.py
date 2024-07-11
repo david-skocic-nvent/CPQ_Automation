@@ -40,16 +40,21 @@ def remove_completed_tests():
 if __name__ == '__main__':
 
     number_of_threads = int(input("How many threads?: "))
+    currency = input("What currency?: ").lower()
+    if currency == EURO:
+        output_folder_path = EURO_FOLDER_PATH
+    elif currency == USD:
+        output_folder_path = USD_FOLDER_PATH
     tool = input("Which tool to use?: ")
 
     if tool == GROUND:
         tests = read_csv_dict_list(PARSED_NUMBERS_FILE_PATH_GROUND)
-        completed_tests = read_csv_list(COMPLETED_PARTS_FILE_PATH_GROUND)
+        completed_tests = read_csv_list(output_folder_path / COMPLETED_PARTS_FILE_NAME_GROUND)
         driver_type = GroundBarDriver
         parser = GroundParser()
     elif tool == TELECOM:
         tests = read_csv_dict_list(PARSED_NUMBERS_FILE_PATH_TELECOM)
-        completed_tests = read_csv_list(COMPLETED_PARTS_FILE_PATH_TELECOM)
+        completed_tests = read_csv_list(output_folder_path / COMPLETED_PARTS_FILE_NAME_TELECOM)
         driver_type = TelecomBarDriver
         parser = TelecomParser()
     
@@ -57,8 +62,10 @@ if __name__ == '__main__':
     parser.write_csv()
    
     remove_completed_tests()
+    print(len(tests))
+    #print(tests)
     
-    controller = DriverController(driver_type=driver_type, driver_count=number_of_threads, test_list=tests)
+    controller = DriverController(driver_type=driver_type, currency=currency, driver_count=number_of_threads, test_list=tests)
     controller.make_drivers(wait_time=1)
 
     controller.run_tests()
