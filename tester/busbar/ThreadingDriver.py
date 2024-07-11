@@ -20,8 +20,7 @@ def repeat_until_successful(func):
                 return ret
             time.sleep(1)
         else:
-            exit(0)
-            #return False
+            return False
     return wrapper
 
 class ThreadingDriver(webdriver.Edge, ABC):
@@ -72,7 +71,7 @@ class ThreadingDriver(webdriver.Edge, ABC):
             return choice
         except:
             print("No combobox value could be chosen for " + str(selection))
-            return None
+            return False
 
     #Chooses a random value from the list argument to put into the textbox.
     #A list with only one element can be used for a direct input value
@@ -80,14 +79,15 @@ class ThreadingDriver(webdriver.Edge, ABC):
     def choose_textbox_value(self, selection, list):
         try:
             choice = random.choice(list)
-            textbox = WebDriverWait(self, 5).until(EC.element_to_be_clickable(selection))
+            textbox = self.find_element(*selection)
+            #textbox = WebDriverWait(self, 5).until(EC.element_to_be_clickable(selection))
             textbox.click()
             ActionChains(self).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()
             textbox.send_keys(choice)
             return choice
         except:
             print("No textbox value could be chosen for "+ str(selection))
-            return None
+            return False
 
     @repeat_until_successful
     def read_value(self, selection):
@@ -98,7 +98,7 @@ class ThreadingDriver(webdriver.Edge, ABC):
             return element.get_attribute("value")
         except:
             print("value from " + str(selection) + " could not be read")
-            return None
+            return False
 
     @repeat_until_successful
     def click_element(self, selection, multiple = False, element_index = 0):
@@ -112,7 +112,7 @@ class ThreadingDriver(webdriver.Edge, ABC):
             return True
         except:
             print(str(selection) + " could not be clicked")
-            return None
+            return False
 
     def dump_html_to_file(self, filename):
         with open(filename, 'w', errors='replace') as f:

@@ -6,6 +6,8 @@ BUSBAR_FOLDER_PATH = Path(os.path.abspath(__file__)).parent
 
 EURO_FOLDER_PATH = BUSBAR_FOLDER_PATH / "data\\Euro"
 USD_FOLDER_PATH =  BUSBAR_FOLDER_PATH / "data\\USD"
+YUAN_FOLDER_PATH = BUSBAR_FOLDER_PATH / "data\\Yuan"
+RUPEE_FOLDER_PATH = BUSBAR_FOLDER_PATH / "data\\Rupee"
 
 PARSED_NUMBERS_FILE_PATH_GROUND = BUSBAR_FOLDER_PATH / "data\\parsed_numbers_ground.csv"
 PARSED_NUMBERS_FILE_PATH_TELECOM = BUSBAR_FOLDER_PATH / "data\\parsed_numbers_telecom.csv"
@@ -18,6 +20,7 @@ TELECOM = "telecom"
 GROUND = "ground"
 EURO = "euro"
 USD = "usd"
+YUAN = "yuan"
 
 FIELD_NAMES_GROUND = ["part number", "configuration", "bar thickness", "bar width", "bar length", "hole pattern", "hole size", "material", "pigtail code", "pigtail length"]
 FIELD_NAMES_TELECOM = ["part number", "prefix", "configuration", "length", "number of holes", "material"]

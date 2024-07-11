@@ -41,25 +41,33 @@ if __name__ == '__main__':
 
     number_of_threads = int(input("How many threads?: "))
     currency = input("What currency?: ").lower()
-    if currency == EURO:
-        output_folder_path = EURO_FOLDER_PATH
-    elif currency == USD:
-        output_folder_path = USD_FOLDER_PATH
+    match currency:
+        case "euro":
+            output_folder_path = EURO_FOLDER_PATH
+        case "usd":
+            output_folder_path = USD_FOLDER_PATH
+        case "yuan":
+            output_folder_path = YUAN_FOLDER_PATH
+        case "rupee":
+            output_folder_path = RUPEE_FOLDER_PATH
     tool = input("Which tool to use?: ")
 
+
+
     if tool == GROUND:
-        tests = read_csv_dict_list(PARSED_NUMBERS_FILE_PATH_GROUND)
+        parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_GROUND
         completed_tests = read_csv_list(output_folder_path / COMPLETED_PARTS_FILE_NAME_GROUND)
         driver_type = GroundBarDriver
         parser = GroundParser()
     elif tool == TELECOM:
-        tests = read_csv_dict_list(PARSED_NUMBERS_FILE_PATH_TELECOM)
+        parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_TELECOM
         completed_tests = read_csv_list(output_folder_path / COMPLETED_PARTS_FILE_NAME_TELECOM)
         driver_type = TelecomBarDriver
         parser = TelecomParser()
     
     parser.parse_all()
     parser.write_csv()
+    tests = read_csv_dict_list(parsed_numbers_path)
    
     remove_completed_tests()
     print(len(tests))

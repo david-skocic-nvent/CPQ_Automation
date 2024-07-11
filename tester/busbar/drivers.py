@@ -32,13 +32,13 @@ class BusbarDriver(ThreadingDriver):
     def read_prices(self, values):
         return_list = []
         return_list.append(values["part number"])
-        return_list.append(self.read_value((By.XPATH, '//*[@id="PricingEditorTable"]/table/tfoot/tr/th[2]/span/span')))
+        return_list.append(self.read_value((By.XPATH, '//*[@id="PricingEditorTable"]/table/tfoot/tr/th[2]/span/span'))[1:])
 
         number_of_bom_rows = int(self.count_existing_elements((By.XPATH, '//*[contains(@id, "bom-item-")]')))
         for i in range(2, number_of_bom_rows+1):
             return_list.append(self.read_value((By.XPATH, f'//*[@id="bom-item-{i}"]/td[4]/span/span')))
             return_list.append(self.read_value((By.XPATH, f'//*[@id="bom-item-{i}"]/td[5]/span/span')))
-            return_list.append(self.read_value((By.XPATH, f'//*[@id="bom-item-{i}"]/td[6]/span/span')))
+            return_list.append(self.read_value((By.XPATH, f'//*[@id="bom-item-{i}"]/td[6]/span/span'))[1:])
 
         # a last check to see if the part number is put in correctly
         part_number_on_site = self.read_value((By.XPATH, '//*[@id="widget-null-90a80895-c989-4fe3-8d3e-8f141408f9b9-4616533bf9-3595-470c-9006-a4615b24d6dd-row"]/div[2]/div/div/input')) 
@@ -58,27 +58,40 @@ class BusbarDriver(ThreadingDriver):
         csv_file = open(file_path, "a", newline='')
         writer = csv.writer(csv_file)
         writer.writerow(row)
-
+    
+    def set_currency(self, currency):
+        match currency:
+            case "euro":
+                self.completed_parts_path = EURO_FOLDER_PATH / self.completed_parts_fname
+            case "usd":
+                self.completed_parts_path = USD_FOLDER_PATH / self.completed_parts_fname
+            case "yuan":
+                self.completed_parts_path = YUAN_FOLDER_PATH / self.completed_parts_fname
+            case "rupee":
+                self.completed_parts_path = RUPEE_FOLDER_PATH / self.completed_parts_fname
+                
 
     # enters a textbox value into the smart part numbers tab then exits the warning if one appears
     def enter_value_exit_warning (self, selection, value):
         warning_selection = (By.XPATH, '//*[@id="conflictForm"]/div[2]/button[1]')
-        self.choose_textbox_value(selection, [value])
+        # if a textbox value isnt entered, we are probably stuck somewhere so just refresh and exit current thread
+        if not self.choose_textbox_value(selection, [value]):
+            self.get(LINK)
+            self.click_to_part_number_logic()
+            exit(0)
         self.tabout()
         time.sleep(2)
         if self.count_existing_elements(warning_selection):
             self.click_element(warning_selection)
+        
 
 class GroundBarDriver(BusbarDriver):
     def __init__ (self, currency):
         self.thread = None
         self.tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[1]'
-        completed_parts_fname = COMPLETED_PARTS_FILE_NAME_GROUND
-        if currency == EURO:
-            self.completed_parts_path = EURO_FOLDER_PATH / completed_parts_fname
-        elif currency == USD:
-            self.completed_parts_path = USD_FOLDER_PATH / completed_parts_fname
+        self.completed_parts_fname = COMPLETED_PARTS_FILE_NAME_GROUND
         self.parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_GROUND
+        self.set_currency(currency)
         super().__init__()
         self.get(LINK)
         self.login()
@@ -102,12 +115,9 @@ class TelecomBarDriver(BusbarDriver):
     def __init__ (self, currency):
         self.thread = None
         self.tool_button_xpath = '//*[@id="config-middle"]/div/div/div[2]/div/div/div[2]'
-        completed_parts_fname = COMPLETED_PARTS_FILE_NAME_TELECOM
-        if currency == EURO:
-            self.completed_parts_path = EURO_FOLDER_PATH / completed_parts_fname
-        elif currency == USD:
-            self.completed_parts_path = USD_FOLDER_PATH / completed_parts_fname
+        self.completed_parts_fname = COMPLETED_PARTS_FILE_NAME_TELECOM
         self.parsed_numbers_path = PARSED_NUMBERS_FILE_PATH_TELECOM
+        self.set_currency(currency)
         super().__init__()
         self.get(LINK)
         self.login()
