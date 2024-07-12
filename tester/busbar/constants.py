@@ -25,4 +25,4 @@ YUAN = "yuan"
 FIELD_NAMES_GROUND = ["part number", "configuration", "bar thickness", "bar width", "bar length", "hole pattern", "hole size", "material", "pigtail code", "pigtail length"]
 FIELD_NAMES_TELECOM = ["part number", "prefix", "configuration", "length", "number of holes", "material"]
 
-LINK = "https://nventefs-admin.tactoncpq.com/!tickets%7ET-00000938/solution/list"
+LINK = "https://nventefs-test.tactoncpq.com/solution/26b1f2247fd446ab8a334cd8e099a9b5"#"https://nventefs-admin.tactoncpq.com/!tickets%7ET-00000938/solution/list"

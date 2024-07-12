@@ -12,7 +12,7 @@ PASSWORD = os.getenv("TACTON_PASSWORD")
 class BusbarDriver(ThreadingDriver):
     def click_to_part_number_logic (self):
         # clicks my project
-        self.click_element((By.XPATH, '//span[text() = "David Skocic"]'))
+        #self.click_element((By.XPATH, '//span[text() = "David Skocic"]'))
         # clicks add product button
         self.click_element((By.XPATH, '//*[@id="objectTab-null-overview"]/div[2]/div[1]/section[1]/div[1]/div[2]/div/a'))
         # clicks the busbar button
